@@ -1,0 +1,53 @@
+---
+recherche_actualite_tech_du_jour:
+  description: Rechercher et identifier l'actualité technologique la plus importante
+    et pertinente du jour dans les domaines de l'intelligence artificielle, du développement
+    informatique, et de l'édition de logiciels SaaS. Se concentrer sur des informations
+    qui seraient utiles et intéressantes pour une équipe de développement travaillant
+    dans ces domaines.
+  expected_output: Un paragraphe concis (3-4 phrases) présentant l'actualité du jour
+    avec le titre de l'information, une explication claire de pourquoi c'est important,
+    et un lien vers la source si disponible.
+  agent: tech_news_researcher
+decouverte_outil_du_jour:
+  description: Découvrir et présenter un nouvel outil technologique intéressant pour
+    l'équipe de développement. L'outil peut être un framework, une bibliothèque, un
+    service SaaS, un outil de développement, ou toute innovation technologique récente
+    qui pourrait être utile dans le développement logiciel ou l'IA.
+  expected_output: 'Une description concise (2 phrases maximum) incluant : le nom
+    de l''outil, ce qu''il fait concrètement, et pourquoi il est utile. Inclure un
+    lien si disponible. Rester bref et impactant.'
+  agent: tech_tool_scout
+creation_blague_du_jour:
+  description: Créer ou trouver une blague du jour, une histoire drôle, ou une information
+    insolite et rigolote liée au monde de l'informatique, du développement, ou de
+    la technologie. Le contenu doit être approprié pour une équipe de travail et apporter
+    un moment de légèreté.
+  expected_output: Une seule blague courte et percutante OU un fait insolite tech
+    (1-2 phrases maximum) qui fera sourire l'équipe. Privilégier la qualité à la quantité
+    pour garder l'impact.
+  agent: tech_humorist
+compilation_newsletter_wakapedia_daily_news:
+  description: 'Compiler les trois sections selon le format standardisé Wakapedia
+    : "Daily New" (actualité du jour), "Daily Tool" (outil du jour), et "Daily Fun
+    Fact" (blague/info insolite du jour). Créer une newsletter professionnelle formatée
+    selon le template fourni avec le titre "L''agitateur matinal de savoir Tech &
+    Fun pour la team Wakastellar". Générer le contenu au format HTML complet, prêt
+    à être converti en PDF manuellement ou via un outil externe.'
+  expected_output: "Une newsletter complète au format HTML standardisé PLUS des instructions
+    très claires pour obtenir le PDF rapidement :\n\n1. Newsletter HTML complète avec:\n
+    \  - En-tête : \"L'agitateur matinal de savoir Tech & Fun pour la team Wakastellar\"\n
+    \  - Section \"Daily New\" : actualité tech importante du jour \n   - Section
+    \"Daily Tool\" : présentation d'un nouvel outil \n   - Section \"Daily Fun Fact\"
+    : blague ou info insolite tech\n   - CSS intégré pour un rendu parfait\n\n2. Instructions
+    précises en fin de sortie :\n   \"\U0001F3AF POUR OBTENIR VOTRE PDF EN 2 CLICS
+    :\n   1. Copiez TOUT le code HTML ci-dessus\n   2. Allez sur https://htmlpdfapi.com/
+    ou https://pdfshift.com/\n   3. Collez le code, cliquez sur Convert, téléchargez
+    votre PDF\n   \n   Alternative : Sauvegardez le HTML dans un fichier .html, ouvrez
+    dans Chrome, Ctrl+P → Enregistrer PDF\"\n\nLe HTML doit être autonome avec tout
+    le styling nécessaire pour un PDF professionnel."
+  agent: newsletter_editor
+  context:
+  - recherche_actualite_tech_du_jour
+  - decouverte_outil_du_jour
+  - creation_blague_du_jour
