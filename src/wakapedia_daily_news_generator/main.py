@@ -4,7 +4,6 @@ import sys
 import re
 import requests
 from datetime import datetime
-from pathlib import Path
 from wakapedia_daily_news_generator.crew import WakapediaDailyNewsGeneratorCrew
 
 
@@ -24,22 +23,48 @@ def extract_content_from_result(result_str: str) -> dict:
     }
 
     # Try to extract from HTML structure
-    # Daily News section
-    news_match = re.search(r'Daily New[s]?</h2>\s*<p><strong>([^<]+)</strong>\s*[-–]?\s*([^<]+)', result_str, re.IGNORECASE)
+    # Daily News section - handle various formats including "Titre :" prefix
+    news_match = re.search(
+        r'Daily New[s]?</h2>\s*<p>(?:<strong>(?:Titre\s*:?\s*)?</strong>\s*)?([^<]+?)(?:</p>|\s*<a)',
+        result_str,
+        re.IGNORECASE
+    )
     if news_match:
         content['news_title'] = news_match.group(1).strip()
-        content['news_content'] = news_match.group(2).strip()
+
+    # Try to extract news content from following paragraph(s)
+    news_content_match = re.search(
+        r'Daily New[s]?</h2>.*?</p>\s*<p>([^<]+)',
+        result_str,
+        re.IGNORECASE | re.DOTALL
+    )
+    if news_content_match:
+        content['news_content'] = news_content_match.group(1).strip()
+    elif news_match:
+        # Use title as content if no separate content found
+        content['news_content'] = content['news_title']
 
     # Extract news link
     news_link_match = re.search(r'Daily New[s]?</h2>.*?<a\s+href=["\']([^"\']+)["\']', result_str, re.IGNORECASE | re.DOTALL)
     if news_link_match:
         content['news_link'] = news_link_match.group(1).strip()
 
-    # Daily Tool section
-    tool_match = re.search(r'Daily Tool</h2>\s*<p><strong>([^<]+)</strong>\s*([^<]+)', result_str, re.IGNORECASE)
+    # Daily Tool section - handle "SeaVerse" style content
+    tool_match = re.search(
+        r'Daily Tool</h2>\s*<p>([^<]+)',
+        result_str,
+        re.IGNORECASE
+    )
     if tool_match:
-        content['tool_title'] = tool_match.group(1).strip()
-        content['tool_content'] = tool_match.group(2).strip()
+        tool_text = tool_match.group(1).strip()
+        # Try to split into title and content at first period or comma
+        split_match = re.match(r'^([^.]+(?:\.[^.]{0,20})?)[.,]\s*(.+)$', tool_text)
+        if split_match:
+            content['tool_title'] = split_match.group(1).strip()
+            content['tool_content'] = split_match.group(2).strip()
+        else:
+            content['tool_title'] = tool_text[:100] + '...' if len(tool_text) > 100 else tool_text
+            content['tool_content'] = tool_text
 
     # Extract tool link
     tool_link_match = re.search(r'Daily Tool</h2>.*?<a\s+href=["\']([^"\']+)["\']', result_str, re.IGNORECASE | re.DOTALL)
@@ -54,35 +79,6 @@ def extract_content_from_result(result_str: str) -> dict:
         content['fun_content'] = fun_match.group(1).strip()
 
     return content
-
-
-def generate_newsletter_pdf(content: dict) -> str:
-    """Generate PDF from the newsletter content."""
-    try:
-        from wakapedia_daily_news_generator.pdf_generator import generate_pdf
-
-        pdf_path = generate_pdf(
-            news_title=content.get('news_title', 'Actualité du jour'),
-            news_content=content.get('news_content', ''),
-            tool_title=content.get('tool_title', 'Outil du jour'),
-            tool_content=content.get('tool_content', ''),
-            fun_content=content.get('fun_content', '')
-        )
-        print(f"PDF generated: {pdf_path}")
-        return pdf_path
-    except Exception as e:
-        print(f"Failed to generate PDF: {e}")
-        return None
-
-
-def upload_to_google_drive(pdf_path: str) -> str:
-    """Upload PDF to Google Drive and return the link."""
-    try:
-        from wakapedia_daily_news_generator.google_drive import upload_and_get_link
-        return upload_and_get_link(pdf_path)
-    except Exception as e:
-        print(f"Failed to upload to Google Drive: {e}")
-        return None
 
 
 def format_text_message(content: dict) -> str:
@@ -173,7 +169,7 @@ def send_to_google_chat(message: str, pdf_link: str = None) -> bool:
 
 def run():
     """
-    Run the crew and send the result to Google Chat as PDF.
+    Run the crew and send the result to Google Chat as Card.
     """
     inputs = {
         'company_name': 'WAKASTELLAR',
@@ -187,21 +183,22 @@ def run():
     # Extract content from the result
     content = extract_content_from_result(result_str)
 
-    # If extraction failed, use raw content
+    # If extraction failed, use default message
     if not content['news_content']:
-        content['news_content'] = result_str[:500] + "..." if len(result_str) > 500 else result_str
-
-    # Generate PDF
-    pdf_path = generate_newsletter_pdf(content)
-
-    # Upload to Google Drive if configured
-    pdf_link = None
-    if pdf_path and os.getenv('GOOGLE_SERVICE_ACCOUNT_JSON'):
-        pdf_link = upload_to_google_drive(pdf_path)
+        content['news_title'] = "Actualité tech du jour"
+        content['news_content'] = "Consultez les dernières actualités tech sur votre fil d'actualité préféré."
+    if not content['tool_content']:
+        content['tool_title'] = "Outil du jour"
+        content['tool_content'] = "Découvrez de nouveaux outils pour améliorer votre productivité."
+    if not content['fun_content']:
+        content['fun_content'] = "Pourquoi les développeurs préfèrent le mode sombre ? Parce que la lumière attire les bugs !"
 
     # Send Card to Google Chat
     if os.getenv("GOOGLE_CHAT_WEBHOOK_URL"):
         send_to_google_chat_card(content)
+    else:
+        print("Warning: GOOGLE_CHAT_WEBHOOK_URL not set. Newsletter content:")
+        print(content)
 
     return result
 
