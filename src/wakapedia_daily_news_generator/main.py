@@ -17,6 +17,7 @@ def extract_content_from_result(result_str: str) -> dict:
     """
     Extract structured content from the crew result.
     Parses the HTML output to get individual sections including links.
+    Handles both formats: with and without <strong> tags.
     """
     content = {
         'news_title': '',
@@ -28,8 +29,7 @@ def extract_content_from_result(result_str: str) -> dict:
         'fun_content': ''
     }
 
-    # Daily News section - extract title from <strong> and full content from <p>
-    # Format: <h2>Daily New</h2><p><strong>TITLE</strong> - CONTENT</p>
+    # Daily News section - try to extract title from <strong> first
     news_title_match = re.search(
         r'Daily New[s]?</h2>\s*(?:<[^>]*>\s*)*<p[^>]*>\s*<strong>([^<]+)</strong>',
         result_str,
@@ -38,7 +38,7 @@ def extract_content_from_result(result_str: str) -> dict:
     if news_title_match:
         content['news_title'] = news_title_match.group(1).strip()
 
-    # Extract full news paragraph content (including HTML) then strip tags
+    # Extract full news paragraph content
     news_content_match = re.search(
         r'Daily New[s]?</h2>\s*(?:<[^>]*>\s*)*<p[^>]*>(.*?)</p>',
         result_str,
@@ -46,9 +46,15 @@ def extract_content_from_result(result_str: str) -> dict:
     )
     if news_content_match:
         raw_content = news_content_match.group(1)
-        # Remove the title part and clean up
+        # Remove the title part if it exists and clean up
         cleaned = re.sub(r'<strong>[^<]+</strong>\s*[-–]?\s*', '', raw_content)
-        content['news_content'] = strip_html_tags(cleaned)
+        full_content = strip_html_tags(cleaned)
+        content['news_content'] = full_content
+        # If no title was found, extract first sentence as title
+        if not content['news_title'] and full_content:
+            # Take first sentence or first 80 chars
+            first_sentence = re.split(r'[.!?]', full_content)[0]
+            content['news_title'] = first_sentence[:80] + ('...' if len(first_sentence) > 80 else '')
 
     # Extract news link
     news_link_match = re.search(
@@ -59,8 +65,7 @@ def extract_content_from_result(result_str: str) -> dict:
     if news_link_match:
         content['news_link'] = news_link_match.group(1).strip()
 
-    # Daily Tool section - extract tool name from <strong> and full content
-    # Format: <h2>Daily Tool</h2><p>Découvrez <strong>TOOL NAME</strong>, DESCRIPTION</p>
+    # Daily Tool section - extract tool name from <strong>
     tool_title_match = re.search(
         r'Daily Tool</h2>\s*(?:<[^>]*>\s*)*<p[^>]*>.*?<strong>([^<]+)</strong>',
         result_str,
@@ -76,7 +81,11 @@ def extract_content_from_result(result_str: str) -> dict:
         re.IGNORECASE | re.DOTALL
     )
     if tool_content_match:
-        content['tool_content'] = strip_html_tags(tool_content_match.group(1))
+        full_content = strip_html_tags(tool_content_match.group(1))
+        content['tool_content'] = full_content
+        # If no title was found, try to extract tool name
+        if not content['tool_title'] and full_content:
+            content['tool_title'] = "Outil du jour"
 
     # Extract tool link
     tool_link_match = re.search(
