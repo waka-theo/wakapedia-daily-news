@@ -6,7 +6,12 @@ on:
     # Using 8:00 UTC to cover CET (winter time)
     - cron: '0 8 * * *'
   workflow_dispatch:
-    # Allow manual trigger
+    # Allow manual trigger with optional test webhook URL
+    inputs:
+      webhook_url:
+        description: 'Google Chat Webhook URL (optional, overrides secret for testing)'
+        required: false
+        type: string
 
 jobs:
   send-newsletter:
@@ -38,6 +43,6 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
-          GOOGLE_CHAT_WEBHOOK_URL: ${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}
+          GOOGLE_CHAT_WEBHOOK_URL: ${{ inputs.webhook_url || secrets.GOOGLE_CHAT_WEBHOOK_URL }}
         run: |
           python -c "from wakapedia_daily_news_generator.main import run; run()"
