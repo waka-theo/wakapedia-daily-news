@@ -17,7 +17,6 @@ def extract_content_from_result(result_str: str) -> dict:
     """
     Extract structured content from the crew result.
     Parses the HTML output to get individual sections including links.
-    Handles both formats: with and without <strong> tags.
     """
     content = {
         'news_title': '',
@@ -46,13 +45,10 @@ def extract_content_from_result(result_str: str) -> dict:
     )
     if news_content_match:
         raw_content = news_content_match.group(1)
-        # Remove the title part if it exists and clean up
         cleaned = re.sub(r'<strong>[^<]+</strong>\s*[-–]?\s*', '', raw_content)
         full_content = strip_html_tags(cleaned)
         content['news_content'] = full_content
-        # If no title was found, extract first sentence as title
         if not content['news_title'] and full_content:
-            # Take first sentence or first 80 chars
             first_sentence = re.split(r'[.!?]', full_content)[0]
             content['news_title'] = first_sentence[:80] + ('...' if len(first_sentence) > 80 else '')
 
@@ -83,7 +79,6 @@ def extract_content_from_result(result_str: str) -> dict:
     if tool_content_match:
         full_content = strip_html_tags(tool_content_match.group(1))
         content['tool_content'] = full_content
-        # If no title was found, try to extract tool name
         if not content['tool_title'] and full_content:
             content['tool_title'] = "Outil du jour"
 
@@ -108,34 +103,6 @@ def extract_content_from_result(result_str: str) -> dict:
     return content
 
 
-def format_text_message(content: dict) -> str:
-    """Format content as a nice text message for Google Chat."""
-    date_str = datetime.now().strftime("%d/%m/%Y")
-
-    message = f"""*🗞️ WAKAPEDIA DAILY NEWS - {date_str}*
-━━━━━━━━━━━━━━━━━━━━━━━
-
-*📰 DAILY NEWS*
-*{content.get('news_title', 'Actualité du jour')}*
-{content.get('news_content', '')}
-
-━━━━━━━━━━━━━━━━━━━━━━━
-
-*🛠️ DAILY TOOL*
-*{content.get('tool_title', 'Outil du jour')}*
-{content.get('tool_content', '')}
-
-━━━━━━━━━━━━━━━━━━━━━━━
-
-*😄 DAILY FUN FACT*
-{content.get('fun_content', '')}
-
-━━━━━━━━━━━━━━━━━━━━━━━
-_L'agitateur matinal de savoir Tech & Fun pour la team Wakastellar_"""
-
-    return message
-
-
 def send_to_google_chat_card(content: dict) -> bool:
     """
     Send the newsletter to Google Chat via webhook using Card format.
@@ -143,7 +110,7 @@ def send_to_google_chat_card(content: dict) -> bool:
     webhook_url = os.getenv("GOOGLE_CHAT_WEBHOOK_URL")
 
     if not webhook_url:
-        print("Warning: GOOGLE_CHAT_WEBHOOK_URL not set. Skipping Google Chat notification.")
+        print("Warning: GOOGLE_CHAT_WEBHOOK_URL not set.")
         return False
 
     try:
@@ -161,32 +128,6 @@ def send_to_google_chat_card(content: dict) -> bool:
 
         response = requests.post(webhook_url, json=card_payload)
         response.raise_for_status()
-        print("Newsletter Card sent to Google Chat successfully!")
-        return True
-    except requests.exceptions.RequestException as e:
-        print(f"Failed to send to Google Chat: {e}")
-        return False
-
-
-def send_to_google_chat(message: str, pdf_link: str = None) -> bool:
-    """
-    Send the newsletter to Google Chat via webhook (text format).
-    """
-    webhook_url = os.getenv("GOOGLE_CHAT_WEBHOOK_URL")
-
-    if not webhook_url:
-        print("Warning: GOOGLE_CHAT_WEBHOOK_URL not set. Skipping Google Chat notification.")
-        return False
-
-    # If we have a PDF link, add it to the message
-    if pdf_link:
-        message += f"\n\n📄 *Voir le PDF:* {pdf_link}"
-
-    payload = {"text": message}
-
-    try:
-        response = requests.post(webhook_url, json=payload)
-        response.raise_for_status()
         print("Newsletter sent to Google Chat successfully!")
         return True
     except requests.exceptions.RequestException as e:
@@ -196,7 +137,7 @@ def send_to_google_chat(message: str, pdf_link: str = None) -> bool:
 
 def run():
     """
-    Run the crew and send the result to Google Chat as Card.
+    Run the crew and send the result to Google Chat.
     """
     inputs = {
         'company_name': 'WAKASTELLAR',
@@ -207,91 +148,73 @@ def run():
     result = WakapediaDailyNewsGeneratorCrew().crew().kickoff(inputs=inputs)
     result_str = str(result)
 
-    # Debug: print first 500 chars of result
-    print("\n" + "=" * 60)
-    print("DEBUG: Raw result (first 500 chars):")
-    print(result_str[:500])
-    print("=" * 60 + "\n")
-
     # Extract content from the result
     content = extract_content_from_result(result_str)
 
-    # Debug: print extracted content
-    print("\n" + "=" * 60)
-    print("DEBUG: Extracted content:")
+    # Debug output
+    print("\n" + "=" * 50)
+    print("Extracted content:")
     print(f"  news_title: {content['news_title'][:50]}..." if content['news_title'] else "  news_title: EMPTY")
-    print(f"  news_content: {content['news_content'][:50]}..." if content['news_content'] else "  news_content: EMPTY")
-    print(f"  news_link: {content['news_link']}" if content['news_link'] else "  news_link: EMPTY")
     print(f"  tool_title: {content['tool_title']}" if content['tool_title'] else "  tool_title: EMPTY")
-    print(f"  tool_content: {content['tool_content'][:50]}..." if content['tool_content'] else "  tool_content: EMPTY")
-    print(f"  tool_link: {content['tool_link']}" if content['tool_link'] else "  tool_link: EMPTY")
     print(f"  fun_content: {content['fun_content'][:50]}..." if content['fun_content'] else "  fun_content: EMPTY")
-    print("=" * 60 + "\n")
+    print("=" * 50 + "\n")
 
-    # If extraction failed, use default message
+    # Apply fallbacks if extraction failed
     if not content['news_content']:
         content['news_title'] = "Actualité tech du jour"
-        content['news_content'] = "Consultez les dernières actualités tech sur votre fil d'actualité préféré."
+        content['news_content'] = "Consultez les dernières actualités tech."
     if not content['tool_content']:
         content['tool_title'] = "Outil du jour"
-        content['tool_content'] = "Découvrez de nouveaux outils pour améliorer votre productivité."
+        content['tool_content'] = "Découvrez de nouveaux outils."
     if not content['fun_content']:
         content['fun_content'] = "Pourquoi les développeurs préfèrent le mode sombre ? Parce que la lumière attire les bugs !"
 
-    # Send Card to Google Chat
+    # Send to Google Chat
     if os.getenv("GOOGLE_CHAT_WEBHOOK_URL"):
         send_to_google_chat_card(content)
     else:
-        print("Warning: GOOGLE_CHAT_WEBHOOK_URL not set. Newsletter content:")
-        print(content)
+        print("Warning: GOOGLE_CHAT_WEBHOOK_URL not set.")
+        print(result_str)
 
     return result
 
 
-def run_with_trigger():
-    """
-    Run the crew with Google Chat integration (for scheduled triggers).
-    """
-    return run()
-
-
 def train():
-    """
-    Train the crew for a given number of iterations.
-    """
+    """Train the crew."""
     inputs = {
         'company_name': 'WAKASTELLAR',
         'email_address': 'wakapedia@wakastellar.com'
     }
     try:
-        WakapediaDailyNewsGeneratorCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
-
+        WakapediaDailyNewsGeneratorCrew().crew().train(
+            n_iterations=int(sys.argv[1]),
+            filename=sys.argv[2],
+            inputs=inputs
+        )
     except Exception as e:
         raise Exception(f"An error occurred while training the crew: {e}")
 
 
 def replay():
-    """
-    Replay the crew execution from a specific task.
-    """
+    """Replay the crew execution from a specific task."""
     try:
         WakapediaDailyNewsGeneratorCrew().crew().replay(task_id=sys.argv[1])
-
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")
 
 
 def test():
-    """
-    Test the crew execution and returns the results.
-    """
+    """Test the crew execution."""
     inputs = {
         'company_name': 'WAKASTELLAR',
         'email_address': 'wakapedia@wakastellar.com'
     }
     try:
-        WakapediaDailyNewsGeneratorCrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
-
+        WakapediaDailyNewsGeneratorCrew().crew().test(
+            n_iterations=int(sys.argv[1]),
+            openai_model_name=sys.argv[2],
+            inputs=inputs
+        )
     except Exception as e:
         raise Exception(f"An error occurred while testing the crew: {e}")
 
