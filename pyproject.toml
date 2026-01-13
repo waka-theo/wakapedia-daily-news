@@ -16,7 +16,6 @@ run_crew = "wakapedia_daily_news_generator.main:run"
 train = "wakapedia_daily_news_generator.main:train"
 replay = "wakapedia_daily_news_generator.main:replay"
 test = "wakapedia_daily_news_generator.main:test"
-run_with_trigger = "wakapedia_daily_news_generator.main:run_with_trigger"
 
 [build-system]
 requires = ["hatchling"]

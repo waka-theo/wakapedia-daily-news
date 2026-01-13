@@ -30,11 +30,14 @@ jobs:
         run: |
           uv pip install --system crewai[litellm,tools]==1.7.2 anthropic>=0.40.0 requests>=2.31.0
 
+      - name: Install project
+        run: |
+          uv pip install --system -e .
+
       - name: Run newsletter crew
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
           GOOGLE_CHAT_WEBHOOK_URL: ${{ secrets.GOOGLE_CHAT_WEBHOOK_URL }}
         run: |
-          cd src/wakapedia_daily_news_generator
-          python -c "from main import run; run()"
+          python -c "from wakapedia_daily_news_generator.main import run; run()"
