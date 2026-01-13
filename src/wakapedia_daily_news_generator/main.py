@@ -7,6 +7,12 @@ from datetime import datetime
 from wakapedia_daily_news_generator.crew import WakapediaDailyNewsGeneratorCrew
 
 
+def strip_html_tags(text: str) -> str:
+    """Remove HTML tags from text."""
+    clean = re.sub(r'<[^>]+>', '', text)
+    return clean.strip()
+
+
 def extract_content_from_result(result_str: str) -> dict:
     """
     Extract structured content from the crew result.
@@ -22,61 +28,73 @@ def extract_content_from_result(result_str: str) -> dict:
         'fun_content': ''
     }
 
-    # Try to extract from HTML structure
-    # Daily News section - handle various formats including "Titre :" prefix
-    news_match = re.search(
-        r'Daily New[s]?</h2>\s*<p>(?:<strong>(?:Titre\s*:?\s*)?</strong>\s*)?([^<]+?)(?:</p>|\s*<a)',
+    # Daily News section - extract title from <strong> and full content from <p>
+    # Format: <h2>Daily New</h2><p><strong>TITLE</strong> - CONTENT</p>
+    news_title_match = re.search(
+        r'Daily New[s]?</h2>\s*(?:<[^>]*>\s*)*<p[^>]*>\s*<strong>([^<]+)</strong>',
         result_str,
-        re.IGNORECASE
+        re.IGNORECASE | re.DOTALL
     )
-    if news_match:
-        content['news_title'] = news_match.group(1).strip()
+    if news_title_match:
+        content['news_title'] = news_title_match.group(1).strip()
 
-    # Try to extract news content from following paragraph(s)
+    # Extract full news paragraph content (including HTML) then strip tags
     news_content_match = re.search(
-        r'Daily New[s]?</h2>.*?</p>\s*<p>([^<]+)',
+        r'Daily New[s]?</h2>\s*(?:<[^>]*>\s*)*<p[^>]*>(.*?)</p>',
         result_str,
         re.IGNORECASE | re.DOTALL
     )
     if news_content_match:
-        content['news_content'] = news_content_match.group(1).strip()
-    elif news_match:
-        # Use title as content if no separate content found
-        content['news_content'] = content['news_title']
+        raw_content = news_content_match.group(1)
+        # Remove the title part and clean up
+        cleaned = re.sub(r'<strong>[^<]+</strong>\s*[-–]?\s*', '', raw_content)
+        content['news_content'] = strip_html_tags(cleaned)
 
     # Extract news link
-    news_link_match = re.search(r'Daily New[s]?</h2>.*?<a\s+href=["\']([^"\']+)["\']', result_str, re.IGNORECASE | re.DOTALL)
+    news_link_match = re.search(
+        r'Daily New[s]?</h2>.*?<a\s+href=["\']([^"\']+)["\']',
+        result_str,
+        re.IGNORECASE | re.DOTALL
+    )
     if news_link_match:
         content['news_link'] = news_link_match.group(1).strip()
 
-    # Daily Tool section - handle "SeaVerse" style content
-    tool_match = re.search(
-        r'Daily Tool</h2>\s*<p>([^<]+)',
+    # Daily Tool section - extract tool name from <strong> and full content
+    # Format: <h2>Daily Tool</h2><p>Découvrez <strong>TOOL NAME</strong>, DESCRIPTION</p>
+    tool_title_match = re.search(
+        r'Daily Tool</h2>\s*(?:<[^>]*>\s*)*<p[^>]*>.*?<strong>([^<]+)</strong>',
         result_str,
-        re.IGNORECASE
+        re.IGNORECASE | re.DOTALL
     )
-    if tool_match:
-        tool_text = tool_match.group(1).strip()
-        # Try to split into title and content at first period or comma
-        split_match = re.match(r'^([^.]+(?:\.[^.]{0,20})?)[.,]\s*(.+)$', tool_text)
-        if split_match:
-            content['tool_title'] = split_match.group(1).strip()
-            content['tool_content'] = split_match.group(2).strip()
-        else:
-            content['tool_title'] = tool_text[:100] + '...' if len(tool_text) > 100 else tool_text
-            content['tool_content'] = tool_text
+    if tool_title_match:
+        content['tool_title'] = tool_title_match.group(1).strip()
+
+    # Extract full tool paragraph content
+    tool_content_match = re.search(
+        r'Daily Tool</h2>\s*(?:<[^>]*>\s*)*<p[^>]*>(.*?)</p>',
+        result_str,
+        re.IGNORECASE | re.DOTALL
+    )
+    if tool_content_match:
+        content['tool_content'] = strip_html_tags(tool_content_match.group(1))
 
     # Extract tool link
-    tool_link_match = re.search(r'Daily Tool</h2>.*?<a\s+href=["\']([^"\']+)["\']', result_str, re.IGNORECASE | re.DOTALL)
+    tool_link_match = re.search(
+        r'Daily Tool</h2>.*?<a\s+href=["\']([^"\']+)["\']',
+        result_str,
+        re.IGNORECASE | re.DOTALL
+    )
     if tool_link_match:
         content['tool_link'] = tool_link_match.group(1).strip()
 
-    # Daily Fun Fact section
-    fun_match = re.search(r'Daily Fun Fact</h2>\s*(?:<div[^>]*>)?\s*<p>([^<]+)</p>', result_str, re.IGNORECASE)
-    if not fun_match:
-        fun_match = re.search(r'Daily Fun Fact</h2>\s*<div[^>]*>\s*([^<]+)', result_str, re.IGNORECASE)
+    # Daily Fun Fact section - extract full content
+    fun_match = re.search(
+        r'Daily Fun Fact</h2>\s*(?:<[^>]*>\s*)*<p[^>]*>(.*?)</p>',
+        result_str,
+        re.IGNORECASE | re.DOTALL
+    )
     if fun_match:
-        content['fun_content'] = fun_match.group(1).strip()
+        content['fun_content'] = strip_html_tags(fun_match.group(1))
 
     return content
 
