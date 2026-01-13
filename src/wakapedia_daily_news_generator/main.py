@@ -207,8 +207,26 @@ def run():
     result = WakapediaDailyNewsGeneratorCrew().crew().kickoff(inputs=inputs)
     result_str = str(result)
 
+    # Debug: print first 500 chars of result
+    print("\n" + "=" * 60)
+    print("DEBUG: Raw result (first 500 chars):")
+    print(result_str[:500])
+    print("=" * 60 + "\n")
+
     # Extract content from the result
     content = extract_content_from_result(result_str)
+
+    # Debug: print extracted content
+    print("\n" + "=" * 60)
+    print("DEBUG: Extracted content:")
+    print(f"  news_title: {content['news_title'][:50]}..." if content['news_title'] else "  news_title: EMPTY")
+    print(f"  news_content: {content['news_content'][:50]}..." if content['news_content'] else "  news_content: EMPTY")
+    print(f"  news_link: {content['news_link']}" if content['news_link'] else "  news_link: EMPTY")
+    print(f"  tool_title: {content['tool_title']}" if content['tool_title'] else "  tool_title: EMPTY")
+    print(f"  tool_content: {content['tool_content'][:50]}..." if content['tool_content'] else "  tool_content: EMPTY")
+    print(f"  tool_link: {content['tool_link']}" if content['tool_link'] else "  tool_link: EMPTY")
+    print(f"  fun_content: {content['fun_content'][:50]}..." if content['fun_content'] else "  fun_content: EMPTY")
+    print("=" * 60 + "\n")
 
     # If extraction failed, use default message
     if not content['news_content']:
