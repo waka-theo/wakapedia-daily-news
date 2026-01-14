@@ -3534,12 +3534,14 @@ source = { editable = "." }
 dependencies = [
     { name = "anthropic" },
     { name = "crewai", extra = ["litellm", "tools"] },
+    { name = "requests" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "anthropic", specifier = ">=0.40.0" },
     { name = "crewai", extras = ["litellm", "tools"], specifier = "==1.7.2" },
+    { name = "requests", specifier = ">=2.31.0" },
 ]
 
 [[package]]

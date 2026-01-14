@@ -2,9 +2,9 @@ name: Daily Newsletter
 
 on:
   schedule:
-    # Run at 9:00 AM Paris time (UTC+1 in winter, UTC+2 in summer)
+    # Run at 8:00 AM Paris time (UTC+1 in winter, UTC+2 in summer)
     # Using 8:00 UTC to cover CET (winter time)
-    - cron: '0 8 * * *'
+    - cron: '0 7 * * *'
   workflow_dispatch:
     # Allow manual trigger with optional test webhook URL
     inputs:
