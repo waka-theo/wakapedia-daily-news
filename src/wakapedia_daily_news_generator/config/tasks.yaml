@@ -11,12 +11,22 @@ recherche_actualite_tech_du_jour:
     - Éviter les articles génériques ou intemporels
     - Privilégier les annonces, lancements, levées de fonds, ou découvertes récentes
     - RÉDIGER ENTIÈREMENT EN FRANÇAIS
+
+    PROCÉDURE ANTI-DOUBLON OBLIGATOIRE:
+    1. Quand vous trouvez un article intéressant, utilisez l'outil 'check_news_url'
+       avec l'URL pour vérifier qu'il n'a pas déjà été publié
+    2. Si l'URL existe déjà, cherchez un autre article et répétez l'étape 1
+    3. Une fois l'article final validé (URL non utilisée), utilisez l'outil
+       'save_news_url' avec l'URL ET le titre pour l'enregistrer en mémoire
+    4. Vous pouvez aussi utiliser 'list_used_news_urls' pour voir les sujets
+       récemment couverts et éviter de traiter les mêmes thématiques
   expected_output: |
     Un paragraphe concis (3-4 phrases) EN FRANÇAIS présentant l'actualité du jour avec:
     - Le titre de l'information
     - Une explication claire de pourquoi c'est important
     - Un lien vers la source
     Le contenu DOIT être en français, même si la source est en anglais.
+    L'URL DOIT avoir été vérifiée et sauvegardée via les outils de mémoire.
   agent: tech_news_researcher
 decouverte_outil_du_jour:
   description: |
@@ -37,24 +47,36 @@ decouverte_outil_du_jour:
     - Un lien vers le site ou la documentation
     Rester bref et impactant. Contenu obligatoirement en français.
   agent: tech_tool_scout
-creation_blague_du_jour:
+recherche_fait_insolite_du_jour:
   description: |
-    Créer ou trouver une blague du jour EN FRANÇAIS, une histoire drôle, ou une
-    information insolite et rigolote liée au monde de l'informatique, du développement,
-    ou de la technologie.
+    TROUVER un fait insolite, une anecdote méconnue ou un événement
+    historique surprenant du monde de l'informatique et de la technologie.
 
-    IMPORTANT:
-    - La blague DOIT être en français
-    - ÉVITER les blagues classiques trop connues comme:
-      * "Pourquoi Oct 31 = Dec 25" (octal/décimal)
-      * "Il y a 10 types de personnes..."
-      * "Un développeur va au magasin..."
-    - Chercher des blagues originales ou des faits insolites méconnus
-    - Le contenu doit être approprié pour une équipe de travail
+    PROCÉDURE OBLIGATOIRE:
+    1. Rechercher sur des sites français et anglais (Wikipédia FR/EN, blogs tech, Le Monde Informatique, Hacker News,
+    Reddit TIL, histoire de l'informatique documentée.)
+    2. Trouver un FAIT RÉEL intéressant et surprenant
+
+    TYPES DE FAITS À CHERCHER:
+    - Bugs célèbres (Y2K, bug Ariane 5, premier bug informatique, etc.)
+    - Easter eggs cachés dans des logiciels ou sites web
+    - Origines insolites de noms (pourquoi Python, pourquoi Java, etc.)
+    - Anecdotes sur les créateurs de langages ou technologies
+    - Records absurdes du monde tech
+    - Coïncidences ou faits historiques surprenants
+
+    RÈGLES CRITIQUES:
+    - UNIQUEMENT des faits RÉELS et VÉRIFIABLES
+    - PAS de blagues ou histoires inventées
+    - Le fait doit être surprenant ou méconnu
+    - Vous pouvez chercher sur des sources anglophones et TRADUIRE en français
+
+    Sources - Wikipédia FR/EN, lemondeinformatique.fr, blogs tech, Hacker News,
+    Reddit TIL, histoire de l'informatique documentée.
   expected_output: |
-    Une seule blague courte et percutante OU un fait insolite tech (1-2 phrases maximum)
-    EN FRANÇAIS qui fera sourire l'équipe. Privilégier l'originalité.
-  agent: tech_humorist
+    Un fait insolite tech EN FRANÇAIS (2-3 phrases maximum) qui surprendra
+    et intéressera l'équipe. Le fait doit être RÉEL et documenté.
+  agent: tech_fact_finder
 compilation_newsletter_wakapedia_daily_news:
   description: |
     Compiler les trois sections selon le format standardisé Wakapedia:
@@ -65,14 +87,15 @@ compilation_newsletter_wakapedia_daily_news:
     Créer une newsletter professionnelle formatée avec le titre
     "L'agitateur matinal de savoir Tech & Fun pour la team Wakastellar".
 
-    IMPORTANT: TOUT le contenu DOIT être en FRANÇAIS. Si un contenu fourni est en
-    anglais, le traduire en français avant de l'intégrer.
+    IMPORTANT: 
+    - TOUT le contenu DOIT être en FRANÇAIS
+
   expected_output: |
     Une newsletter complète au format HTML avec:
     - En-tête: "L'agitateur matinal de savoir Tech & Fun pour la team Wakastellar"
-    - Section "Daily News": actualité tech importante du jour EN FRANÇAIS
-    - Section "Daily Tool": présentation d'un nouvel outil EN FRANÇAIS
-    - Section "Daily Fun Fact": blague ou info insolite tech EN FRANÇAIS
+    - Section "Daily News": actualité tech importante du jour EN FRANÇAIS avec lien
+    - Section "Daily Tool": présentation d'un nouvel outil EN FRANÇAIS avec lien
+    - Section "Daily Fun Fact": blague ou info insolite tech EN FRANÇAIS 
     - CSS intégré pour un rendu professionnel
 
     TOUT le contenu doit être rédigé en français.
@@ -80,4 +103,4 @@ compilation_newsletter_wakapedia_daily_news:
   context:
   - recherche_actualite_tech_du_jour
   - decouverte_outil_du_jour
-  - creation_blague_du_jour
+  - recherche_fait_insolite_du_jour

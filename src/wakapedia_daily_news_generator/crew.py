@@ -7,6 +7,12 @@ from crewai_tools import (
 	SerperDevTool
 )
 
+from wakapedia_daily_news_generator.tools.news_memory_tool import (
+    CheckNewsUrlTool,
+    SaveNewsUrlTool,
+    ListUsedNewsUrlsTool,
+)
+
 
 
 
@@ -21,22 +27,23 @@ class WakapediaDailyNewsGeneratorCrew:
         
         return Agent(
             config=self.agents_config["tech_news_researcher"],
-            
-            
-            tools=[				SerperDevTool()],
+            tools=[
+                SerperDevTool(),
+                CheckNewsUrlTool(),
+                SaveNewsUrlTool(),
+                ListUsedNewsUrlsTool(),
+            ],
             reasoning=False,
             max_reasoning_attempts=None,
             inject_date=True,
             allow_delegation=False,
-            max_iter=25,
+            max_iter=10,
             max_rpm=None,
-            
             max_execution_time=None,
             llm=LLM(
                 model="openai/gpt-4o-mini",
                 temperature=0.5,
             ),
-
         )
 
     @agent
@@ -51,7 +58,7 @@ class WakapediaDailyNewsGeneratorCrew:
             max_reasoning_attempts=None,
             inject_date=True,
             allow_delegation=False,
-            max_iter=25,
+            max_iter=10,
             max_rpm=None,
             
             max_execution_time=None,
@@ -63,26 +70,22 @@ class WakapediaDailyNewsGeneratorCrew:
         )
 
     @agent
-    def tech_humorist(self) -> Agent:
+    def tech_fact_finder(self) -> Agent:
         
         return Agent(
-            config=self.agents_config["tech_humorist"],
-            
-            
-            tools=[				SerperDevTool()],
+            config=self.agents_config["tech_fact_finder"],
+            tools=[SerperDevTool()],
             reasoning=False,
             max_reasoning_attempts=None,
             inject_date=True,
             allow_delegation=False,
-            max_iter=25,
+            max_iter=10,
             max_rpm=None,
-            
             max_execution_time=None,
             llm=LLM(
                 model="openai/gpt-4o",
-                temperature=0.9,
+                temperature=0.3,
             ),
-
         )
 
     @agent
@@ -97,7 +100,7 @@ class WakapediaDailyNewsGeneratorCrew:
             max_reasoning_attempts=None,
             inject_date=True,
             allow_delegation=False,
-            max_iter=25,
+            max_iter=10,
             max_rpm=None,
             
             max_execution_time=None,
@@ -129,12 +132,10 @@ class WakapediaDailyNewsGeneratorCrew:
         )
     
     @task
-    def creation_blague_du_jour(self) -> Task:
+    def recherche_fait_insolite_du_jour(self) -> Task:
         return Task(
-            config=self.tasks_config["creation_blague_du_jour"],
+            config=self.tasks_config["recherche_fait_insolite_du_jour"],
             markdown=False,
-            
-            
         )
     
     @task
