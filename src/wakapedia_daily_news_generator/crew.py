@@ -158,9 +158,3 @@ class WakapediaDailyNewsGeneratorCrew:
             verbose=True,
             chat_llm=LLM(model="openai/gpt-4o-mini"),
         )
-
-    def _load_response_format(self, name):
-        with open(os.path.join(self.base_directory, "config", f"{name}.json")) as f:
-            json_schema = json.loads(f.read())
-
-        return SchemaConverter.build(json_schema)
