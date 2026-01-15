@@ -89,6 +89,9 @@ Required environment variables in `.env`:
 - `SERPER_API_KEY`: For SerperDevTool web search
 - `GOOGLE_CHAT_WEBHOOK_URL`: For sending newsletter to Google Chat
 
+Optional environment variables:
+- `NEWSLETTER_LOGO_URL`: Public URL for the logo displayed in the Google Chat card header (must be publicly accessible, e.g., GitHub Raw URL or CDN)
+
 ## GitHub Actions
 
 The newsletter is automatically sent every day at **8:00 AM Paris time** via GitHub Actions.
@@ -99,6 +102,9 @@ Required GitHub Secrets:
 - `OPENAI_API_KEY`
 - `SERPER_API_KEY`
 - `GOOGLE_CHAT_WEBHOOK_URL`
+
+Optional GitHub Secrets:
+- `NEWSLETTER_LOGO_URL`: Public URL for the newsletter logo in Google Chat card header
 
 ## Crew Inputs
 

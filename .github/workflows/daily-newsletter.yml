@@ -44,5 +44,6 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
           GOOGLE_CHAT_WEBHOOK_URL: ${{ inputs.webhook_url || secrets.GOOGLE_CHAT_WEBHOOK_URL }}
+          NEWSLETTER_LOGO_URL: ${{ secrets.NEWSLETTER_LOGO_URL }}
         run: |
           python -c "from wakapedia_daily_news_generator.main import run; run()"

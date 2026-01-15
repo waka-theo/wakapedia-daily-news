@@ -116,6 +116,9 @@ def send_to_google_chat_card(content: dict) -> bool:
     try:
         from wakapedia_daily_news_generator.google_chat_card import create_simple_card
 
+        # Logo URL from environment variable (must be publicly accessible)
+        logo_url = os.getenv("NEWSLETTER_LOGO_URL")
+        
         card_payload = create_simple_card(
             news_title=content.get('news_title', 'Actualité du jour'),
             news_content=content.get('news_content', ''),
@@ -123,7 +126,8 @@ def send_to_google_chat_card(content: dict) -> bool:
             tool_content=content.get('tool_content', ''),
             fun_content=content.get('fun_content', ''),
             news_link=content.get('news_link', ''),
-            tool_link=content.get('tool_link', '')
+            tool_link=content.get('tool_link', ''),
+            logo_url=logo_url
         )
 
         response = requests.post(webhook_url, json=card_payload)

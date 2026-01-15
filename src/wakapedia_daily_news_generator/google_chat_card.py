@@ -13,7 +13,8 @@ def create_simple_card(
     tool_content: str,
     fun_content: str,
     news_link: str = None,
-    tool_link: str = None
+    tool_link: str = None,
+    logo_url: str = None
 ) -> dict:
     """
     Create a Google Chat Card V1 formatted message for the newsletter.
@@ -126,13 +127,20 @@ def create_simple_card(
         ]
     })
 
+    # Build header with optional logo
+    header = {
+        "title": "Wakapedia Daily News",
+        "subtitle": date_str
+    }
+    
+    if logo_url:
+        header["imageUrl"] = logo_url
+        header["imageStyle"] = "IMAGE"  # "IMAGE" = rectangulaire, "AVATAR" = rond
+    
     return {
         "cards": [
             {
-                "header": {
-                    "title": "✏️ Wakapedia Daily News",
-                    "subtitle": date_str
-                },
+                "header": header,
                 "sections": sections
             }
         ]
