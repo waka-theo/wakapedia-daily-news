@@ -135,7 +135,7 @@ def create_simple_card(
     
     if logo_url:
         header["imageUrl"] = logo_url
-        header["imageStyle"] = "IMAGE"  # "IMAGE" = rectangulaire, "AVATAR" = rond
+        header["imageStyle"] = "AVATAR"  # "AVATAR" = rond (mieux pour les icônes)
     
     return {
         "cards": [
