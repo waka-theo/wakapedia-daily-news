@@ -12,6 +12,14 @@ recherche_actualite_tech_du_jour:
     - Privilégier les annonces, lancements, levées de fonds, ou découvertes récentes
     - RÉDIGER ENTIÈREMENT EN FRANÇAIS
 
+    CRITÈRES DE QUALITÉ OBLIGATOIRES:
+    - Source fiable et reconnue: TechCrunch, The Verge, Wired, Ars Technica, VentureBeat,
+      MIT Technology Review, LeMagIT, 01net, Le Monde Informatique, ZDNet, Reuters Tech
+    - Article avec des FAITS CONCRETS (chiffres, noms, dates) - PAS de rumeurs ou spéculations
+    - Impact réel sur l'industrie tech (pas de gadgets ou accessoires grand public)
+    - Éviter les articles sponsorisés, publicitaires ou les communiqués de presse non vérifiés
+    - Préférer les annonces officielles et les analyses de sources de référence
+
     PROCÉDURE ANTI-DOUBLON OBLIGATOIRE:
     1. Quand vous trouvez un article intéressant, utilisez l'outil 'check_news_url'
        avec l'URL pour vérifier qu'il n'a pas déjà été publié
@@ -34,11 +42,33 @@ decouverte_outil_du_jour:
     pour l'équipe de développement.
 
     IMPORTANT:
-    - ÉVITER les outils très populaires (GitHub, VS Code, Docker, Notion, Slack, etc.)
+    - ÉVITER les outils très populaires (GitHub, VS Code, Docker, Notion, Slack, Figma, Jira, etc.)
     - Chercher des outils lancés récemment ou des pépites méconnues
     - L'outil peut être un framework, une bibliothèque, un service SaaS, ou une innovation récente
     - Varier les catégories (un jour un outil IA, le lendemain un outil DevOps, etc.)
     - RÉDIGER ENTIÈREMENT EN FRANÇAIS
+
+    SOURCES À PRIVILÉGIER:
+    - Product Hunt (nouveautés récentes, tri par date)
+    - GitHub Trending (projets émergents avec étoiles récentes)
+    - Hacker News "Show HN" (projets indie et innovations)
+    - AlternativeTo (alternatives méconnues à des outils populaires)
+    - DevHunt, BetaList (outils en beta ou récemment lancés)
+
+    CRITÈRES DE SÉLECTION:
+    - Outil avec au moins 100 stars GitHub OU avis positifs sur Product Hunt
+    - Documentation disponible et claire
+    - Cas d'usage concret pour une équipe de développement
+    - Éviter les outils abandonnés (vérifier la date du dernier commit/mise à jour)
+
+    PROCÉDURE ANTI-DOUBLON OBLIGATOIRE:
+    1. Quand vous trouvez un outil intéressant, utilisez l'outil 'check_tool_url'
+       avec l'URL pour vérifier qu'il n'a pas déjà été présenté
+    2. Si l'URL existe déjà, cherchez un autre outil et répétez l'étape 1
+    3. Une fois l'outil final validé (URL non utilisée), utilisez l'outil
+       'save_tool_url' avec l'URL ET le nom pour l'enregistrer en mémoire
+    4. Vous pouvez aussi utiliser 'list_used_tools_urls' pour voir les outils
+       récemment présentés et éviter les répétitions
   expected_output: |
     Une description concise (2-3 phrases) EN FRANÇAIS incluant:
     - Le nom de l'outil
@@ -46,6 +76,7 @@ decouverte_outil_du_jour:
     - Pourquoi il est utile/innovant
     - Un lien vers le site ou la documentation
     Rester bref et impactant. Contenu obligatoirement en français.
+    L'URL DOIT avoir été vérifiée et sauvegardée via les outils de mémoire.
   agent: tech_tool_scout
 recherche_fait_insolite_du_jour:
   description: |
@@ -82,23 +113,31 @@ compilation_newsletter_wakapedia_daily_news:
     Compiler les trois sections selon le format standardisé Wakapedia:
     - "Daily News" (actualité du jour)
     - "Daily Tool" (outil du jour)
-    - "Daily Fun Fact" (blague/info insolite du jour)
+    - "Daily Fun Fact" (info insolite du jour)
 
     Créer une newsletter professionnelle formatée avec le titre
     "L'agitateur matinal de savoir Tech & Fun pour la team Wakastellar".
 
-    IMPORTANT: 
+    VALIDATION QUALITÉ AVANT COMPILATION:
+    - Vérifier que chaque section a un LIEN VALIDE (URL complète commençant par http)
+    - Vérifier que le contenu est factuel et non vague (pas de phrases génériques)
+    - Vérifier que le français est correct et fluide
+    - Si une section manque de lien ou est trop courte, reformuler pour améliorer la qualité
+
+    IMPORTANT:
     - TOUT le contenu DOIT être en FRANÇAIS
+    - Les liens doivent être cliquables et fonctionnels
+    - Le style doit être professionnel mais accessible
 
   expected_output: |
     Une newsletter complète au format HTML avec:
     - En-tête: "L'agitateur matinal de savoir Tech & Fun pour la team Wakastellar"
-    - Section "Daily News": actualité tech importante du jour EN FRANÇAIS avec lien
-    - Section "Daily Tool": présentation d'un nouvel outil EN FRANÇAIS avec lien
-    - Section "Daily Fun Fact": blague ou info insolite tech EN FRANÇAIS 
+    - Section "Daily News": actualité tech importante du jour EN FRANÇAIS avec lien valide
+    - Section "Daily Tool": présentation d'un nouvel outil EN FRANÇAIS avec lien valide
+    - Section "Daily Fun Fact": info insolite tech EN FRANÇAIS (fait réel, pas de blague)
     - CSS intégré pour un rendu professionnel
 
-    TOUT le contenu doit être rédigé en français.
+    TOUT le contenu doit être rédigé en français avec des liens fonctionnels.
   agent: newsletter_editor
   context:
   - recherche_actualite_tech_du_jour

@@ -12,6 +12,11 @@ from wakapedia_daily_news_generator.tools.news_memory_tool import (
     SaveNewsUrlTool,
     ListUsedNewsUrlsTool,
 )
+from wakapedia_daily_news_generator.tools.tool_memory_tool import (
+    CheckToolUrlTool,
+    SaveToolUrlTool,
+    ListUsedToolsUrlsTool,
+)
 
 
 
@@ -42,36 +47,37 @@ class WakapediaDailyNewsGeneratorCrew:
             max_execution_time=None,
             llm=LLM(
                 model="openai/gpt-4o-mini",
-                temperature=0.5,
+                temperature=0.2,
             ),
         )
 
     @agent
     def tech_tool_scout(self) -> Agent:
-        
+
         return Agent(
             config=self.agents_config["tech_tool_scout"],
-            
-            
-            tools=[				SerperDevTool()],
+            tools=[
+                SerperDevTool(),
+                CheckToolUrlTool(),
+                SaveToolUrlTool(),
+                ListUsedToolsUrlsTool(),
+            ],
             reasoning=False,
             max_reasoning_attempts=None,
             inject_date=True,
             allow_delegation=False,
             max_iter=10,
             max_rpm=None,
-            
             max_execution_time=None,
             llm=LLM(
                 model="openai/gpt-4o-mini",
-                temperature=0.5,
+                temperature=0.3,
             ),
-
         )
 
     @agent
     def tech_fact_finder(self) -> Agent:
-        
+
         return Agent(
             config=self.agents_config["tech_fact_finder"],
             tools=[SerperDevTool()],
@@ -83,18 +89,16 @@ class WakapediaDailyNewsGeneratorCrew:
             max_rpm=None,
             max_execution_time=None,
             llm=LLM(
-                model="openai/gpt-4o",
+                model="openai/gpt-4o-mini",
                 temperature=0.3,
             ),
         )
 
     @agent
     def newsletter_editor(self) -> Agent:
-        
+
         return Agent(
             config=self.agents_config["newsletter_editor"],
-            
-            
             tools=[],
             reasoning=False,
             max_reasoning_attempts=None,
@@ -102,13 +106,11 @@ class WakapediaDailyNewsGeneratorCrew:
             allow_delegation=False,
             max_iter=10,
             max_rpm=None,
-            
             max_execution_time=None,
             llm=LLM(
-                model="openai/gpt-4o",
+                model="openai/gpt-4o-mini",
                 temperature=0.3,
             ),
-
         )
 
 
