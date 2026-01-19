@@ -52,7 +52,7 @@ class WakapediaDailyNewsGeneratorCrew:
             max_execution_time=None,
             llm=LLM(
                 model="openai/gpt-4o-mini",
-                temperature=0.5,
+                temperature=0.2,
             ),
         )
 
@@ -75,13 +75,11 @@ class WakapediaDailyNewsGeneratorCrew:
             allow_delegation=False,
             max_iter=10,
             max_rpm=None,
-            
             max_execution_time=None,
             llm=LLM(
                 model="openai/gpt-4o-mini",
-                temperature=0.5,
+                temperature=0.3,
             ),
-
         )
 
     @agent
@@ -103,18 +101,16 @@ class WakapediaDailyNewsGeneratorCrew:
             max_rpm=None,
             max_execution_time=None,
             llm=LLM(
-                model="openai/gpt-4o",
+                model="openai/gpt-4o-mini",
                 temperature=0.3,
             ),
         )
 
     @agent
     def newsletter_editor(self) -> Agent:
-        
+
         return Agent(
             config=self.agents_config["newsletter_editor"],
-            
-            
             tools=[],
             reasoning=False,
             max_reasoning_attempts=None,
@@ -122,13 +118,11 @@ class WakapediaDailyNewsGeneratorCrew:
             allow_delegation=False,
             max_iter=10,
             max_rpm=None,
-            
             max_execution_time=None,
             llm=LLM(
-                model="openai/gpt-4o",
+                model="openai/gpt-4o-mini",
                 temperature=0.3,
             ),
-
         )
 
 
