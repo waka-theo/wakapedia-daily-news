@@ -121,7 +121,7 @@ def create_simple_card(
         "widgets": [
             {
                 "textParagraph": {
-                    "text": "<i>WAKASTELLAR • L'agitateur matinal Tech & Fun</i>"
+                    "text": "<center><i>V1.1 By TH-SQUAD</i></center>"
                 }
             }
         ]
@@ -130,7 +130,7 @@ def create_simple_card(
     # Build header with optional logo
     header = {
         "title": "Wakapedia Daily News",
-        "subtitle": date_str
+        "subtitle": f"L'agitateur de savoir matinal Tech & Fun\n{date_str}"
     }
     
     if logo_url:

@@ -12,10 +12,15 @@ from wakapedia_daily_news_generator.tools.news_memory_tool import (
     SaveNewsUrlTool,
     ListUsedNewsUrlsTool,
 )
-from wakapedia_daily_news_generator.tools.tool_memory_tool import (
-    CheckToolUrlTool,
-    SaveToolUrlTool,
-    ListUsedToolsUrlsTool,
+from wakapedia_daily_news_generator.tools.tools_memory_tool import (
+    CheckToolTool,
+    SaveToolTool,
+    ListUsedToolsTool,
+)
+from wakapedia_daily_news_generator.tools.facts_memory_tool import (
+    CheckFactTool,
+    SaveFactTool,
+    ListUsedFactsTool,
 )
 
 
@@ -56,11 +61,13 @@ class WakapediaDailyNewsGeneratorCrew:
 
         return Agent(
             config=self.agents_config["tech_tool_scout"],
+
+
             tools=[
                 SerperDevTool(),
-                CheckToolUrlTool(),
-                SaveToolUrlTool(),
-                ListUsedToolsUrlsTool(),
+                CheckToolTool(),
+                SaveToolTool(),
+                ListUsedToolsTool(),
             ],
             reasoning=False,
             max_reasoning_attempts=None,
@@ -80,7 +87,12 @@ class WakapediaDailyNewsGeneratorCrew:
 
         return Agent(
             config=self.agents_config["tech_fact_finder"],
-            tools=[SerperDevTool()],
+            tools=[
+                SerperDevTool(),
+                CheckFactTool(),
+                SaveFactTool(),
+                ListUsedFactsTool(),
+            ],
             reasoning=False,
             max_reasoning_attempts=None,
             inject_date=True,

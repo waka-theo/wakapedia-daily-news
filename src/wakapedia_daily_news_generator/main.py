@@ -35,7 +35,11 @@ def extract_content_from_result(result_str: str) -> dict:
         re.IGNORECASE | re.DOTALL
     )
     if news_title_match:
-        content['news_title'] = news_title_match.group(1).strip()
+        news_title = news_title_match.group(1).strip()
+        # Truncate title if too long (max 60 characters)
+        if len(news_title) > 60:
+            news_title = news_title[:57] + '...'
+        content['news_title'] = news_title
 
     # Extract full news paragraph content
     news_content_match = re.search(
@@ -50,7 +54,7 @@ def extract_content_from_result(result_str: str) -> dict:
         content['news_content'] = full_content
         if not content['news_title'] and full_content:
             first_sentence = re.split(r'[.!?]', full_content)[0]
-            content['news_title'] = first_sentence[:80] + ('...' if len(first_sentence) > 80 else '')
+            content['news_title'] = first_sentence[:57] + '...' if len(first_sentence) > 60 else first_sentence
 
     # Extract news link
     news_link_match = re.search(
@@ -68,7 +72,10 @@ def extract_content_from_result(result_str: str) -> dict:
         re.IGNORECASE | re.DOTALL
     )
     if tool_title_match:
-        content['tool_title'] = tool_title_match.group(1).strip()
+        tool_title = tool_title_match.group(1).strip()
+        # Remove "Nom de l'outil :" prefix if present
+        tool_title = re.sub(r"^Nom de l'outil\s*:\s*", '', tool_title, flags=re.IGNORECASE)
+        content['tool_title'] = tool_title
 
     # Extract full tool paragraph content
     tool_content_match = re.search(
