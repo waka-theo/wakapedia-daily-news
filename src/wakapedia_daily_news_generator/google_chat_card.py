@@ -110,7 +110,7 @@ def create_simple_card(
             },
             {
                 "textParagraph": {
-                    "text": f"{fun_content} 🐛"
+                    "text": fun_content
                 }
             }
         ]
@@ -130,7 +130,7 @@ def create_simple_card(
     # Build header with optional logo
     header = {
         "title": "Wakapedia Daily News",
-        "subtitle": f"L'agitateur de savoir matinal Tech & Fun\n{date_str}"
+        "subtitle": date_str
     }
     
     if logo_url:

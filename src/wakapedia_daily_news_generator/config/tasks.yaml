@@ -30,7 +30,8 @@ recherche_actualite_tech_du_jour:
        récemment couverts et éviter de traiter les mêmes thématiques
   expected_output: |
     Un paragraphe concis (3-4 phrases) EN FRANÇAIS présentant l'actualité du jour avec:
-    - Le titre de l'information
+    - Un TITRE COURT (max 50 caractères) accrocheur et informatif qui résume l'essentiel de la news
+      (PAS le début de l'article tronqué, mais un vrai titre rédigé)
     - Une explication claire de pourquoi c'est important
     - Un lien vers la source
     Le contenu DOIT être en français, même si la source est en anglais.
@@ -89,7 +90,7 @@ recherche_fait_insolite_du_jour:
     2. Trouver un FAIT RÉEL intéressant et surprenant
 
     TYPES DE FAITS À CHERCHER:
-    - Bugs célèbres (Y2K, bug Ariane 5, premier bug informatique, etc.)
+    - Bugs célèbres (Y2K, bug Ariane 5, etc.)
     - Easter eggs cachés dans des logiciels ou sites web
     - Origines insolites de noms (pourquoi Python, pourquoi Java, etc.)
     - Anecdotes sur les créateurs de langages ou technologies
@@ -104,9 +105,18 @@ recherche_fait_insolite_du_jour:
 
     Sources - Wikipédia FR/EN, lemondeinformatique.fr, blogs tech, Hacker News,
     Reddit TIL, histoire de l'informatique documentée.
+
+    PROCÉDURE ANTI-DOUBLON OBLIGATOIRE:
+    1. TOUJOURS commencer par utiliser 'list_used_facts' pour voir les faits déjà présentés
+    2. Quand vous trouvez un fait intéressant, utilisez l'outil 'check_fact'
+       avec un résumé court (mots-clés) pour vérifier qu'il n'a pas déjà été présenté
+    3. Si le fait existe déjà, cherchez un autre fait et répétez l'étape 2
+    4. Une fois le fait final validé (non utilisé), utilisez l'outil
+       'save_fact' avec le résumé ET le fait complet pour l'enregistrer en mémoire
   expected_output: |
     Un fait insolite tech EN FRANÇAIS (2-3 phrases maximum) qui surprendra
     et intéressera l'équipe. Le fait doit être RÉEL et documenté.
+    Le fait DOIT avoir été vérifié et sauvegardé via les outils de mémoire.
   agent: tech_fact_finder
 compilation_newsletter_wakapedia_daily_news:
   description: |

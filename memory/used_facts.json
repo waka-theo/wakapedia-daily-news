@@ -1,3 +1,9 @@
 {
-  "facts": []
+  "facts": [
+    {
+      "summary": "premier bug informatique mite papillon 1947 harvard mark ii grace hopper",
+      "full": "Le premier bug informatique documenté remonte à 1947, lorsque des ingénieurs travaillant sur l'ordinateur Mark II à l'Université Harvard ont découvert une mite coincée dans l'un des composants.",
+      "date_used": "2026-01-20T08:00:00"
+    }
+  ]
 }
