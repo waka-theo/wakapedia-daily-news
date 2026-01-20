@@ -10,7 +10,6 @@ import os
 import tempfile
 from datetime import datetime
 from pathlib import Path
-from typing import Type
 
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
@@ -39,7 +38,7 @@ def _load_memory() -> dict:
     """Load memory from JSON file with error handling."""
     _ensure_memory_file_exists()
     try:
-        with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+        with open(MEMORY_FILE, encoding="utf-8") as f:
             data = json.load(f)
             # Validate structure
             if not isinstance(data, dict) or "facts" not in data:
@@ -62,7 +61,7 @@ def _load_memory() -> dict:
 
 def _save_memory(data: dict) -> None:
     """Save memory to JSON file atomically."""
-    _ensure_memory_file_exists()
+    MEMORY_DIR.mkdir(parents=True, exist_ok=True)
     try:
         # Write to temporary file first
         temp_fd, temp_path = tempfile.mkstemp(
@@ -117,7 +116,7 @@ class CheckFactTool(BaseTool):
         "Returns 'OUI' if the fact already exists (to avoid), 'NON' if it's new (OK to use). "
         "ALWAYS use this tool BEFORE selecting a fact to avoid duplicates."
     )
-    args_schema: Type[BaseModel] = CheckFactInput
+    args_schema: type[BaseModel] = CheckFactInput
 
     def _run(self, fact_summary: str) -> str:
         memory = _load_memory()
@@ -158,7 +157,7 @@ class SaveFactTool(BaseTool):
         "ALWAYS use this tool AFTER finalizing the fact choice to avoid "
         "reusing it in future editions."
     )
-    args_schema: Type[BaseModel] = SaveFactInput
+    args_schema: type[BaseModel] = SaveFactInput
 
     def _run(self, fact_summary: str, fact_full: str = "") -> str:
         memory = _load_memory()
@@ -198,7 +197,7 @@ class ListUsedFactsTool(BaseTool):
         "Lists fun facts recently presented in previous newsletters. "
         "Useful to quickly see which facts have already been covered."
     )
-    args_schema: Type[BaseModel] = ListUsedFactsInput
+    args_schema: type[BaseModel] = ListUsedFactsInput
 
     def _run(self, limit: int = 10) -> str:
         memory = _load_memory()

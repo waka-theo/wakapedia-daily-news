@@ -3,8 +3,6 @@
 from datetime import datetime
 from unittest.mock import patch
 
-import pytest
-
 from wakapedia_daily_news_generator.google_chat_card import create_simple_card
 
 
@@ -42,7 +40,7 @@ class TestCreateSimpleCard:
     def test_includes_date_in_subtitle(self):
         """Test that subtitle includes formatted date."""
         with patch("wakapedia_daily_news_generator.google_chat_card.datetime") as mock_dt:
-            mock_dt.now.return_value = datetime(2026, 1, 15)  # Wednesday
+            mock_dt.now.return_value = datetime(2026, 1, 14)  # Wednesday
 
             card = create_simple_card(
                 news_title="News",
@@ -54,7 +52,7 @@ class TestCreateSimpleCard:
 
             subtitle = card["cards"][0]["header"]["subtitle"]
             assert "Mercredi" in subtitle
-            assert "15" in subtitle
+            assert "14" in subtitle
             assert "Janvier" in subtitle
             assert "2026" in subtitle
 

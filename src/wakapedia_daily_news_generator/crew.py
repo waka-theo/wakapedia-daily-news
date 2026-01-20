@@ -4,26 +4,25 @@ Multi-agent system for generating daily tech newsletters.
 """
 
 import logging
-from typing import Any
 
 from crewai import LLM, Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import SerperDevTool
 
+from wakapedia_daily_news_generator.tools.facts_memory_tool import (
+    CheckFactTool,
+    ListUsedFactsTool,
+    SaveFactTool,
+)
 from wakapedia_daily_news_generator.tools.news_memory_tool import (
     CheckNewsUrlTool,
-    SaveNewsUrlTool,
     ListUsedNewsUrlsTool,
+    SaveNewsUrlTool,
 )
 from wakapedia_daily_news_generator.tools.tool_memory import (
     CheckToolUrlTool,
-    SaveToolTool,
     ListUsedToolsTool,
-)
-from wakapedia_daily_news_generator.tools.facts_memory_tool import (
-    CheckFactTool,
-    SaveFactTool,
-    ListUsedFactsTool,
+    SaveToolTool,
 )
 
 logger = logging.getLogger(__name__)

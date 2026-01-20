@@ -13,7 +13,7 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
 import requests
 
@@ -158,7 +158,15 @@ def validate_webhook_url(url: str) -> bool:
     if not url:
         return False
     # Basic validation - must be HTTPS and from Google
-    return url.startswith("https://") and "chat.googleapis.com" in url
+    if not url.startswith("https://"):
+        return False
+    # Extract hostname and validate it's exactly chat.googleapis.com
+    try:
+        from urllib.parse import urlparse
+        parsed = urlparse(url)
+        return parsed.hostname == "chat.googleapis.com"
+    except Exception:
+        return False
 
 
 def send_to_google_chat_card(content: dict[str, str]) -> bool:
@@ -209,7 +217,7 @@ def run_crew_with_retry(inputs: dict[str, Any], max_retries: int = MAX_RETRIES) 
     """
     Run the crew with retry logic and exponential backoff.
     """
-    last_exception: Optional[Exception] = None
+    last_exception: Exception | None = None
 
     for attempt in range(max_retries):
         try:

@@ -4,8 +4,6 @@ import json
 from pathlib import Path
 from unittest.mock import patch
 
-import pytest
-
 
 class TestNewsMemoryTool:
     """Tests for news memory tools."""

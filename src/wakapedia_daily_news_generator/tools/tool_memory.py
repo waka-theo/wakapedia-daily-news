@@ -10,7 +10,6 @@ import os
 import tempfile
 from datetime import datetime
 from pathlib import Path
-from typing import Type
 
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
@@ -36,7 +35,7 @@ def _load_memory() -> dict:
     """Load memory from JSON file with error handling."""
     _ensure_memory_file_exists()
     try:
-        with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+        with open(MEMORY_FILE, encoding="utf-8") as f:
             data = json.load(f)
             # Validate structure
             if not isinstance(data, dict) or "tools" not in data:
@@ -59,7 +58,7 @@ def _load_memory() -> dict:
 
 def _save_memory(data: dict) -> None:
     """Save memory to JSON file atomically."""
-    _ensure_memory_file_exists()
+    MEMORY_DIR.mkdir(parents=True, exist_ok=True)
     try:
         # Write to temporary file first
         temp_fd, temp_path = tempfile.mkstemp(
@@ -108,7 +107,7 @@ class CheckToolUrlTool(BaseTool):
         "Returns 'OUI' if the tool already exists (to avoid), 'NON' if it's new (OK to use). "
         "ALWAYS use this tool BEFORE selecting a tool to avoid duplicates."
     )
-    args_schema: Type[BaseModel] = CheckToolUrlInput
+    args_schema: type[BaseModel] = CheckToolUrlInput
 
     def _run(self, url: str) -> str:
         memory = _load_memory()
@@ -136,7 +135,7 @@ class CheckToolNameTool(BaseTool):
         "Returns 'OUI' if the tool already exists (to avoid), 'NON' if it's new (OK to use). "
         "ALWAYS use this tool BEFORE selecting a tool to avoid duplicates."
     )
-    args_schema: Type[BaseModel] = CheckToolNameInput
+    args_schema: type[BaseModel] = CheckToolNameInput
 
     def _run(self, tool_name: str) -> str:
         memory = _load_memory()
@@ -165,7 +164,7 @@ class SaveToolTool(BaseTool):
         "ALWAYS use this tool AFTER finalizing the tool choice to avoid "
         "reusing it in future editions. Provide both name and URL for best deduplication."
     )
-    args_schema: Type[BaseModel] = SaveToolInput
+    args_schema: type[BaseModel] = SaveToolInput
 
     def _run(self, tool_name: str, tool_url: str = "") -> str:
         memory = _load_memory()
@@ -211,7 +210,7 @@ class ListUsedToolsTool(BaseTool):
         "Lists tools recently presented in previous newsletters. "
         "Useful to quickly see which tools have already been covered."
     )
-    args_schema: Type[BaseModel] = ListUsedToolsInput
+    args_schema: type[BaseModel] = ListUsedToolsInput
 
     def _run(self, limit: int = 10) -> str:
         memory = _load_memory()

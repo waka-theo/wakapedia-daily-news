@@ -1,7 +1,5 @@
 """Tests for content extraction from crew output."""
 
-import pytest
-
 from wakapedia_daily_news_generator.main import (
     extract_content_from_result,
     strip_html_tags,

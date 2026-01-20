@@ -132,11 +132,11 @@ def create_simple_card(
         "title": "Wakapedia Daily News",
         "subtitle": date_str
     }
-    
+
     if logo_url:
         header["imageUrl"] = logo_url
         header["imageStyle"] = "AVATAR"  # "AVATAR" = rond (mieux pour les icônes)
-    
+
     return {
         "cards": [
             {
