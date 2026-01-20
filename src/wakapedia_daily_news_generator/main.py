@@ -374,23 +374,23 @@ def replay(task_id: str) -> None:
         raise
 
 
-def test(n_iterations: int, openai_model_name: str) -> None:
+def test(n_iterations: int, eval_llm: str) -> None:
     """
     Test the crew execution.
 
     Args:
         n_iterations: Number of test iterations.
-        openai_model_name: OpenAI model to use for testing.
+        eval_llm: LLM model string for evaluation (e.g., "openai/gpt-4o-mini").
     """
     inputs = {
         'company_name': 'WAKASTELLAR',
         'email_address': 'wakapedia@wakastellar.com'
     }
     try:
-        logger.info(f"Starting crew test: {n_iterations} iterations, model: {openai_model_name}")
+        logger.info(f"Starting crew test: {n_iterations} iterations, eval_llm: {eval_llm}")
         WakapediaDailyNewsGeneratorCrew().crew().test(
             n_iterations=n_iterations,
-            openai_model_name=openai_model_name,
+            eval_llm=eval_llm,
             inputs=inputs
         )
         logger.info("Test completed successfully")
@@ -464,12 +464,12 @@ def main() -> None:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  %(prog)s run                    Run the newsletter generator
-  %(prog)s run --dry-run          Generate without sending
-  %(prog)s status                 Show system status
-  %(prog)s train 5 model.pkl      Train the crew
-  %(prog)s replay task_123        Replay from a specific task
-  %(prog)s test 3 gpt-4o-mini     Test with a specific model
+  %(prog)s run                              Run the newsletter generator
+  %(prog)s run --dry-run                    Generate without sending
+  %(prog)s status                           Show system status
+  %(prog)s train 5 model.pkl                Train the crew
+  %(prog)s replay task_123                  Replay from a specific task
+  %(prog)s test 3 openai/gpt-4o-mini        Test with evaluation LLM
         """
     )
 
@@ -498,7 +498,7 @@ Examples:
     # Test command
     test_parser = subparsers.add_parser("test", help="Test the crew execution")
     test_parser.add_argument("n_iterations", type=int, help="Number of test iterations")
-    test_parser.add_argument("openai_model_name", help="OpenAI model to use for testing")
+    test_parser.add_argument("eval_llm", help="LLM model for evaluation (e.g., openai/gpt-4o-mini)")
 
     args = parser.parse_args()
 
@@ -511,7 +511,7 @@ Examples:
     elif args.command == "replay":
         replay(args.task_id)
     elif args.command == "test":
-        test(args.n_iterations, args.openai_model_name)
+        test(args.n_iterations, args.eval_llm)
     else:
         parser.print_help()
         sys.exit(1)

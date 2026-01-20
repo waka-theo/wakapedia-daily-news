@@ -4,6 +4,7 @@ Uses Google Chat's Card V1 format for webhook compatibility.
 """
 
 from datetime import datetime
+from typing import Any
 
 
 def create_simple_card(
@@ -12,10 +13,10 @@ def create_simple_card(
     tool_title: str,
     tool_content: str,
     fun_content: str,
-    news_link: str = None,
-    tool_link: str = None,
-    logo_url: str = None
-) -> dict:
+    news_link: str | None = None,
+    tool_link: str | None = None,
+    logo_url: str | None = None
+) -> dict[str, Any]:
     """
     Create a Google Chat Card V1 formatted message for the newsletter.
     This format works with incoming webhooks.
@@ -28,10 +29,10 @@ def create_simple_card(
     date_str = f"{days_fr[today.weekday()]} {today.day} {months_fr[today.month - 1]} {today.year}"
 
     # Build sections
-    sections = []
+    sections: list[dict[str, Any]] = []
 
     # === DAILY NEWS Section ===
-    news_widgets = [
+    news_widgets: list[dict[str, Any]] = [
         {
             "textParagraph": {
                 "text": "<font color=\"#e74c3c\"><b>📰 DAILY NEWS</b></font>"
@@ -66,7 +67,7 @@ def create_simple_card(
     sections.append({"widgets": news_widgets})
 
     # === DAILY TOOL Section ===
-    tool_widgets = [
+    tool_widgets: list[dict[str, Any]] = [
         {
             "textParagraph": {
                 "text": "<font color=\"#27ae60\"><b>🛠 DAILY TOOL</b></font>"

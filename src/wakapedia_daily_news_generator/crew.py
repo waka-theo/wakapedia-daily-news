@@ -4,6 +4,8 @@ Multi-agent system for generating daily tech newsletters.
 """
 
 import logging
+from collections.abc import Sequence
+from typing import Any
 
 from crewai import LLM, Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
@@ -59,6 +61,12 @@ AGENT_CONFIG = {
 @CrewBase
 class WakapediaDailyNewsGeneratorCrew:
     """Wakapedia Daily News Generator crew."""
+
+    # Déclaration des attributs injectés par @CrewBase pour mypy
+    agents_config: dict[str, Any]
+    tasks_config: dict[str, Any]
+    agents: Sequence[Agent]
+    tasks: Sequence[Task]
 
     @agent
     def tech_news_researcher(self) -> Agent:
@@ -158,7 +166,7 @@ class WakapediaDailyNewsGeneratorCrew:
     @task
     def recherche_actualite_tech_du_jour(self) -> Task:
         """Task to research today's tech news."""
-        return Task(
+        return Task(  # type: ignore[call-arg]
             config=self.tasks_config["recherche_actualite_tech_du_jour"],
             markdown=False,
         )
@@ -166,7 +174,7 @@ class WakapediaDailyNewsGeneratorCrew:
     @task
     def decouverte_outil_du_jour(self) -> Task:
         """Task to discover today's tech tool."""
-        return Task(
+        return Task(  # type: ignore[call-arg]
             config=self.tasks_config["decouverte_outil_du_jour"],
             markdown=False,
         )
@@ -174,7 +182,7 @@ class WakapediaDailyNewsGeneratorCrew:
     @task
     def recherche_fait_insolite_du_jour(self) -> Task:
         """Task to find an interesting tech fact."""
-        return Task(
+        return Task(  # type: ignore[call-arg]
             config=self.tasks_config["recherche_fait_insolite_du_jour"],
             markdown=False,
         )
@@ -182,7 +190,7 @@ class WakapediaDailyNewsGeneratorCrew:
     @task
     def compilation_newsletter_wakapedia_daily_news(self) -> Task:
         """Task to compile the final newsletter."""
-        return Task(
+        return Task(  # type: ignore[call-arg]
             config=self.tasks_config["compilation_newsletter_wakapedia_daily_news"],
             markdown=False,
         )
@@ -191,8 +199,8 @@ class WakapediaDailyNewsGeneratorCrew:
     def crew(self) -> Crew:
         """Creates the Wakapedia Daily News Generator crew."""
         return Crew(
-            agents=self.agents,
-            tasks=self.tasks,
+            agents=self.agents,  # type: ignore[arg-type]
+            tasks=self.tasks,  # type: ignore[arg-type]
             process=Process.sequential,
             verbose=True,
             chat_llm=LLM(model=CHAT_MODEL),

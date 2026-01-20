@@ -44,7 +44,7 @@ python -m wakapedia_daily_news_generator.main train <n_iterations> <filename>
 python -m wakapedia_daily_news_generator.main replay <task_id>
 
 # Test the crew
-python -m wakapedia_daily_news_generator.main test <n_iterations> <openai_model_name>
+python -m wakapedia_daily_news_generator.main test <n_iterations> <eval_llm>
 
 # Or use CrewAI CLI
 crewai run
