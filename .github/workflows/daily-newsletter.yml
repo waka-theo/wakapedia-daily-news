@@ -2,10 +2,11 @@ name: Daily Newsletter
 
 on:
   schedule:
-    # Run at 8:00 AM Paris time (UTC+1 in winter, UTC+2 in summer)
-    # Using 7:00 UTC to cover CET (winter time)
-    # Only on weekdays (Monday to Friday)
-    - cron: '0 7 * * 1-5'
+    # Run at 8:00 AM Paris time
+    # Winter time (CET = UTC+1): November-March -> 7:00 UTC
+    - cron: '0 7 * 11,12,1,2,3 1-5'
+    # Summer time (CEST = UTC+2): April-October -> 6:00 UTC
+    - cron: '0 6 * 4,5,6,7,8,9,10 1-5'
   workflow_dispatch:
     # Allow manual trigger with optional test webhook URL
     inputs:
@@ -13,10 +14,20 @@ on:
         description: 'Google Chat Webhook URL (optional, overrides secret for testing)'
         required: false
         type: string
+      dry_run:
+        description: 'Dry run mode (generate but do not send)'
+        required: false
+        type: boolean
+        default: false
+
+# Minimal permissions
+permissions:
+  contents: read
 
 jobs:
   send-newsletter:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     steps:
       - name: Checkout repository
@@ -27,9 +38,21 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Cache UV dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/uv
+            ~/.local/bin/uv
+          key: ${{ runner.os }}-uv-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-uv-
+
       - name: Install UV package manager
         run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
+          if [ ! -f "$HOME/.local/bin/uv" ]; then
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+          fi
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Install dependencies
@@ -40,11 +63,49 @@ jobs:
         run: |
           uv pip install --system -e .
 
+      - name: Validate environment
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+          WEBHOOK_URL: ${{ inputs.webhook_url || secrets.GOOGLE_CHAT_WEBHOOK_URL }}
+          DRY_RUN_MODE: ${{ inputs.dry_run }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::OPENAI_API_KEY secret is not set"
+            exit 1
+          fi
+          if [ -z "$SERPER_API_KEY" ]; then
+            echo "::error::SERPER_API_KEY secret is not set"
+            exit 1
+          fi
+          if [ -z "$WEBHOOK_URL" ] && [ "$DRY_RUN_MODE" != "true" ]; then
+            echo "::warning::GOOGLE_CHAT_WEBHOOK_URL is not set, newsletter will not be sent"
+          fi
+          echo "Environment validation passed"
+
       - name: Run newsletter crew
+        id: newsletter
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
           GOOGLE_CHAT_WEBHOOK_URL: ${{ inputs.webhook_url || secrets.GOOGLE_CHAT_WEBHOOK_URL }}
           NEWSLETTER_LOGO_URL: ${{ secrets.NEWSLETTER_LOGO_URL }}
+          LOG_LEVEL: INFO
+          DRY_RUN_MODE: ${{ inputs.dry_run }}
         run: |
-          python -c "from wakapedia_daily_news_generator.main import run; run()"
+          set -e
+          if [ "$DRY_RUN_MODE" = "true" ]; then
+            python -c "from wakapedia_daily_news_generator.main import run; run(dry_run=True)"
+          else
+            python -c "from wakapedia_daily_news_generator.main import run; run()"
+          fi
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter-logs-${{ github.run_id }}
+          path: |
+            output/
+            archives/
+          retention-days: 7
