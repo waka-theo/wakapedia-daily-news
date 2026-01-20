@@ -55,7 +55,7 @@ jobs:
           pytest tests/ -v --cov=wakapedia_daily_news_generator --cov-report=xml --cov-report=term-missing
 
       - name: Upload coverage report
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           file: ./coverage.xml
           fail_ci_if_error: false
