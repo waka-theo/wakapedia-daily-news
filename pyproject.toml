@@ -19,7 +19,7 @@ classifiers = [
 ]
 
 dependencies = [
-    "crewai[litellm,tools]==1.7.2",
+    "crewai[litellm,tools]==1.8.1",
     "anthropic>=0.40.0",
     "requests>=2.31.0",
 ]
