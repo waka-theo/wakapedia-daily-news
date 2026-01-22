@@ -4,6 +4,16 @@
       "summary": "premier bug informatique mite papillon 1947 harvard mark ii grace hopper",
       "full": "Le premier bug informatique documenté remonte à 1947, lorsque des ingénieurs travaillant sur l'ordinateur Mark II à l'Université Harvard ont découvert une mite coincée dans l'un des composants.",
       "date_used": "2026-01-20T08:00:00"
+    },
+    {
+      "summary": "Easter egg Excel 97 simulateur de vol",
+      "full": "Dans Excel 97, les développeurs ont caché un simulateur de vol entièrement fonctionnel. Pour y accéder, il suffisait de suivre une série d'étapes spécifiques dans le logiciel, révélant ainsi un easter egg surprenant au sein d'une application de tableur.",
+      "date_used": "2026-01-20T17:05:44.435217"
+    },
+    {
+      "summary": "premier bug informatique mite papillon 1947 harvard mark ii grace hopper",
+      "full": "Le terme 'bug' en informatique provient d'un incident survenu en 1947, lorsque des ingénieurs travaillant sur l'ordinateur Mark II à l'Université de Harvard ont trouvé un papillon coincé dans le matériel, provoquant un dysfonctionnement. Cet événement a été documenté par Grace Hopper, qui a collé le papillon dans le journal de bord, marquant ainsi l'origine du terme 'bug' pour désigner une erreur technique.",
+      "date_used": "2026-01-22T08:00:00"
     }
   ]
 }

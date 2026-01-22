@@ -1,3 +1,14 @@
 {
-  "tools": []
+  "tools": [
+    {
+      "name": "Kinsta - Outils de développement web",
+      "url": "https://kinsta.com/fr/blog/outils-developpement-web/",
+      "date_used": "2026-01-20T17:05:22.291702"
+    },
+    {
+      "name": "Outil du jour - O'clock",
+      "url": "https://oclock.io/devenir-developpeur-freelance-en-2026-les-bons-outils",
+      "date_used": "2026-01-22T08:00:00"
+    }
+  ]
 }
