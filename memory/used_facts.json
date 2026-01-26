@@ -19,6 +19,11 @@
       "summary": "origine du terme bug Grace Hopper 1947",
       "full": "Le terme \"bug\" en informatique a été popularisé par Grace Hopper dans les années 1940, lorsqu'un véritable papillon a été trouvé coincé dans un relais de l'ordinateur Harvard Mark II, provoquant une panne. Cet incident a été documenté dans le journal de bord de l'ordinateur, marquant ainsi l'origine du terme \"bug\" pour désigner une erreur technique.",
       "date_used": "2026-01-23T07:28:23.707080"
+    },
+    {
+      "summary": "premier easter egg logiciel 1967 PDP-10",
+      "full": "Le premier Easter egg connu dans un logiciel a été intégré dans la commande 'make' des ordinateurs PDP-10 entre octobre 1967 et octobre 1968. Ce Easter egg a été conçu par les programmeurs pour prouver que le code avait été volé si quelqu'un tentait de le réemballer comme étant le sien.",
+      "date_used": "2026-01-26T07:30:41.884439"
     }
   ]
 }
