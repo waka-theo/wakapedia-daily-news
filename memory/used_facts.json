@@ -24,6 +24,11 @@
       "summary": "premier easter egg logiciel 1967 PDP-10",
       "full": "Le premier Easter egg connu dans un logiciel a été intégré dans la commande 'make' des ordinateurs PDP-10 entre octobre 1967 et octobre 1968. Ce Easter egg a été conçu par les programmeurs pour prouver que le code avait été volé si quelqu'un tentait de le réemballer comme étant le sien.",
       "date_used": "2026-01-26T07:30:41.884439"
+    },
+    {
+      "summary": "bug Therac-25 radiation overdose",
+      "full": "Le bug Therac-25 est l'un des incidents les plus tragiques de l'histoire de l'informatique. Ce logiciel, utilisé pour administrer des traitements de radiothérapie, a causé des surdoses mortelles de radiation à des patients en raison de défauts de programmation. Entre 1985 et 1987, plusieurs patients ont été gravement blessés, et certains sont décédés à cause de ce bug, soulignant l'importance cruciale de la vérification des logiciels dans des applications médicales.",
+      "date_used": "2026-01-27T07:30:06.790968"
     }
   ]
 }
