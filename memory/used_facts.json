@@ -39,6 +39,11 @@
       "summary": "bug Ariane 5 1996",
       "full": "Le 4 juin 1996, la fusée Ariane 5 a explosé 37 secondes après son lancement en raison d'un bug dans son logiciel de contrôle. Ce bug était dû à une conversion de données incorrecte entre deux systèmes, entraînant une surcharge de données. Cet incident a coûté environ 500 millions de dollars et a conduit à des révisions majeures des protocoles de test et de validation dans l'industrie spatiale.",
       "date_used": "2026-01-29T07:41:45.181022"
+    },
+    {
+      "summary": "origine du nom Python langage de programmation Monty Python",
+      "full": "Le langage de programmation Python a été créé par Guido van Rossum à la fin des années 1980 et a été nommé d'après la série télévisée britannique \"Monty Python's Flying Circus\". Van Rossum voulait un nom qui soit à la fois court, unique et un peu mystérieux, et il était fan de l'humour absurde de cette série.",
+      "date_used": "2026-01-30T07:43:18.631681"
     }
   ]
 }
