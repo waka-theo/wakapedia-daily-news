@@ -49,6 +49,11 @@
       "summary": "premier virus informatique Creeper 1971",
       "full": "Le premier virus informatique, nommé \"Creeper\", a été créé en 1971 par un programmeur nommé Bob Thomas. Ce virus infectait le réseau ARPANET et était conçu pour se propager d'un ordinateur à l'autre, affichant le message : \"Je suis Creeper, attrapez-moi si vous le pouvez !\".",
       "date_used": "2026-02-02T07:53:23.606683"
+    },
+    {
+      "summary": "Y2K bug millennium bug",
+      "full": "Le bug de l'an 2000, également connu sous le nom de Y2K, était une préoccupation majeure à l'approche de l'an 2000. Les systèmes informatiques, qui utilisaient souvent un format d'année à deux chiffres, risquaient de mal interpréter la date de transition du 31 décembre 1999 au 1er janvier 2000, ce qui aurait pu entraîner des pannes massives dans divers secteurs. Heureusement, grâce à des efforts de mise à jour et de test, la plupart des problèmes ont été évités.",
+      "date_used": "2026-02-04T07:45:54.814867"
     }
   ]
 }
