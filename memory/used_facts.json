@@ -59,6 +59,11 @@
       "summary": "bug du missile Patriot erreur 404",
       "full": "En 1991, lors de la guerre du Golfe, le système de missiles Patriot a connu un bug qui a conduit à l'échec d'une interception. Une erreur de calcul du temps a causé un retard dans le système, permettant à un missile Scud irakien de frapper une caserne à Dhahran, en Arabie Saoudite, tuant 28 soldats américains. Cet incident est souvent cité comme un exemple tragique des conséquences d'un bug informatique.",
       "date_used": "2026-02-05T07:51:13.117867"
+    },
+    {
+      "summary": "Pentium FDIV bug 1994",
+      "full": "En 1994, le bug FDIV du processeur Intel Pentium a causé des erreurs dans les opérations de division flottante. Ce problème a été découvert lorsque des utilisateurs ont remarqué des résultats incorrects dans des calculs mathématiques, entraînant des pertes financières pour certaines entreprises. Intel a dû rappeler les processeurs affectés, ce qui a coûté des millions de dollars à l'entreprise.",
+      "date_used": "2026-02-10T08:00:21.292307"
     }
   ]
 }
