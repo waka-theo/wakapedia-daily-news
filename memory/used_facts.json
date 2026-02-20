@@ -79,6 +79,11 @@
       "summary": "bug du Thérac 25 1985",
       "full": "Le bug du Thérac 25, survenu entre 1985 et 1987, est l'un des accidents les plus tragiques de l'histoire de l'informatique. Ce système de radiothérapie a causé des surdoses de radiation à plusieurs patients en raison de défauts logiciels, entraînant la mort de trois d'entre eux. Les erreurs de programmation ont conduit à des doses mortelles, soulignant l'importance cruciale de la validation et de la vérification des logiciels dans les systèmes critiques.",
       "date_used": "2026-02-19T07:50:51.519165"
+    },
+    {
+      "summary": "easter eggs in software history",
+      "full": "Les easter eggs, ou œufs de Pâques, sont des fonctionnalités cachées dans des logiciels, souvent ajoutées par les développeurs pour le plaisir. Le premier easter egg documenté a été découvert dans le jeu vidéo Adventure sur Atari en 1980, où les joueurs pouvaient trouver un message secret créditant le programmeur, Warren Robinett, pour son travail.",
+      "date_used": "2026-02-20T07:50:20.121718"
     }
   ]
 }
