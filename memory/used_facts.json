@@ -89,6 +89,11 @@
       "summary": "inventions created simultaneously",
       "full": "Dans l'histoire de la technologie, il existe de nombreux exemples d'inventions qui ont été créées simultanément par différents inventeurs. Par exemple, le téléphone a été breveté par Alexander Graham Bell en 1876, mais un autre inventeur, Elisha Gray, a déposé un brevet pour un appareil similaire le même jour. De même, le calculateur électronique a été développé indépendamment par plusieurs inventeurs dans les années 1940, chacun apportant sa propre contribution à cette technologie révolutionnaire.",
       "date_used": "2026-02-23T07:56:31.582196"
+    },
+    {
+      "summary": "Mariner 1 spacecraft bug 1962",
+      "full": "En 1962, la sonde spatiale Mariner 1 a été perdue à cause d'une erreur de programmation. Un simple symbole manquant dans le code a conduit à une déviation de la trajectoire, rendant la mission impossible. Cet incident a coûté environ 80 millions de dollars et a mis en lumière l'importance cruciale de la vérification des logiciels dans les missions spatiales.",
+      "date_used": "2026-02-24T07:52:03.946911"
     }
   ]
 }
