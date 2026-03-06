@@ -94,6 +94,11 @@
       "summary": "Mariner 1 spacecraft bug 1962",
       "full": "En 1962, la sonde spatiale Mariner 1 a été perdue à cause d'une erreur de programmation. Un simple symbole manquant dans le code a conduit à une déviation de la trajectoire, rendant la mission impossible. Cet incident a coûté environ 80 millions de dollars et a mis en lumière l'importance cruciale de la vérification des logiciels dans les missions spatiales.",
       "date_used": "2026-02-24T07:52:03.946911"
+    },
+    {
+      "summary": "Java programming language name origin Oak tree",
+      "full": "Le langage de programmation Java a été initialement nommé Oak, d'après un chêne qui se trouvait devant le bureau de son créateur, James Gosling. Ce nom a ensuite été changé en Java, inspiré par le café Java, pour refléter une nouvelle identité.",
+      "date_used": "2026-03-06T07:40:04.499563"
     }
   ]
 }
