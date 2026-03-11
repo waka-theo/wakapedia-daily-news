@@ -69,6 +69,11 @@
       "name": "Mago",
       "url": "https://github.com/carthage-software/mago",
       "date_used": "2026-02-19T07:50:34.542074"
+    },
+    {
+      "name": "ChartGPU",
+      "url": "https://github.com/ChartGPU/ChartGPU",
+      "date_used": "2026-03-11T07:45:07.373393"
     }
   ]
 }
