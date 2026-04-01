@@ -110,6 +110,7 @@ jobs:
             echo "No changes to memory files"
           else
             git commit -m "chore: update memory files after newsletter generation"
+            git pull --rebase origin main
             git push
           fi
 
