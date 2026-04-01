@@ -17,6 +17,7 @@ from wakapedia_daily_news_generator.tools.facts_memory_tool import (
     SaveFactTool,
 )
 from wakapedia_daily_news_generator.tools.news_memory_tool import (
+    CheckNewsTitleTool,
     CheckNewsUrlTool,
     ListUsedNewsUrlsTool,
     SaveNewsUrlTool,
@@ -76,6 +77,7 @@ class WakapediaDailyNewsGeneratorCrew:
             config=self.agents_config["tech_news_researcher"],
             tools=[
                 SerperDevTool(),
+                CheckNewsTitleTool(),
                 CheckNewsUrlTool(),
                 SaveNewsUrlTool(),
                 ListUsedNewsUrlsTool(),

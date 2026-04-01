@@ -21,13 +21,17 @@ recherche_actualite_tech_du_jour:
     - Préférer les annonces officielles et les analyses de sources de référence
 
     PROCÉDURE ANTI-DOUBLON OBLIGATOIRE:
-    1. Quand vous trouvez un article intéressant, utilisez l'outil 'check_news_url'
-       avec l'URL pour vérifier qu'il n'a pas déjà été publié
-    2. Si l'URL existe déjà, cherchez un autre article et répétez l'étape 1
-    3. Une fois l'article final validé (URL non utilisée), utilisez l'outil
+    0. TOUJOURS commencer par utiliser 'list_used_news_urls' pour voir les 20 derniers
+       sujets couverts. Identifier les THÈMES récurrents listés en bas et les ÉVITER.
+       Si un thème apparaît 2+ fois, il est INTERDIT de le couvrir à nouveau.
+       Chercher dans un domaine DIFFÉRENT (cybersécurité, open source, DevOps, quantique, etc.)
+    1. Quand vous trouvez un article intéressant, utilisez d'abord 'check_news_title'
+       avec le titre pour vérifier que le THÈME n'a pas déjà été couvert
+    2. Si le thème existe déjà, cherchez un article sur un SUJET DIFFÉRENT et répétez l'étape 1
+    3. Ensuite utilisez 'check_news_url' avec l'URL pour vérifier qu'elle n'a pas été publiée
+    4. Si l'URL existe déjà, cherchez un autre article et répétez l'étape 1
+    5. Une fois l'article final validé (thème ET URL nouveaux), utilisez l'outil
        'save_news_url' avec l'URL ET le titre pour l'enregistrer en mémoire
-    4. Vous pouvez aussi utiliser 'list_used_news_urls' pour voir les sujets
-       récemment couverts et éviter de traiter les mêmes thématiques
   expected_output: |
     Un paragraphe concis (3-4 phrases) EN FRANÇAIS présentant l'actualité du jour avec:
     - Un TITRE COURT (max 50 caractères) accrocheur et informatif qui résume l'essentiel de la news
@@ -106,13 +110,22 @@ recherche_fait_insolite_du_jour:
     Sources - Wikipédia FR/EN, lemondeinformatique.fr, blogs tech, Hacker News,
     Reddit TIL, histoire de l'informatique documentée.
 
+    RÈGLE DE PERTINENCE:
+    - Le fait DOIT être lié à l'informatique ou la technologie
+    - Les coïncidences historiques générales (Lincoln/Kennedy, Titanic/Titan) sont INTERDITES
+    - Privilégier des sujets variés et DIFFÉRENTS de ceux déjà couverts
+
     PROCÉDURE ANTI-DOUBLON OBLIGATOIRE:
     1. TOUJOURS commencer par utiliser 'list_used_facts' pour voir les faits déjà présentés
-    2. Quand vous trouvez un fait intéressant, utilisez l'outil 'check_fact'
+    2. Identifier les THÈMES déjà couverts et les ÉVITER (bugs célèbres, easter eggs, etc.)
+    3. Quand vous trouvez un fait intéressant, utilisez l'outil 'check_fact'
        avec un résumé court (mots-clés) pour vérifier qu'il n'a pas déjà été présenté
-    3. Si le fait existe déjà, cherchez un autre fait et répétez l'étape 2
-    4. Une fois le fait final validé (non utilisé), utilisez l'outil
+    4. Si le résultat indique OUI ou REFUSE, cherchez un fait sur un THÈME COMPLÈTEMENT
+       DIFFÉRENT et répétez l'étape 3
+    5. Une fois le fait final validé (non utilisé), utilisez l'outil
        'save_fact' avec le résumé ET le fait complet pour l'enregistrer en mémoire
+    6. Si 'save_fact' retourne REFUSE, le fait n'a PAS été sauvegardé - cherchez un
+       autre fait sur un thème différent
   expected_output: |
     Un fait insolite tech EN FRANÇAIS (2-3 phrases maximum) qui surprendra
     et intéressera l'équipe. Le fait doit être RÉEL et documenté.

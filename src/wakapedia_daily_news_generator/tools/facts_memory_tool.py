@@ -14,6 +14,10 @@ from pathlib import Path
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
 
+from wakapedia_daily_news_generator.tools.similarity_utils import (
+    calculate_similarity,
+)
+
 logger = logging.getLogger(__name__)
 
 # Path to memory file (at project root)
@@ -23,146 +27,11 @@ MEMORY_FILE = MEMORY_DIR / "used_facts.json"
 # Maximum entries to keep
 MAX_ENTRIES = 90
 
-# Similarity threshold (40% - more strict to catch reformulations)
-SIMILARITY_THRESHOLD = 0.4
+# Similarity threshold (30% - strict enough to catch reformulations)
+SIMILARITY_THRESHOLD = 0.30
 
-# French and English stop words to ignore in similarity calculation
-STOP_WORDS = frozenset([
-    # French
-    "le", "la", "les", "un", "une", "des", "du", "de", "d", "l",
-    "et", "ou", "a", "au", "aux", "en", "dans", "sur", "pour", "par",
-    "avec", "sans", "est", "sont", "été", "était", "ce", "cette", "ces",
-    "qui", "que", "dont", "où", "quand", "comment", "pourquoi",
-    "son", "sa", "ses", "leur", "leurs", "mon", "ma", "mes",
-    "il", "elle", "ils", "elles", "on", "nous", "vous",
-    "plus", "moins", "très", "bien", "aussi", "comme", "ainsi",
-    "premier", "première", "premiers", "premières",
-    "avoir", "être", "fait", "faire", "été",
-    # English
-    "the", "a", "an", "of", "in", "on", "at", "to", "for", "by",
-    "with", "from", "is", "are", "was", "were", "been", "be",
-    "has", "have", "had", "this", "that", "these", "those",
-    "which", "who", "whom", "whose", "when", "where", "why", "how",
-    "first", "one", "two", "three",
-])
-
-# Canonical synonyms - different words that refer to the same concept
-# Maps variants to a canonical form
-SYNONYMS = {
-    # Bug/insect story
-    "mite": "bug_insect",
-    "moth": "bug_insect",
-    "papillon": "bug_insect",
-    "insecte": "bug_insect",
-    # Bug term
-    "bug": "bug_term",
-    "bogue": "bug_term",
-    "erreur": "bug_term",
-    # Grace Hopper
-    "hopper": "grace_hopper",
-    "grace": "grace_hopper",
-    # Harvard Mark II
-    "harvard": "harvard_mark",
-    "mark": "harvard_mark",
-    # Computer terms
-    "ordinateur": "computer",
-    "computer": "computer",
-    "informatique": "computer",
-    "machine": "computer",
-    # Origin/history
-    "origine": "origin",
-    "origin": "origin",
-    "histoire": "origin",
-    "history": "origin",
-    "naissance": "origin",
-    # Year references - grouped by decade
-    "1947": "year_1940s",
-    "1940": "year_1940s",
-    "1940s": "year_1940s",
-    "1990": "year_1990s",
-    "1990s": "year_1990s",
-    "1995": "year_1990s",
-    "1996": "year_1990s",
-    "1997": "year_1990s",
-    "1998": "year_1990s",
-    "1999": "year_1990s",
-    # Easter eggs / hidden features
-    "easter": "easter_egg",
-    "egg": "easter_egg",
-    "caché": "easter_egg",
-    "cache": "easter_egg",
-    "hidden": "easter_egg",
-    "secret": "easter_egg",
-    # Simulators/games
-    "simulateur": "simulator_game",
-    "simulator": "simulator_game",
-    "jeu": "simulator_game",
-    "game": "simulator_game",
-    "vol": "flight_sim",
-    "flight": "flight_sim",
-    # Spreadsheet software
-    "excel": "spreadsheet",
-    "tableur": "spreadsheet",
-    "spreadsheet": "spreadsheet",
-    "calc": "spreadsheet",
-    # Microsoft / Office
-    "microsoft": "microsoft",
-    "office": "microsoft",
-    # Developers
-    "développeur": "developer",
-    "developpeur": "developer",
-    "developer": "developer",
-    "programmeur": "developer",
-    "programmer": "developer",
-    "ingénieur": "developer",
-    "ingenieur": "developer",
-    "engineer": "developer",
-    # Email
-    "email": "email",
-    "mail": "email",
-    "courriel": "email",
-    "courrier": "email",
-    # Network / Internet
-    "internet": "network",
-    "arpanet": "network",
-    "réseau": "network",
-    "reseau": "network",
-    "network": "network",
-    "web": "network",
-    # AI / Machine Learning
-    "intelligence": "ai",
-    "artificielle": "ai",
-    "artificial": "ai",
-    "learning": "ai",
-    "neural": "ai",
-    "neurone": "ai",
-    "deep": "ai",
-    # Programming languages
-    "langage": "programming",
-    "language": "programming",
-    "programmation": "programming",
-    "programming": "programming",
-    "code": "programming",
-    "coder": "programming",
-    # Space / NASA
-    "nasa": "space",
-    "spatial": "space",
-    "space": "space",
-    "apollo": "space",
-    "lune": "space",
-    "moon": "space",
-    "fusée": "space",
-    "rocket": "space",
-    # Cryptography / Security
-    "cryptographie": "crypto",
-    "cryptography": "crypto",
-    "chiffrement": "crypto",
-    "encryption": "crypto",
-    "sécurité": "crypto",
-    "security": "crypto",
-    "hacker": "crypto",
-    "pirate": "crypto",
-}
+# Similarity threshold for full text comparison (slightly higher since full texts share more incidental words)
+FULL_TEXT_SIMILARITY_THRESHOLD = 0.35
 
 
 def _ensure_memory_file_exists() -> None:
@@ -224,57 +93,6 @@ def _save_memory(data: dict) -> None:
         raise
 
 
-def _normalize_keyword(word: str) -> str:
-    """Normalize a keyword by applying synonym mapping."""
-    word = word.lower().strip()
-    # Remove common punctuation
-    word = word.strip(".,;:!?\"'()-")
-    # Apply synonym mapping
-    return SYNONYMS.get(word, word)
-
-
-def _extract_keywords(text: str) -> set[str]:
-    """Extract meaningful keywords from text, removing stop words and normalizing."""
-    words = text.lower().strip().split()
-    keywords = set()
-    for word in words:
-        # Clean punctuation
-        clean_word = word.strip(".,;:!?\"'()-")
-        if not clean_word:
-            continue
-        # Skip stop words
-        if clean_word in STOP_WORDS:
-            continue
-        # Skip very short words (likely not meaningful)
-        if len(clean_word) < 3:
-            continue
-        # Normalize via synonyms
-        normalized = _normalize_keyword(clean_word)
-        keywords.add(normalized)
-    return keywords
-
-
-def _calculate_similarity(text1: str, text2: str) -> float:
-    """Calculate keyword-based similarity between two texts.
-
-    Uses intelligent keyword extraction:
-    - Removes stop words (French and English)
-    - Normalizes synonyms to canonical forms
-    - Uses Jaccard-like similarity with min denominator for better detection
-    """
-    keywords1 = _extract_keywords(text1)
-    keywords2 = _extract_keywords(text2)
-
-    if not keywords1 or not keywords2:
-        return 0.0
-
-    common = keywords1.intersection(keywords2)
-
-    # Use min instead of max for more aggressive duplicate detection
-    # If a short summary shares most keywords with a longer one, it's likely the same topic
-    return len(common) / min(len(keywords1), len(keywords2))
-
-
 class CheckFactInput(BaseModel):
     """Input schema for checking if a fun fact has been presented."""
     fact_summary: str = Field(
@@ -308,13 +126,23 @@ class CheckFactTool(BaseTool):
 
         # Check for similar facts (approximate duplicate detection)
         for entry in used_facts:
-            existing = entry.get("summary", "")
-            similarity = _calculate_similarity(normalized_summary, existing)
+            existing_summary = entry.get("summary", "")
+            similarity = calculate_similarity(normalized_summary, existing_summary)
             if similarity > SIMILARITY_THRESHOLD:
                 return (
-                    f"ATTENTION - Ce fait semble similaire a un fait deja presente "
-                    f"({existing}). Verifiez bien ou cherchez un autre fun fact."
+                    f"OUI - Ce fait est trop similaire a un fait deja presente: "
+                    f"'{existing_summary}'. Cherchez un fun fact sur un THEME COMPLETEMENT DIFFERENT."
                 )
+
+            # Also check against full text if available
+            existing_full = entry.get("full", "")
+            if existing_full:
+                full_similarity = calculate_similarity(normalized_summary, existing_full)
+                if full_similarity > FULL_TEXT_SIMILARITY_THRESHOLD:
+                    return (
+                        f"OUI - Ce fait est trop similaire a un fait deja presente: "
+                        f"'{existing_summary}'. Cherchez un fun fact sur un THEME COMPLETEMENT DIFFERENT."
+                    )
 
         return "NON - Ce fait est nouveau, vous pouvez le presenter."
 
@@ -340,10 +168,32 @@ class SaveFactTool(BaseTool):
         memory = _load_memory()
         normalized_summary = fact_summary.lower().strip()
 
-        # Check if fact already exists
+        # Check if fact already exists (exact match)
         for entry in memory.get("facts", []):
             if entry.get("summary", "").lower().strip() == normalized_summary:
                 return "Fait deja enregistre, pas de doublon cree."
+
+        # Gate: check similarity before allowing save
+        for entry in memory.get("facts", []):
+            existing_summary = entry.get("summary", "")
+
+            # Check summary similarity
+            similarity = calculate_similarity(normalized_summary, existing_summary)
+            if similarity > SIMILARITY_THRESHOLD:
+                return (
+                    f"REFUSE - Ce fait est trop similaire a un fait existant: "
+                    f"'{existing_summary}'. Choisissez un fait sur un THEME COMPLETEMENT DIFFERENT."
+                )
+
+            # Check full text similarity if available
+            existing_full = entry.get("full", "")
+            if fact_full and existing_full:
+                full_similarity = calculate_similarity(fact_full, existing_full)
+                if full_similarity > FULL_TEXT_SIMILARITY_THRESHOLD:
+                    return (
+                        f"REFUSE - Ce fait est trop similaire a un fait existant: "
+                        f"'{existing_summary}'. Choisissez un fait sur un THEME COMPLETEMENT DIFFERENT."
+                    )
 
         # Add new entry
         new_entry = {
@@ -363,7 +213,7 @@ class SaveFactTool(BaseTool):
 
 class ListUsedFactsInput(BaseModel):
     """Input schema for listing presented fun facts."""
-    limit: int = Field(default=10, description="Number of recent facts to display (default: 10)")
+    limit: int = Field(default=15, description="Number of recent facts to display (default: 15)")
 
 
 class ListUsedFactsTool(BaseTool):
@@ -376,7 +226,7 @@ class ListUsedFactsTool(BaseTool):
     )
     args_schema: type[BaseModel] = ListUsedFactsInput
 
-    def _run(self, limit: int = 10) -> str:
+    def _run(self, limit: int = 15) -> str:
         memory = _load_memory()
         facts = memory.get("facts", [])
 

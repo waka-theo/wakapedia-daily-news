@@ -9,6 +9,7 @@ from wakapedia_daily_news_generator.tools.facts_memory_tool import (
     SaveFactTool,
 )
 from wakapedia_daily_news_generator.tools.news_memory_tool import (
+    CheckNewsTitleTool,
     CheckNewsUrlTool,
     ListUsedNewsUrlsTool,
     SaveNewsUrlTool,
@@ -23,6 +24,7 @@ from wakapedia_daily_news_generator.tools.tool_memory import (
 
 __all__ = [
     # News memory tools
+    "CheckNewsTitleTool",
     "CheckNewsUrlTool",
     "SaveNewsUrlTool",
     "ListUsedNewsUrlsTool",

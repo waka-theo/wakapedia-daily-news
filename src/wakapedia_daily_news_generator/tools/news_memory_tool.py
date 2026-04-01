@@ -1,20 +1,30 @@
 """
 Memory tool for news URLs deduplication.
 Prevents republishing the same news articles.
-Includes robust error handling and atomic write operations.
+Includes robust error handling, atomic write operations,
+and title-based similarity detection to avoid covering the same theme.
 """
 
 import json
 import logging
 import os
 import tempfile
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
 
+from wakapedia_daily_news_generator.tools.similarity_utils import (
+    calculate_similarity,
+    extract_keywords,
+)
+
 logger = logging.getLogger(__name__)
+
+# Similarity threshold for news titles (higher than facts because titles are shorter)
+NEWS_TITLE_SIMILARITY_THRESHOLD = 0.5
 
 # Path to memory file (at project root)
 MEMORY_DIR = Path(__file__).parent.parent.parent.parent / "memory"
@@ -116,6 +126,43 @@ class CheckNewsUrlTool(BaseTool):
         return "NON - Cette URL est nouvelle, vous pouvez l'utiliser."
 
 
+class CheckNewsTitleInput(BaseModel):
+    """Input schema for checking if a news title/topic has been covered."""
+    title: str = Field(..., description="The article title to check for topic similarity")
+
+
+class CheckNewsTitleTool(BaseTool):
+    """Tool to check if a news topic has already been covered."""
+
+    name: str = "check_news_title"
+    description: str = (
+        "Checks if an article TOPIC has already been covered in a previous newsletter. "
+        "Provide the article title. Returns 'OUI' if a similar topic was already covered "
+        "(even from a different source). Use this BEFORE check_news_url to avoid "
+        "covering the same theme from different sources."
+    )
+    args_schema: type[BaseModel] = CheckNewsTitleInput
+
+    def _run(self, title: str) -> str:
+        memory = _load_memory()
+        used_urls = memory.get("urls", [])
+
+        for entry in used_urls:
+            existing_title = entry.get("title", "")
+            if not existing_title:
+                continue
+            similarity = calculate_similarity(title, existing_title)
+            if similarity > NEWS_TITLE_SIMILARITY_THRESHOLD:
+                date = entry.get("date_used", "")[:10]
+                return (
+                    f"OUI - Ce theme a deja ete couvert: "
+                    f"'{existing_title}' ({date}). "
+                    f"Cherchez un article sur un THEME DIFFERENT."
+                )
+
+        return "NON - Ce theme est nouveau, vous pouvez continuer avec check_news_url."
+
+
 class SaveNewsUrlInput(BaseModel):
     """Input schema for saving a used URL."""
     url: str = Field(..., description="The article URL to save")
@@ -142,6 +189,20 @@ class SaveNewsUrlTool(BaseTool):
             if _normalize_url(entry.get("url", "")) == normalized_url:
                 return "URL deja enregistree, pas de doublon cree."
 
+        # Gate: check title similarity before allowing save
+        for entry in memory.get("urls", []):
+            existing_title = entry.get("title", "")
+            if not existing_title:
+                continue
+            similarity = calculate_similarity(title, existing_title)
+            if similarity > NEWS_TITLE_SIMILARITY_THRESHOLD:
+                date = entry.get("date_used", "")[:10]
+                return (
+                    f"REFUSE - Ce theme a deja ete couvert: "
+                    f"'{existing_title}' ({date}). "
+                    f"Cherchez un article sur un THEME COMPLETEMENT DIFFERENT."
+                )
+
         # Add new entry
         new_entry = {
             "url": url,
@@ -160,7 +221,7 @@ class SaveNewsUrlTool(BaseTool):
 
 class ListUsedNewsUrlsInput(BaseModel):
     """Input schema for listing used URLs."""
-    limit: int = Field(default=10, description="Number of recent URLs to display (default: 10)")
+    limit: int = Field(default=20, description="Number of recent URLs to display (default: 20)")
 
 
 class ListUsedNewsUrlsTool(BaseTool):
@@ -169,11 +230,12 @@ class ListUsedNewsUrlsTool(BaseTool):
     name: str = "list_used_news_urls"
     description: str = (
         "Lists article URLs recently used in previous newsletters. "
-        "Useful to quickly see which topics have already been covered."
+        "Useful to quickly see which topics have already been covered "
+        "and identify recurring themes to AVOID."
     )
     args_schema: type[BaseModel] = ListUsedNewsUrlsInput
 
-    def _run(self, limit: int = 10) -> str:
+    def _run(self, limit: int = 20) -> str:
         memory = _load_memory()
         urls = memory.get("urls", [])
 
@@ -188,5 +250,20 @@ class ListUsedNewsUrlsTool(BaseTool):
             date = entry.get("date_used", "date inconnue")[:10]
             title = entry.get("title", "Sans titre")
             result += f"- [{date}] {title}\n"
+
+        # Add theme frequency summary
+        all_keywords: list[str] = []
+        for entry in urls:
+            title = entry.get("title", "")
+            if title:
+                all_keywords.extend(extract_keywords(title))
+
+        if all_keywords:
+            theme_counts = Counter(all_keywords)
+            top_themes = theme_counts.most_common(5)
+            result += "\n--- THEMES LES PLUS FREQUENTS (a eviter) ---\n"
+            for theme, count in top_themes:
+                if count >= 2:
+                    result += f"- '{theme}' : {count} fois\n"
 
         return result
