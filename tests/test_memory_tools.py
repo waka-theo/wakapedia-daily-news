@@ -162,9 +162,11 @@ class TestNewsMemoryTool:
 
     def test_save_news_url_limits_entries(self, temp_memory_dir: Path):
         """Test that memory is limited to MAX_ENTRIES."""
-        # Create memory with 90 entries
+        # Create memory with 90 entries (unique titles to avoid similarity gate)
+        topics = ["cybersecurite", "quantique", "blockchain", "robotique", "cloud",
+                  "devops", "mobile", "gaming", "biotech", "fintech"]
         urls = [
-            {"url": f"https://example.com/{i}", "title": f"Article {i}", "date_used": "2026-01-01T00:00:00"}
+            {"url": f"https://example.com/{i}", "title": f"{topics[i % len(topics)]} innovation {i}", "date_used": "2026-01-01T00:00:00"}
             for i in range(90)
         ]
         memory_file = temp_memory_dir / "used_news_urls.json"
@@ -180,7 +182,7 @@ class TestNewsMemoryTool:
             from wakapedia_daily_news_generator.tools.news_memory_tool import SaveNewsUrlTool
 
             tool = SaveNewsUrlTool()
-            tool._run("https://new-article.com", "New Article")
+            tool._run("https://new-article.com", "Nouvelle decouverte spatiale historique")
 
             data = json.loads(memory_file.read_text())
             assert len(data["urls"]) == 90
