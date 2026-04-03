@@ -144,6 +144,11 @@
       "summary": "coincidences in tech history",
       "full": "Il existe des coïncidences étonnantes dans l'histoire de la technologie. Par exemple, le fait que les deux premiers ordinateurs personnels, l'Apple I et l'Altair 8800, aient été lancés presque simultanément en 1975, a marqué le début d'une révolution informatique. De même, les tragédies du Titanic et du Titan, un paquebot fictif, présentent des similitudes frappantes, notamment le fait que les deux navires étaient considérés comme insubmersibles.",
       "date_used": "2026-03-27T08:01:29.430373"
+    },
+    {
+      "summary": "Knight Capital Group trading glitch 2012",
+      "full": "En 2012, une erreur de logiciel chez Knight Capital Group a causé une perte de 440 millions de dollars en seulement 45 minutes. Un technicien avait oublié de copier le nouveau code sur un serveur, ce qui a entraîné une série de transactions erronées. Cette situation a presque conduit la société à la faillite, soulignant l'impact dévastateur que peut avoir un bug dans le secteur financier.",
+      "date_used": "2026-04-03T07:21:27.135906"
     }
   ]
 }
