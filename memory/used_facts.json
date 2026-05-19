@@ -11,16 +11,6 @@
       "date_used": "2026-01-20T17:05:44.435217"
     },
     {
-      "summary": "premier bug informatique mite papillon 1947 harvard mark ii grace hopper",
-      "full": "Le terme 'bug' en informatique provient d'un incident survenu en 1947, lorsque des ingénieurs travaillant sur l'ordinateur Mark II à l'Université de Harvard ont trouvé un papillon coincé dans le matériel, provoquant un dysfonctionnement. Cet événement a été documenté par Grace Hopper, qui a collé le papillon dans le journal de bord, marquant ainsi l'origine du terme 'bug' pour désigner une erreur technique.",
-      "date_used": "2026-01-22T08:00:00"
-    },
-    {
-      "summary": "origine du terme bug Grace Hopper 1947",
-      "full": "Le terme \"bug\" en informatique a été popularisé par Grace Hopper dans les années 1940, lorsqu'un véritable papillon a été trouvé coincé dans un relais de l'ordinateur Harvard Mark II, provoquant une panne. Cet incident a été documenté dans le journal de bord de l'ordinateur, marquant ainsi l'origine du terme \"bug\" pour désigner une erreur technique.",
-      "date_used": "2026-01-23T07:28:23.707080"
-    },
-    {
       "summary": "premier easter egg logiciel 1967 PDP-10",
       "full": "Le premier Easter egg connu dans un logiciel a été intégré dans la commande 'make' des ordinateurs PDP-10 entre octobre 1967 et octobre 1968. Ce Easter egg a été conçu par les programmeurs pour prouver que le code avait été volé si quelqu'un tentait de le réemballer comme étant le sien.",
       "date_used": "2026-01-26T07:30:41.884439"
@@ -76,16 +66,6 @@
       "date_used": "2026-02-16T07:56:19.718583"
     },
     {
-      "summary": "bug du Thérac 25 1985",
-      "full": "Le bug du Thérac 25, survenu entre 1985 et 1987, est l'un des accidents les plus tragiques de l'histoire de l'informatique. Ce système de radiothérapie a causé des surdoses de radiation à plusieurs patients en raison de défauts logiciels, entraînant la mort de trois d'entre eux. Les erreurs de programmation ont conduit à des doses mortelles, soulignant l'importance cruciale de la validation et de la vérification des logiciels dans les systèmes critiques.",
-      "date_used": "2026-02-19T07:50:51.519165"
-    },
-    {
-      "summary": "easter eggs in software history",
-      "full": "Les easter eggs, ou œufs de Pâques, sont des fonctionnalités cachées dans des logiciels, souvent ajoutées par les développeurs pour le plaisir. Le premier easter egg documenté a été découvert dans le jeu vidéo Adventure sur Atari en 1980, où les joueurs pouvaient trouver un message secret créditant le programmeur, Warren Robinett, pour son travail.",
-      "date_used": "2026-02-20T07:50:20.121718"
-    },
-    {
       "summary": "inventions created simultaneously",
       "full": "Dans l'histoire de la technologie, il existe de nombreux exemples d'inventions qui ont été créées simultanément par différents inventeurs. Par exemple, le téléphone a été breveté par Alexander Graham Bell en 1876, mais un autre inventeur, Elisha Gray, a déposé un brevet pour un appareil similaire le même jour. De même, le calculateur électronique a été développé indépendamment par plusieurs inventeurs dans les années 1940, chacun apportant sa propre contribution à cette technologie révolutionnaire.",
       "date_used": "2026-02-23T07:56:31.582196"
@@ -126,24 +106,9 @@
       "date_used": "2026-03-19T07:48:47.341533"
     },
     {
-      "summary": "Titanic and Titan coincidence",
-      "full": "Le Titanic, qui a coulé en 1912, et le Titan, un paquebot fictif décrit dans le roman de Morgan Robertson \"Futility\" publié en 1898, partagent des coïncidences troublantes. Les deux navires étaient décrits comme \"insubmersibles\" et ont tous deux fait naufrage après avoir heurté un iceberg. Cette coïncidence a suscité de nombreuses discussions sur le destin et la prémonition.",
-      "date_used": "2026-03-23T08:03:32.685737"
-    },
-    {
-      "summary": "Lincoln Kennedy coincidences",
-      "full": "Il existe de nombreuses coïncidences fascinantes entre Abraham Lincoln et John F. Kennedy. Par exemple, Lincoln a été élu au Congrès en 1846, tandis que Kennedy a été élu en 1946. Tous deux ont été élus à la présidence en 1860 et 1960 respectivement. De plus, Lincoln a été abattu dans un théâtre, et Kennedy a été abattu en voiture. Ces similitudes ont suscité de nombreuses discussions et théories au fil des ans.",
-      "date_used": "2026-03-25T07:54:18.531174"
-    },
-    {
       "summary": "Soviet gas pipeline bug 1982",
       "full": "En 1982, un bug logiciel a provoqué l'explosion d'un gazoduc soviétique. Ce bug, causé par une modification non autorisée du code, a entraîné une surpression dans le système, provoquant une énorme explosion qui a été décrite comme l'un des pires accidents industriels de l'histoire.",
       "date_used": "2026-03-26T08:03:08.991921"
-    },
-    {
-      "summary": "coincidences in tech history",
-      "full": "Il existe des coïncidences étonnantes dans l'histoire de la technologie. Par exemple, le fait que les deux premiers ordinateurs personnels, l'Apple I et l'Altair 8800, aient été lancés presque simultanément en 1975, a marqué le début d'une révolution informatique. De même, les tragédies du Titanic et du Titan, un paquebot fictif, présentent des similitudes frappantes, notamment le fait que les deux navires étaient considérés comme insubmersibles.",
-      "date_used": "2026-03-27T08:01:29.430373"
     },
     {
       "summary": "Knight Capital Group trading glitch 2012",

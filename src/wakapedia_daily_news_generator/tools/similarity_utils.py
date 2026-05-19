@@ -3,6 +3,8 @@ Shared similarity utilities for content deduplication.
 Used by news, tools, and facts memory modules.
 """
 
+import unicodedata
+
 # French and English stop words to ignore in similarity calculation
 STOP_WORDS = frozenset([
     # French
@@ -208,9 +210,17 @@ SYNONYMS = {
 }
 
 
+def _remove_accents(text: str) -> str:
+    """Remove diacritical marks so 'Thérac' matches 'Therac'."""
+    return ''.join(
+        c for c in unicodedata.normalize('NFD', text)
+        if unicodedata.category(c) != 'Mn'
+    )
+
+
 def normalize_keyword(word: str) -> str:
     """Normalize a keyword by applying synonym mapping."""
-    word = word.lower().strip()
+    word = _remove_accents(word.lower().strip())
     word = word.strip(".,;:!?\"'()-")
     return SYNONYMS.get(word, word)
 
@@ -221,10 +231,14 @@ MEANINGFUL_SHORT_WORDS = frozenset(["ia", "ai", "ux", "ui", "ci", "cd", "qa"])
 
 def extract_keywords(text: str) -> set[str]:
     """Extract meaningful keywords from text, removing stop words and normalizing."""
-    words = text.lower().strip().split()
+    text = _remove_accents(text.lower().strip())
+    # Split on spaces then on hyphens so "therac-25" → ["therac", "25"]
+    raw_words: list[str] = []
+    for word in text.split():
+        raw_words.extend(word.split('-'))
     keywords = set()
-    for word in words:
-        clean_word = word.strip(".,;:!?\"'()-")
+    for word in raw_words:
+        clean_word = word.strip(".,;:!?\"'()")
         if not clean_word:
             continue
         if clean_word in STOP_WORDS:

@@ -10,6 +10,7 @@ import os
 import tempfile
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
@@ -22,6 +23,13 @@ MEMORY_FILE = MEMORY_DIR / "used_tools.json"
 
 # Maximum entries to keep
 MAX_ENTRIES = 90
+
+# URL path fragments that indicate a blog post / list article rather than a real tool page
+BLOG_URL_PATTERNS = (
+    "/blog/", "/tendances", "/top-", "/meilleurs", "/best-",
+    "/outils-", "/tools-", "/awesome-", "/trends", "/liste-",
+    "/classement", "/comparatif", "/guide-", "/tutoriel",
+)
 
 
 def _ensure_memory_file_exists() -> None:
@@ -91,6 +99,20 @@ def _normalize_url(url: str) -> str:
 def _normalize_name(name: str) -> str:
     """Normalize tool name for comparison."""
     return name.lower().strip()
+
+
+def _extract_domain(url: str) -> str:
+    """Return the netloc (domain) of a URL, lowercased."""
+    try:
+        return urlparse(url.lower().strip()).netloc
+    except Exception:
+        return ""
+
+
+def _is_blog_url(url: str) -> bool:
+    """Return True if the URL looks like a blog post / list article."""
+    lower = url.lower()
+    return any(pattern in lower for pattern in BLOG_URL_PATTERNS)
 
 
 class CheckToolUrlInput(BaseModel):
@@ -167,11 +189,20 @@ class SaveToolTool(BaseTool):
     args_schema: type[BaseModel] = SaveToolInput
 
     def _run(self, tool_name: str, tool_url: str = "") -> str:
+        # Bloc 1 : rejeter les URLs de type blog/liste
+        if tool_url and _is_blog_url(tool_url):
+            return (
+                "REFUSE - L'URL fournie ressemble à un article de blog ou une liste d'outils. "
+                "Fournissez l'URL OFFICIELLE de l'outil (page d'accueil, repo GitHub, fiche Product Hunt). "
+                "Exemple valide : https://github.com/auteur/outil ou https://monoutil.com"
+            )
+
         memory = _load_memory()
         normalized_name = _normalize_name(tool_name)
         normalized_url = _normalize_url(tool_url) if tool_url else ""
+        new_domain = _extract_domain(tool_url) if tool_url else ""
 
-        # Check if already exists (by name or URL)
+        # Check if already exists (by name, URL, or domain)
         for entry in memory.get("tools", []):
             entry_name = entry.get("name", "")
             entry_url = entry.get("url", "")
@@ -180,12 +211,21 @@ class SaveToolTool(BaseTool):
                 return "Outil deja enregistre (meme nom), pas de doublon cree."
             if normalized_url and entry_url and _normalize_url(entry_url) == normalized_url:
                 return "Outil deja enregistre (meme URL), pas de doublon cree."
+            # Domain check: same domain = likely the same site
+            if new_domain and entry_url:
+                entry_domain = _extract_domain(entry_url)
+                if entry_domain and entry_domain == new_domain:
+                    return (
+                        f"ATTENTION - Le domaine '{new_domain}' a déjà été utilisé "
+                        f"(outil précédent : '{entry_name}'). "
+                        "Cherchez un outil hébergé sur un domaine différent."
+                    )
 
         # Add new entry
         new_entry = {
             "name": tool_name,
             "url": tool_url,
-            "date_used": datetime.now().isoformat()
+            "date_used": datetime.now().isoformat(),
         }
         memory["tools"].append(new_entry)
 

@@ -66,20 +66,27 @@ decouverte_outil_du_jour:
     - Cas d'usage concret pour une équipe de développement
     - Éviter les outils abandonnés (vérifier la date du dernier commit/mise à jour)
 
+    RÈGLE URL OBLIGATOIRE:
+    - L'URL sauvegardée DOIT être la page OFFICIELLE de l'outil :
+      page d'accueil du produit, repo GitHub, fiche Product Hunt, ou page BetaList.
+    - NE JAMAIS sauvegarder une URL d'article de blog, de liste d'outils, de rapport de tendances,
+      ou d'URL contenant /blog/, /tendances/, /top-, /meilleurs, /best-, /outils-, /awesome-.
+    - Un outil = une URL unique pointant vers CE seul outil, pas une collection.
+
     PROCÉDURE ANTI-DOUBLON OBLIGATOIRE:
-    1. Quand vous trouvez un outil intéressant, utilisez l'outil 'check_tool_url'
-       avec l'URL pour vérifier qu'il n'a pas déjà été présenté
-    2. Si l'URL existe déjà, cherchez un autre outil et répétez l'étape 1
-    3. Une fois l'outil final validé (URL non utilisée), utilisez l'outil
-       'save_tool_url' avec l'URL ET le nom pour l'enregistrer en mémoire
-    4. Vous pouvez aussi utiliser 'list_used_tools_urls' pour voir les outils
-       récemment présentés et éviter les répétitions
+    1. TOUJOURS commencer par utiliser 'list_used_tools_urls' pour voir les outils récents
+    2. Quand vous trouvez un outil intéressant, utilisez l'outil 'check_tool_url'
+       avec l'URL officielle pour vérifier qu'il n'a pas déjà été présenté
+    3. Si l'URL ou le domaine existe déjà, cherchez un autre outil et répétez l'étape 2
+    4. Une fois l'outil final validé (URL non utilisée), utilisez l'outil
+       'save_tool_url' avec l'URL officielle ET le nom pour l'enregistrer en mémoire
+    5. Si 'save_tool_url' retourne REFUSE ou ATTENTION, cherchez un outil différent
   expected_output: |
     Une description concise (2-3 phrases) EN FRANÇAIS incluant:
     - Le nom de l'outil
     - Ce qu'il fait concrètement
     - Pourquoi il est utile/innovant
-    - Un lien vers le site ou la documentation
+    - Un lien vers le site OFFICIEL ou le repo GitHub (pas un article de blog)
     Rester bref et impactant. Contenu obligatoirement en français.
     L'URL DOIT avoir été vérifiée et sauvegardée via les outils de mémoire.
   agent: tech_tool_scout
@@ -93,13 +100,22 @@ recherche_fait_insolite_du_jour:
     Reddit TIL, histoire de l'informatique documentée.)
     2. Trouver un FAIT RÉEL intéressant et surprenant
 
-    TYPES DE FAITS À CHERCHER:
-    - Bugs célèbres (Y2K, bug Ariane 5, etc.)
-    - Easter eggs cachés dans des logiciels ou sites web
-    - Origines insolites de noms (pourquoi Python, pourquoi Java, etc.)
-    - Anecdotes sur les créateurs de langages ou technologies
-    - Records absurdes du monde tech
-    - Coïncidences ou faits historiques surprenants
+    CATÉGORIES DISPONIBLES (rotation obligatoire):
+    - bugs        : bugs et erreurs logicielles célèbres (Y2K, Ariane 5, Therac-25…)
+    - easter_eggs : œufs de Pâques cachés dans des logiciels ou jeux
+    - origins     : origines insolites de noms (Python, Java, Bluetooth…)
+    - records     : records absurdes du monde tech (plus grand, plus vieux, plus rapide…)
+    - inventions  : inventions accidentelles ou simultanées
+    - pioneers    : anecdotes sur les pionniers de l'informatique
+    - security    : hacks, virus, failles célèbres (Creeper, Morris Worm…)
+    - other       : tout autre fait tech insolite
+
+    RÈGLE DE ROTATION OBLIGATOIRE:
+    - AVANT de chercher, utilisez 'list_used_facts' et identifiez les CATÉGORIES RECOMMANDÉES
+      (les moins utilisées, affichées en bas de la liste).
+    - Vous DEVEZ chercher un fait dans l'une des catégories recommandées.
+    - Si les 2-3 dernières éditions ont utilisé 'bugs', cherchez dans 'records', 'pioneers',
+      'inventions', 'security' ou 'other' — pas dans 'bugs' ni 'easter_eggs'.
 
     RÈGLES CRITIQUES:
     - UNIQUEMENT des faits RÉELS et VÉRIFIABLES
@@ -110,22 +126,24 @@ recherche_fait_insolite_du_jour:
     Sources - Wikipédia FR/EN, lemondeinformatique.fr, blogs tech, Hacker News,
     Reddit TIL, histoire de l'informatique documentée.
 
-    RÈGLE DE PERTINENCE:
+    RÈGLE DE PERTINENCE ABSOLUE:
     - Le fait DOIT être lié à l'informatique ou la technologie
-    - Les coïncidences historiques générales (Lincoln/Kennedy, Titanic/Titan) sont INTERDITES
+    - Les coïncidences historiques générales (Lincoln/Kennedy, Titanic/Titan, etc.)
+      sont STRICTEMENT INTERDITES et seront REFUSÉES automatiquement par le système
     - Privilégier des sujets variés et DIFFÉRENTS de ceux déjà couverts
 
     PROCÉDURE ANTI-DOUBLON OBLIGATOIRE:
     1. TOUJOURS commencer par utiliser 'list_used_facts' pour voir les faits déjà présentés
-    2. Identifier les THÈMES déjà couverts et les ÉVITER (bugs célèbres, easter eggs, etc.)
+       ET identifier la catégorie recommandée (affichée en bas)
+    2. Chercher un fait dans la catégorie recommandée — NE PAS choisir une catégorie déjà saturée
     3. Quand vous trouvez un fait intéressant, utilisez l'outil 'check_fact'
        avec un résumé court (mots-clés) pour vérifier qu'il n'a pas déjà été présenté
     4. Si le résultat indique OUI ou REFUSE, cherchez un fait sur un THÈME COMPLÈTEMENT
-       DIFFÉRENT et répétez l'étape 3
+       DIFFÉRENT dans une autre catégorie et répétez l'étape 3
     5. Une fois le fait final validé (non utilisé), utilisez l'outil
-       'save_fact' avec le résumé ET le fait complet pour l'enregistrer en mémoire
+       'save_fact' avec le résumé, le fait complet ET la catégorie pour l'enregistrer en mémoire
     6. Si 'save_fact' retourne REFUSE, le fait n'a PAS été sauvegardé - cherchez un
-       autre fait sur un thème différent
+       autre fait sur un thème différent dans une catégorie différente
   expected_output: |
     Un fait insolite tech EN FRANÇAIS (2-3 phrases maximum) qui surprendra
     et intéressera l'équipe. Le fait doit être RÉEL et documenté.

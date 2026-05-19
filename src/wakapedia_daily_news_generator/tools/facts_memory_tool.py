@@ -16,6 +16,7 @@ from pydantic import BaseModel, Field
 
 from wakapedia_daily_news_generator.tools.similarity_utils import (
     calculate_similarity,
+    extract_keywords,
 )
 
 logger = logging.getLogger(__name__)
@@ -27,11 +28,20 @@ MEMORY_FILE = MEMORY_DIR / "used_facts.json"
 # Maximum entries to keep
 MAX_ENTRIES = 90
 
-# Similarity threshold (30% - strict enough to catch reformulations)
-SIMILARITY_THRESHOLD = 0.30
+# Similarity threshold — raised to catch same-topic reformulations across languages/accents
+SIMILARITY_THRESHOLD = 0.45
 
-# Similarity threshold for full text comparison (slightly higher since full texts share more incidental words)
-FULL_TEXT_SIMILARITY_THRESHOLD = 0.35
+# Full-text similarity threshold
+FULL_TEXT_SIMILARITY_THRESHOLD = 0.50
+
+# Canonical categories for fun facts — used for rotation tracking
+FACT_CATEGORIES = frozenset([
+    "bugs", "easter_eggs", "origins", "records",
+    "inventions", "pioneers", "security", "other",
+])
+
+# Keywords whose presence in a fact marks it as off-topic (non-tech historical coincidences)
+FORBIDDEN_KEYWORD_CANONICAL = frozenset(["titanic_story", "lincoln_kennedy"])
 
 
 def _ensure_memory_file_exists() -> None:
@@ -151,6 +161,13 @@ class SaveFactInput(BaseModel):
     """Input schema for saving a presented fun fact."""
     fact_summary: str = Field(..., description="A short summary of the fact to identify it")
     fact_full: str = Field(default="", description="The complete fact (optional)")
+    category: str = Field(
+        default="other",
+        description=(
+            "Category of the fact. Must be one of: "
+            "bugs, easter_eggs, origins, records, inventions, pioneers, security, other"
+        ),
+    )
 
 
 class SaveFactTool(BaseTool):
@@ -164,7 +181,16 @@ class SaveFactTool(BaseTool):
     )
     args_schema: type[BaseModel] = SaveFactInput
 
-    def _run(self, fact_summary: str, fact_full: str = "") -> str:
+    def _run(self, fact_summary: str, fact_full: str = "", category: str = "other") -> str:
+        # Bloc 1 : rejeter les faits hors-sujet (coïncidences historiques non-informatiques)
+        summary_keywords = extract_keywords(fact_summary)
+        forbidden_hits = summary_keywords & FORBIDDEN_KEYWORD_CANONICAL
+        if forbidden_hits:
+            return (
+                "REFUSE - Ce fait est hors-sujet (coïncidence historique non-informatique). "
+                "Cherchez un fait STRICTEMENT lié à l'informatique ou la technologie."
+            )
+
         memory = _load_memory()
         normalized_summary = fact_summary.lower().strip()
 
@@ -195,11 +221,17 @@ class SaveFactTool(BaseTool):
                         f"'{existing_summary}'. Choisissez un fait sur un THEME COMPLETEMENT DIFFERENT."
                     )
 
+        # Normalise category
+        normalised_category = category.lower().strip()
+        if normalised_category not in FACT_CATEGORIES:
+            normalised_category = "other"
+
         # Add new entry
         new_entry = {
             "summary": fact_summary,
             "full": fact_full,
-            "date_used": datetime.now().isoformat()
+            "category": normalised_category,
+            "date_used": datetime.now().isoformat(),
         }
         memory["facts"].append(new_entry)
 
@@ -240,6 +272,25 @@ class ListUsedFactsTool(BaseTool):
         for entry in recent:
             date = entry.get("date_used", "date inconnue")[:10]
             summary = entry.get("summary", "Sans resume")
-            result += f"- [{date}] {summary}\n"
+            cat = entry.get("category", "other")
+            result += f"- [{date}] [{cat}] {summary}\n"
 
+        # Category count across ALL stored facts
+        counts: dict[str, int] = {}
+        for entry in facts:
+            cat = entry.get("category", "other")
+            counts[cat] = counts.get(cat, 0) + 1
+
+        result += "\n--- Répartition par catégorie (total mémoire) ---\n"
+        for cat in sorted(FACT_CATEGORIES):
+            n = counts.get(cat, 0)
+            result += f"  {cat}: {n}\n"
+
+        # Suggest the least-used categories
+        least_used = sorted(FACT_CATEGORIES, key=lambda c: counts.get(c, 0))[:3]
+        result += (
+            "\nCATÉGORIES RECOMMANDÉES (les moins utilisées, à privilégier) : "
+            + ", ".join(least_used)
+            + "\n"
+        )
         return result
