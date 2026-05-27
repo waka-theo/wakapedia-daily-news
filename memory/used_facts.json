@@ -172,6 +172,12 @@
       "full": "Une cloche électrique expérimentale à l'Université d'Oxford, en Angleterre, sonne presque en continu depuis 185 ans. Alimentée par deux piles sèches, elle est considérée comme l'un des plus anciens appareils électriques encore en fonctionnement. Ce record insolite témoigne des avancées technologiques et de la durabilité des inventions du XIXe siècle.",
       "category": "records",
       "date_used": "2026-05-26T10:11:46.790343"
+    },
+    {
+      "summary": "Morris Worm 1988",
+      "full": "Le Morris Worm, lancé en 1988 par Robert Tappan Morris, est considéré comme le premier ver informatique à se propager sur Internet. Il a infecté environ 6 000 ordinateurs, soit 10% des machines connectées à l'époque, et a causé des millions de dollars de dommages. Ce ver a mis en lumière les vulnérabilités des systèmes informatiques et a conduit à une prise de conscience accrue de la cybersécurité.",
+      "category": "security",
+      "date_used": "2026-05-27T10:09:53.481958"
     }
   ]
 }
