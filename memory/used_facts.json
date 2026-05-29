@@ -178,6 +178,12 @@
       "full": "Le Morris Worm, lancé en 1988 par Robert Tappan Morris, est considéré comme le premier ver informatique à se propager sur Internet. Il a infecté environ 6 000 ordinateurs, soit 10% des machines connectées à l'époque, et a causé des millions de dollars de dommages. Ce ver a mis en lumière les vulnérabilités des systèmes informatiques et a conduit à une prise de conscience accrue de la cybersécurité.",
       "category": "security",
       "date_used": "2026-05-27T10:09:53.481958"
+    },
+    {
+      "summary": "transistor invention 1947 Bell Labs",
+      "full": "Le transistor, inventé en 1947 par John Bardeen, Walter Brattain et William Shockley aux Bell Labs, a révolutionné l'électronique. Cet appareil a remplacé les tubes à vide, permettant de miniaturiser les appareils électroniques et de réduire leur consommation d'énergie, ouvrant la voie à l'ère des ordinateurs modernes et des dispositifs portables.",
+      "category": "inventions",
+      "date_used": "2026-05-29T10:08:48.257392"
     }
   ]
 }
