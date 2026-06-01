@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.leparisien.fr/high-tech/baisse-de-8-des-visites-comment-wikipedia-compte-resister-a-la-deferlante-ia-15-01-2026-UOZJUIJK6ZCG5PXHXPYI7PRREM.php",
-      "title": "Baisse de 8 % des visites : comment Wikipédia compte résister à la déferlante IA",
-      "date_used": "2026-01-15T10:35:28.372922"
-    },
-    {
       "url": "https://leerosportnews.com/nvidia-investissements-ai/",
       "title": "Nvidia booste ses investissements IA en janvier 2026",
       "date_used": "2026-01-15T10:44:12.021201"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/saas-software-as-a-service-86.html",
       "title": "Wimi obtient le label SecNumCloud pour sa plateforme SaaS",
       "date_used": "2026-05-29T10:08:10.293401"
+    },
+    {
+      "url": "https://www.globalsecuritymag.fr/infosecurity-europe-revient-du-2-au-4-juin-2026-les-strategies-europeennes-de.html",
+      "title": "Infosecurity Europe revient du 2 au 4 juin 2026",
+      "date_used": "2026-06-01T11:49:58.893262"
     }
   ]
 }
