@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://leerosportnews.com/nvidia-investissements-ai/",
-      "title": "Nvidia booste ses investissements IA en janvier 2026",
-      "date_used": "2026-01-15T10:44:12.021201"
-    },
-    {
       "url": "https://fr.euronews.com/2026/01/20/ia-a-davos-2026-du-travail-a-une-ia-utile-et-sure-ce-quen-disent-les-dirigeants-de-la-tech",
       "title": "IA à Davos 2026 : visions des dirigeants de la tech",
       "date_used": "2026-01-20T17:05:04.865885"
@@ -449,6 +444,11 @@
       "url": "https://www.globalsecuritymag.fr/infosecurity-europe-revient-du-2-au-4-juin-2026-les-strategies-europeennes-de.html",
       "title": "Infosecurity Europe revient du 2 au 4 juin 2026",
       "date_used": "2026-06-01T11:49:58.893262"
+    },
+    {
+      "url": "https://www.techniques-ingenieur.fr/actualite/",
+      "title": "La cryptographie post-quantique se prépare à contrer les attaques...",
+      "date_used": "2026-06-02T10:49:02.667302"
     }
   ]
 }
