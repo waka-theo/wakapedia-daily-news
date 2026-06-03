@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://fr.euronews.com/2026/01/20/ia-a-davos-2026-du-travail-a-une-ia-utile-et-sure-ce-quen-disent-les-dirigeants-de-la-tech",
-      "title": "IA à Davos 2026 : visions des dirigeants de la tech",
-      "date_used": "2026-01-20T17:05:04.865885"
-    },
-    {
       "url": "https://itchannel.info/articles/208504/lia-agentique-sapprete-a-gerer-95-des-interactions-clients-en-2026.html",
       "title": "L'IA agentique s'apprête à gérer 95 % des interactions clients en 2026",
       "date_used": "2026-01-22T08:00:00"
@@ -449,6 +444,11 @@
       "url": "https://www.techniques-ingenieur.fr/actualite/",
       "title": "La cryptographie post-quantique se prépare à contrer les attaques...",
       "date_used": "2026-06-02T10:49:02.667302"
+    },
+    {
+      "url": "https://www.france-epargne.fr/news/souverainete-numerique-bruxelles-devoile-un-plan-pour-reduire-la-dependance-technologique-de-leurope",
+      "title": "Souveraineté numérique : le plan de Bruxelles dévoilé",
+      "date_used": "2026-06-03T11:16:15.236107"
     }
   ]
 }
