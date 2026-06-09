@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.placeco.fr/nouvelle-aquitaine/ecosysteme/article/village-by-ca-deux-rendez-vous-pour-transformer-lia-en-levier-economique-9411",
-      "title": "Village by CA : Deux rendez-vous pour transformer l'IA",
-      "date_used": "2026-01-27T07:29:36.629981"
-    },
-    {
       "url": "https://www.polarastudio.fr/blog/marche-saas-2026-tendances-ia-et-chiffres-cles",
       "title": "Marché SaaS 2026 : Tendances, IA et Chiffres Clés",
       "date_used": "2026-01-28T07:28:01.247897"
@@ -449,6 +444,11 @@
       "url": "https://www.clubic.com/actualites-informatique/",
       "title": "Actualités High-Tech : dernières innovations et tendances",
       "date_used": "2026-06-08T11:11:02.311899"
+    },
+    {
+      "url": "https://www.techniques-ingenieur.fr/actualite/articles/ces-2026-quand-linnovation-se-passe-dintelligence-artificielle-ou-presque-154889/",
+      "title": "CES 2026 : quand l'innovation se passe d'intelligence artificielle (ou presque)",
+      "date_used": "2026-06-09T09:57:54.392888"
     }
   ]
 }
