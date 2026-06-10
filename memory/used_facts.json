@@ -202,6 +202,12 @@
       "full": "En 1942, le chimiste Harry Coover a accidentellement inventé la super glue (ou cyanoacrylate) alors qu'il travaillait sur des matériaux pour des viseurs d'arme. Bien que le produit ait été initialement considéré comme un échec, il a été redécouvert plus tard et commercialisé, devenant l'un des adhésifs les plus populaires au monde.",
       "category": "inventions",
       "date_used": "2026-06-09T09:58:30.603735"
+    },
+    {
+      "summary": "Ada Lovelace first computer program",
+      "full": "Ada Lovelace, souvent considérée comme la première programmeuse au monde, a écrit le premier algorithme destiné à être exécuté par une machine, le moteur analytique de Charles Babbage, dans les années 1840. Son travail visionnaire a jeté les bases de la programmation moderne.",
+      "category": "pioneers",
+      "date_used": "2026-06-10T10:16:10.212003"
     }
   ]
 }
