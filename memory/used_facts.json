@@ -208,6 +208,12 @@
       "full": "Ada Lovelace, souvent considérée comme la première programmeuse au monde, a écrit le premier algorithme destiné à être exécuté par une machine, le moteur analytique de Charles Babbage, dans les années 1840. Son travail visionnaire a jeté les bases de la programmation moderne.",
       "category": "pioneers",
       "date_used": "2026-06-10T10:16:10.212003"
+    },
+    {
+      "summary": "longest continuously operating electronic computer",
+      "full": "Le plus ancien ordinateur électronique encore en fonctionnement est le 'Zuse Z3', construit par Konrad Zuse en 1941. Cependant, le titre du plus ancien ordinateur électronique en fonctionnement est souvent attribué à l'ENIAC, qui a été mis en service en 1945 et a fonctionné jusqu'en 1955. Il est remarquable non seulement pour sa longévité, mais aussi pour son rôle dans le développement de l'informatique moderne.",
+      "category": "records",
+      "date_used": "2026-06-12T10:25:42.588010"
     }
   ]
 }
