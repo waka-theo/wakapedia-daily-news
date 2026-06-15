@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.ouest-france.fr/high-tech/intelligence-artificielle/avec-cedric-villani-le-30-janvier-une-journee-pour-tout-comprendre-sur-lia-a-luniversite-bretagne-sud-de-vannes-e9a26d92-f83d-11f0-bcbd-01f0839eab22",
-      "title": "Journée IA à l'Université Bretagne Sud avec Villani",
-      "date_used": "2026-01-30T07:41:50.331088"
-    },
-    {
       "url": "https://mdp-data.com/data-act-et-solutions-saas-quels-impacts-concrets-pour-les-clients-et-les-editeurs/",
       "title": "Data Act et solutions SaaS : impacts concrets pour éditeurs",
       "date_used": "2026-02-02T07:51:42.528213"
@@ -449,6 +444,11 @@
       "url": "https://www.futura-sciences.com/tech/actualites/technologie-vivatech-2026-coeur-innovation-transformation-numerique-confiance-tech-134474/",
       "title": "VivaTech 2026 : au cœur de l'innovation numérique",
       "date_used": "2026-06-12T10:25:04.919456"
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/ai-to-reshape-the-global-technology-landscape-in-2026-says-trendforce-302626789.html",
+      "title": "L'IA redéfinira le paysage technologique mondial en 2026",
+      "date_used": "2026-06-15T12:33:22.681835"
     }
   ]
 }
