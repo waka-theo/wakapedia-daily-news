@@ -214,6 +214,12 @@
       "full": "Le plus ancien ordinateur électronique encore en fonctionnement est le 'Zuse Z3', construit par Konrad Zuse en 1941. Cependant, le titre du plus ancien ordinateur électronique en fonctionnement est souvent attribué à l'ENIAC, qui a été mis en service en 1945 et a fonctionné jusqu'en 1955. Il est remarquable non seulement pour sa longévité, mais aussi pour son rôle dans le développement de l'informatique moderne.",
       "category": "records",
       "date_used": "2026-06-12T10:25:42.588010"
+    },
+    {
+      "summary": "Marriott International Data Breach 2018",
+      "full": "En 2018, Marriott International a subi une violation de données massive qui a commencé en 2014, exposant les informations personnelles d'environ 500 millions de clients. Parmi ces données, 327 millions de numéros de passeport ont été compromis, ce qui en fait l'une des plus grandes violations de données de l'histoire.",
+      "category": "security",
+      "date_used": "2026-06-16T11:26:40.411794"
     }
   ]
 }

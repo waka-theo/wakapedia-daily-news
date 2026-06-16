@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://mdp-data.com/data-act-et-solutions-saas-quels-impacts-concrets-pour-les-clients-et-les-editeurs/",
-      "title": "Data Act et solutions SaaS : impacts concrets pour éditeurs",
-      "date_used": "2026-02-02T07:51:42.528213"
-    },
-    {
       "url": "https://intelligence-artificielle.com/ia-provoque-fin-modele-saas-traditionnel/",
       "title": "L'IA provoque la fin du modèle SaaS traditionnel",
       "date_used": "2026-02-03T07:44:16.572060"
@@ -449,6 +444,11 @@
       "url": "https://www.prnewswire.com/news-releases/ai-to-reshape-the-global-technology-landscape-in-2026-says-trendforce-302626789.html",
       "title": "L'IA redéfinira le paysage technologique mondial en 2026",
       "date_used": "2026-06-15T12:33:22.681835"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/open-source-et-logiciels-libres-69.html",
+      "title": "La Cnaf contribue au projet open source Catala de l'Inria.",
+      "date_used": "2026-06-16T11:26:07.161782"
     }
   ]
 }
