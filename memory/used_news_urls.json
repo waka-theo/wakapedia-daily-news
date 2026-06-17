@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://intelligence-artificielle.com/ia-provoque-fin-modele-saas-traditionnel/",
-      "title": "L'IA provoque la fin du modèle SaaS traditionnel",
-      "date_used": "2026-02-03T07:44:16.572060"
-    },
-    {
       "url": "https://www.lesnumeriques.com/intelligence-artificielle/panne-majeure-de-chatgpt-ce-que-l-on-sait-du-black-out-en-cours-n250982.html",
       "title": "Panne majeure de ChatGPT : ce que l'on sait",
       "date_used": "2026-02-04T07:45:17.333188"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/open-source-et-logiciels-libres-69.html",
       "title": "La Cnaf contribue au projet open source Catala de l'Inria.",
       "date_used": "2026-06-16T11:26:07.161782"
+    },
+    {
+      "url": "https://www.zdnet.fr/",
+      "title": "ZDNET - Actualité, business et technologies pour les professionne ...",
+      "date_used": "2026-06-17T11:10:08.329832"
     }
   ]
 }
