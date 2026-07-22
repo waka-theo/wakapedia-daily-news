@@ -77,17 +77,17 @@ ignore = [
 known-first-party = ["wakapedia_daily_news_generator"]
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.12"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = false
 ignore_missing_imports = true
 
-# numpy (transitive dep) ships stubs using 3.12-only `type` statements which
-# break mypy targeting 3.10 on the CI's Python 3.12. Skip analysing numpy.
+# CI runs mypy on Python 3.12. numpy (transitive via crewai) ships stubs using
+# 3.12-only `type` statements; targeting 3.12 lets mypy parse them, and we
+# ignore numpy-internal stub errors so they never fail our own type check.
 [[tool.mypy.overrides]]
-module = ["numpy.*"]
-follow_imports = "skip"
+module = ["numpy", "numpy.*"]
 ignore_errors = true
 
 [tool.pytest.ini_options]
