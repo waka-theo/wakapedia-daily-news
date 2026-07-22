@@ -83,6 +83,13 @@ warn_unused_configs = true
 disallow_untyped_defs = false
 ignore_missing_imports = true
 
+# numpy (transitive dep) ships stubs using 3.12-only `type` statements which
+# break mypy targeting 3.10 on the CI's Python 3.12. Skip analysing numpy.
+[[tool.mypy.overrides]]
+module = ["numpy.*"]
+follow_imports = "skip"
+ignore_errors = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
