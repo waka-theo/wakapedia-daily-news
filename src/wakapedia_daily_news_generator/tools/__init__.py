@@ -14,6 +14,7 @@ from wakapedia_daily_news_generator.tools.news_memory_tool import (
     ListUsedNewsUrlsTool,
     SaveNewsUrlTool,
 )
+from wakapedia_daily_news_generator.tools.rss_feed_tool import RssFeedTool
 from wakapedia_daily_news_generator.tools.tool_memory import (
     CheckToolNameTool,
     CheckToolTool,  # Alias for CheckToolNameTool
@@ -38,4 +39,6 @@ __all__ = [
     "CheckFactTool",
     "SaveFactTool",
     "ListUsedFactsTool",
+    # RSS feed tool
+    "RssFeedTool",
 ]

@@ -77,11 +77,73 @@ FALLBACK_FACTS = [
 MAX_RETRIES = 3
 RETRY_DELAY_BASE = 4  # seconds
 
+# Patterns that reveal an LLM "refusal" / apology instead of real content.
+# If any is found in a section, we treat the section as failed and fall back.
+REFUSAL_PATTERNS = re.compile(
+    r"je ne peux pas fournir"
+    r"|je ne suis pas en mesure"
+    r"|je n['e ]ai pas (?:acc[eè]s|d['e ]information)"
+    r"|malheureusement,? je"
+    r"|je vous recommande de consulter"
+    r"|je vous invite à consulter"
+    r"|en tant qu[e']? (?:ia|intelligence artificielle|mod[eè]le)"
+    r"|as an ai"
+    r"|i (?:cannot|can't|am unable|am not able)"
+    r"|language model"
+    r"|i (?:do not|don't) have access",
+    re.IGNORECASE,
+)
+
 
 def strip_html_tags(text: str) -> str:
     """Remove HTML tags from text."""
     clean = re.sub(r'<[^>]+>', '', text)
     return clean.strip()
+
+
+def strip_markdown_fences(text: str) -> str:
+    """
+    Clean LLM output: remove markdown code fences (```html / ```) and any
+    trailing commentary the model appended after the HTML document.
+    """
+    cleaned = text.strip()
+    # Remove standalone code-fence lines anywhere (```html, ```)
+    cleaned = re.sub(r'(?m)^\s*```[a-zA-Z]*\s*$', '', cleaned)
+    # If it is a full HTML document, drop anything after the closing </html>
+    match = re.search(r'</html\s*>', cleaned, re.IGNORECASE)
+    if match:
+        cleaned = cleaned[: match.end()]
+    return cleaned.strip()
+
+
+def looks_like_refusal(text: str) -> bool:
+    """Return True if the text looks like an LLM apology/refusal instead of content."""
+    if not text:
+        return False
+    return bool(REFUSAL_PATTERNS.search(text))
+
+
+def rss_fallback(category: str) -> dict[str, str]:
+    """
+    Build a clean fallback section from the RSS feed when an agent failed
+    (empty output or refusal). Returns {title, content, link}; empty on failure.
+    """
+    try:
+        from wakapedia_daily_news_generator.tools.rss_feed_tool import (
+            get_recent_entries,
+        )
+
+        entries = get_recent_entries(category, max_days=7, limit=1)
+        if entries:
+            entry = entries[0]
+            return {
+                "title": entry["title"][:60],
+                "content": f"{entry['title']} (source: {entry['source']}).",
+                "link": entry["url"],
+            }
+    except Exception as e:
+        logger.warning(f"RSS fallback failed for {category}: {e}")
+    return {"title": "", "content": "", "link": ""}
 
 
 def extract_content_from_result(result_str: str) -> dict[str, str]:
@@ -284,7 +346,7 @@ def run(dry_run: bool = False) -> Any:
         # Could add notification here (email, Slack, etc.)
         raise
 
-    result_str = str(result)
+    result_str = strip_markdown_fences(str(result))
 
     # Extract content from the result
     content = extract_content_from_result(result_str)
@@ -295,19 +357,31 @@ def run(dry_run: bool = False) -> Any:
     logger.info(f"  tool_title: {content['tool_title']}" if content['tool_title'] else "  tool_title: EMPTY")
     logger.info(f"  fun_content: {content['fun_content'][:50]}..." if content['fun_content'] else "  fun_content: EMPTY")
 
-    # Apply fallbacks if extraction failed
-    if not content['news_content']:
-        logger.warning("News content extraction failed, using fallback")
-        content['news_title'] = "Actualite tech du jour"
-        content['news_content'] = "Consultez les dernieres actualites tech."
+    # Apply fallbacks if extraction failed OR the agent produced a refusal/apology.
+    if not content['news_content'] or looks_like_refusal(content['news_content']):
+        logger.warning("News content missing or refusal detected, using RSS fallback")
+        fallback = rss_fallback("news")
+        if fallback['content']:
+            content['news_title'] = fallback['title']
+            content['news_content'] = fallback['content']
+            content['news_link'] = fallback['link']
+        else:
+            content['news_title'] = "Actualite tech du jour"
+            content['news_content'] = "Consultez les dernieres actualites tech."
 
-    if not content['tool_content']:
-        logger.warning("Tool content extraction failed, using fallback")
-        content['tool_title'] = "Outil du jour"
-        content['tool_content'] = "Decouvrez de nouveaux outils."
+    if not content['tool_content'] or looks_like_refusal(content['tool_content']):
+        logger.warning("Tool content missing or refusal detected, using RSS fallback")
+        fallback = rss_fallback("tools")
+        if fallback['content']:
+            content['tool_title'] = fallback['title']
+            content['tool_content'] = fallback['content']
+            content['tool_link'] = fallback['link']
+        else:
+            content['tool_title'] = "Outil du jour"
+            content['tool_content'] = "Decouvrez de nouveaux outils."
 
-    if not content['fun_content']:
-        logger.warning("Fun fact content extraction failed, using fallback")
+    if not content['fun_content'] or looks_like_refusal(content['fun_content']):
+        logger.warning("Fun fact content missing or refusal detected, using fallback")
         # Use a real tech fact, NOT a joke
         content['fun_content'] = random.choice(FALLBACK_FACTS)
 

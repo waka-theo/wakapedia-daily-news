@@ -2,11 +2,24 @@
 recherche_actualite_tech_du_jour:
   description: |
     Rechercher et identifier l'actualité technologique la plus importante et pertinente
-    PUBLIÉE AUJOURD'HUI (date actuelle) dans les domaines de l'intelligence artificielle,
+    PUBLIÉE DURANT LES 7 DERNIERS JOURS dans les domaines de l'intelligence artificielle,
     du développement informatique, et de l'édition de logiciels SaaS.
 
+    SOURCE PRIORITAIRE - FLUX RSS:
+    - COMMENCEZ TOUJOURS par utiliser l'outil 'fetch_news_feed' pour obtenir une liste
+      d'articles RÉELS et DATÉS des 7 derniers jours (TechCrunch, The Verge, Ars Technica,
+      VentureBeat, LeMagIT, Le Monde Informatique, Hacker News, InfoQ).
+    - Choisissez votre actualité PARMI ces articles réels. N'utilisez Serper QUE pour
+      compléter, vérifier ou approfondir un article trouvé dans le flux.
+
+    RÈGLE ANTI-ABANDON (CRITIQUE):
+    - Il est ABSOLUMENT INTERDIT d'écrire un message d'excuse, de dire que vous ne pouvez
+      pas fournir d'actualité, ou de renvoyer le lecteur vers d'autres sites.
+    - Le flux RSS fournit toujours des articles réels et récents : vous DEVEZ retourner
+      une actualité concrète avec un titre, une explication et un lien valide.
+
     IMPORTANT:
-    - Chercher des actualités datées du jour actuel uniquement
+    - Chercher des actualités des 7 derniers jours (privilégier les plus récentes)
     - Utiliser la date du jour dans vos recherches (ex: "actualité IA janvier 2026")
     - Éviter les articles génériques ou intemporels
     - Privilégier les annonces, lancements, levées de fonds, ou découvertes récentes
@@ -32,6 +45,12 @@ recherche_actualite_tech_du_jour:
     4. Si l'URL existe déjà, cherchez un autre article et répétez l'étape 1
     5. Une fois l'article final validé (thème ET URL nouveaux), utilisez l'outil
        'save_news_url' avec l'URL ET le titre pour l'enregistrer en mémoire
+
+    DÉDUPLICATION SOUPLE (pour ne JAMAIS abandonner):
+    - Si, après avoir parcouru le flux RSS, tous les articles récents semblent proches
+      d'un thème déjà couvert, choisissez malgré tout le plus pertinent des 7 derniers
+      jours (en variant l'angle ou le domaine) PLUTÔT QUE DE NE RIEN RENDRE.
+    - Ne jamais préférer une excuse à une actualité imparfaite mais réelle.
   expected_output: |
     Un paragraphe concis (3-4 phrases) EN FRANÇAIS présentant l'actualité du jour avec:
     - Un TITRE COURT (max 50 caractères) accrocheur et informatif qui résume l'essentiel de la news
@@ -45,6 +64,21 @@ decouverte_outil_du_jour:
   description: |
     Découvrir et présenter un nouvel outil technologique intéressant et PEU CONNU
     pour l'équipe de développement.
+
+    SOURCE PRIORITAIRE - FLUX RSS:
+    - COMMENCEZ TOUJOURS par utiliser l'outil 'fetch_tools_feed' pour obtenir une liste
+      de NOUVEAUX outils/produits récemment lancés (Product Hunt, Show HN, BetaList,
+      Hacker News). C'est la meilleure source pour proposer un outil DIFFÉRENT chaque jour.
+    - Choisissez votre outil PARMI ces nouveautés réelles ; utilisez Serper uniquement
+      pour compléter la description ou retrouver l'URL officielle.
+
+    RÈGLE ANTI-RÉPÉTITION (CRITIQUE):
+    - VARIEZ IMPÉRATIVEMENT la CATÉGORIE d'un jour à l'autre : IA, DevOps, base de données,
+      sécurité, productivité développeur, no-code, data, observabilité, CLI, design, etc.
+    - Ne proposez PAS un outil du même type que les jours précédents (consultez d'abord
+      'list_used_tools_urls' pour voir ce qui a déjà été présenté).
+    - Il est INTERDIT d'écrire un message d'excuse : le flux RSS fournit toujours des
+      nouveautés, vous DEVEZ présenter un outil concret.
 
     IMPORTANT:
     - ÉVITER les outils très populaires (GitHub, VS Code, Docker, Notion, Slack, Figma, Jira, etc.)
@@ -95,10 +129,23 @@ recherche_fait_insolite_du_jour:
     TROUVER un fait insolite, une anecdote méconnue ou un événement
     historique surprenant du monde de l'informatique et de la technologie.
 
+    SOURCE PRIORITAIRE - FLUX RSS:
+    - COMMENCEZ par utiliser l'outil 'fetch_facts_feed' pour vous inspirer d'articles
+      d'histoire tech RÉELS et VARIÉS (This Day in Tech History fournit un fait daté
+      DIFFÉRENT chaque jour ; Computer History Museum, Ars Technica, The Register).
+    - Complétez avec Serper et vos connaissances pour vérifier et rédiger le fait.
+
     PROCÉDURE OBLIGATOIRE:
     1. Rechercher sur des sites français et anglais (Wikipédia FR/EN, blogs tech, Le Monde Informatique, Hacker News,
     Reddit TIL, histoire de l'informatique documentée.)
     2. Trouver un FAIT RÉEL intéressant et surprenant
+
+    DIVERSITÉ OBLIGATOIRE - SORTIR DES EASTER EGGS:
+    - Les faits récents ont trop souvent tourné autour des EASTER EGGS. C'est INTERDIT
+      de choisir la catégorie 'easter_eggs' si elle apparaît dans les faits récents.
+    - Vous DEVEZ choisir une des catégories RECOMMANDÉES (les moins utilisées) affichées
+      en bas de 'list_used_facts' : privilégiez pioneers, records, inventions, security,
+      origins, bugs ou other AVANT easter_eggs.
 
     CATÉGORIES DISPONIBLES (rotation obligatoire):
     - bugs        : bugs et erreurs logicielles célèbres (Y2K, Ariane 5, Therac-25…)

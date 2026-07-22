@@ -22,6 +22,7 @@ from wakapedia_daily_news_generator.tools.news_memory_tool import (
     ListUsedNewsUrlsTool,
     SaveNewsUrlTool,
 )
+from wakapedia_daily_news_generator.tools.rss_feed_tool import RssFeedTool
 from wakapedia_daily_news_generator.tools.tool_memory import (
     CheckToolUrlTool,
     ListUsedToolsTool,
@@ -76,6 +77,7 @@ class WakapediaDailyNewsGeneratorCrew:
         return Agent(
             config=self.agents_config["tech_news_researcher"],
             tools=[
+                RssFeedTool(category="news"),
                 SerperDevTool(),
                 CheckNewsTitleTool(),
                 CheckNewsUrlTool(),
@@ -102,6 +104,7 @@ class WakapediaDailyNewsGeneratorCrew:
         return Agent(
             config=self.agents_config["tech_tool_scout"],
             tools=[
+                RssFeedTool(category="tools"),
                 SerperDevTool(),
                 CheckToolUrlTool(),
                 SaveToolTool(),
@@ -127,6 +130,7 @@ class WakapediaDailyNewsGeneratorCrew:
         return Agent(
             config=self.agents_config["tech_fact_finder"],
             tools=[
+                RssFeedTool(category="facts"),
                 SerperDevTool(),
                 CheckFactTool(),
                 SaveFactTool(),
