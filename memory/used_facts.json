@@ -220,6 +220,12 @@
       "full": "En 2018, Marriott International a subi une violation de données massive qui a commencé en 2014, exposant les informations personnelles d'environ 500 millions de clients. Parmi ces données, 327 millions de numéros de passeport ont été compromis, ce qui en fait l'une des plus grandes violations de données de l'histoire.",
       "category": "security",
       "date_used": "2026-06-16T11:26:40.411794"
+    },
+    {
+      "summary": "Intel founded 1968",
+      "full": "Intel a été fondée le 18 juillet 1968 par Robert Noyce et Gordon Moore, deux pionniers de l'industrie des semi-conducteurs. Cette entreprise est devenue célèbre pour avoir développé le premier microprocesseur commercial, le 4004, en 1971, marquant ainsi le début de l'ère des ordinateurs personnels.",
+      "category": "pioneers",
+      "date_used": "2026-07-23T08:41:04.477641"
     }
   ]
 }
