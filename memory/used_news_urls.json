@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.informatiquenews.fr/databricks-leve-a-nouveau-et-repense-le-saas-a-lere-de-lia-109405",
-      "title": "Databricks lève à nouveau et repense le SaaS à l'ère de l'IA",
-      "date_used": "2026-02-11T07:56:28.657989"
-    },
-    {
       "url": "https://www.decideo.fr/MyReport-annonce-une-nouvelle-gouvernance-et-accelere-sa-bascule-vers-un-modele-SaaS-et-100-recurrent_a14546.html",
       "title": "MyReport annonce une nouvelle gouvernance SaaS",
       "date_used": "2026-02-12T07:53:44.371765"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/",
       "title": "Cyera acquiert Oasis Security pour 1 milliard $",
       "date_used": "2026-07-29T08:50:58.533778"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/zd-tech-la-menace-invisible-des-agents-ia-en-entreprise-et-90-des-organisations-sont-concernees-498192.htm#xtor=RSS-1",
+      "title": "La menace invisible des agents IA en entreprise",
+      "date_used": "2026-07-30T08:40:18.068509"
     }
   ]
 }
