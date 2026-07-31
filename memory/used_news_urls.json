@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.decideo.fr/MyReport-annonce-une-nouvelle-gouvernance-et-accelere-sa-bascule-vers-un-modele-SaaS-et-100-recurrent_a14546.html",
-      "title": "MyReport annonce une nouvelle gouvernance SaaS",
-      "date_used": "2026-02-12T07:53:44.371765"
-    },
-    {
       "url": "https://www.lopinion.fr/economie/lapocalypse-du-logiciel-nourrit-la-grande-rotation-boursiere",
       "title": "L'apocalypse du logiciel et la rotation boursière",
       "date_used": "2026-02-13T07:50:34.826368"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/zd-tech-la-menace-invisible-des-agents-ia-en-entreprise-et-90-des-organisations-sont-concernees-498192.htm#xtor=RSS-1",
       "title": "La menace invisible des agents IA en entreprise",
       "date_used": "2026-07-30T08:40:18.068509"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/lue-lance-la-construction-de-sept-gigafactories-dia-avec-un-soutien-de-10-milliards-deuros-499178.htm#xtor=RSS-1",
+      "title": "L'UE lance sept gigafactories d'IA avec 10 Md€",
+      "date_used": "2026-07-31T09:11:33.387611"
     }
   ]
 }
