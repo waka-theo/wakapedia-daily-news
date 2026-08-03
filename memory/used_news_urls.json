@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lopinion.fr/economie/lapocalypse-du-logiciel-nourrit-la-grande-rotation-boursiere",
-      "title": "L'apocalypse du logiciel et la rotation boursière",
-      "date_used": "2026-02-13T07:50:34.826368"
-    },
-    {
       "url": "https://www.challenges.fr/monde/sommet-mondial-sur-lia-a-new-delhi-linde-veut-jouer-dans-la-cour-des-grands_640040",
       "title": "Sommet mondial sur l'IA : l'Inde veut s'imposer",
       "date_used": "2026-02-17T07:51:51.425273"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/lue-lance-la-construction-de-sept-gigafactories-dia-avec-un-soutien-de-10-milliards-deuros-499178.htm#xtor=RSS-1",
       "title": "L'UE lance sept gigafactories d'IA avec 10 Md€",
       "date_used": "2026-07-31T09:11:33.387611"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/la-taille-de-vos-fichiers-de-telechargement-windows-ne-cesse-daugmenter-et-cest-a-cause-de-lia-voici-pourquoi-cest-important-499242.htm#xtor=RSS-1",
+      "title": "L'IA augmente la taille des fichiers Windows",
+      "date_used": "2026-08-03T09:59:21.284916"
     }
   ]
 }
