@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lemonde.fr/economie/article/2026/02/17/l-ia-fait-souffler-un-vent-de-panique-sur-le-secteur-geant-des-logiciels-d-entreprise_6667098_3234.html",
-      "title": "L'IA fait souffler un vent de panique sur les logiciels",
-      "date_used": "2026-02-18T07:51:25.488611"
-    },
-    {
       "url": "https://www.journaldemontreal.com/2026/02/19/modi-macron-et-guterres-appellent-a-un-acces-universel-a-lia",
       "title": "Modi, Macron et Guterres appellent à un accès universel à l'IA",
       "date_used": "2026-02-19T07:50:09.599457"
@@ -449,6 +444,11 @@
       "url": "https://venturebeat.com/orchestration/asanas-ai-agents-share-memory-across-your-company-but-not-your-secrets",
       "title": "Asana's AI agents share memory across your company — but not your secrets",
       "date_used": "2026-08-04T08:48:55.306820"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/bug-bounty-microsoft-verse-20-millions-de-dollars-un-record-dope-par-lia-499302.htm#xtor=RSS-1",
+      "title": "Bug bounty : Microsoft verse 20 millions de dollars, un record dopé par l’IA",
+      "date_used": "2026-08-05T08:46:44.339475"
     }
   ]
 }
