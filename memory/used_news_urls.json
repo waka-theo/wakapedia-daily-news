@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.journaldemontreal.com/2026/02/20/lonu-lance-une-commission-sur-le-controle-humain-de-lia",
-      "title": "L'ONU crée une commission sur le contrôle humain de l'IA",
-      "date_used": "2026-02-20T07:50:01.394776"
-    },
-    {
       "url": "https://itsocial.fr/logiciel-agilite/logiciel-agilite-actualites/myreport-change-de-gouvernance-et-accelere-sa-bascule-vers-un-modele-saas-et-100-recurrent/",
       "title": "MyReport change de gouvernance et accélère vers le SaaS",
       "date_used": "2026-02-23T07:55:57.969834"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/meta-entre-dans-la-course-aux-agents-de-programmation-avec-muse-code-499356.htm#xtor=RSS-1",
       "title": "Meta lance Muse Code, un agent de programmation",
       "date_used": "2026-08-06T08:47:44.359043"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/les-geants-de-la-tech-sengagent-sur-plus-de-1-000-milliards-de-dollars-de-loyers-pour-soutenir-la-course-a-lia-499408.htm#xtor=RSS-1",
+      "title": "Les géants de la tech s'engagent sur 1 000 milliards $ pour l'IA",
+      "date_used": "2026-08-07T07:26:53.249997"
     }
   ]
 }
