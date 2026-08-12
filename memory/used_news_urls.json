@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://dcod.ch/2026/02/26/fuites-de-donnees-les-13-incidents-majeurs-au-26-fev-2026/",
-      "title": "Fuites de données : les 13 incidents majeurs au 26 fév 2026",
-      "date_used": "2026-02-26T07:52:39.246481"
-    },
-    {
       "url": "https://www.cio-online.com/actualites/lire-et-si-l-agentique-menacait-le-modele-saas-16871.html",
       "title": "L'agentique menace le modèle SaaS",
       "date_used": "2026-02-27T07:48:04.764876"
@@ -449,6 +444,11 @@
       "url": "https://arstechnica.com/ai/2026/08/with-new-open-models-meta-pitches-another-reboot-of-its-struggling-ai-strategy/",
       "title": "Meta relance sa stratégie IA avec de nouveaux modèles ouverts",
       "date_used": "2026-08-11T07:18:22.116541"
+    },
+    {
+      "url": "https://zdnet.fr/actualites/apres-windows-et-macos-chatgpt-arrive-enfin-sur-linux-499725.htm#xtor=RSS-1",
+      "title": "ChatGPT arrive enfin sur Linux",
+      "date_used": "2026-08-12T07:42:09.147862"
     }
   ]
 }
