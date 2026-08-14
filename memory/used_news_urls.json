@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.radiofrance.fr/franceculture/podcasts/un-monde-connecte/anthropic-bannit-de-l-armee-americaine-et-open-ai-deja-a-la-releve-moins-d-ethique-pour-plus-de-tactique-1396693",
-      "title": "Anthropic bannit l'armée américaine, OpenAI en relève",
-      "date_used": "2026-03-02T07:50:22.948333"
-    },
-    {
       "url": "https://dcod.ch/2026/03/03/cyberattaques-les-8-incidents-majeurs-du-3-mars-2026/",
       "title": "Cyberattaques : les 8 incidents majeurs du 3 mars 2026",
       "date_used": "2026-03-03T07:43:45.717700"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/apple-negocierait-avec-des-medias-un-paiement-a-lusage-pour-entrainer-siri-ai-499813.htm#xtor=RSS-1",
       "title": "Apple négocierait un paiement à l’usage pour Siri AI",
       "date_used": "2026-08-13T07:44:14.378840"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/lg-mise-sur-nvidia-pour-son-premier-robot-humanoide-et-ses-futures-usines-ia-499910.htm#xtor=RSS-1",
+      "title": "LG mise sur Nvidia pour son robot humanoïde",
+      "date_used": "2026-08-14T07:41:40.724403"
     }
   ]
 }
