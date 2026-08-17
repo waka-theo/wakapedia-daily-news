@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://dcod.ch/2026/03/03/cyberattaques-les-8-incidents-majeurs-du-3-mars-2026/",
-      "title": "Cyberattaques : les 8 incidents majeurs du 3 mars 2026",
-      "date_used": "2026-03-03T07:43:45.717700"
-    },
-    {
       "url": "https://webnyxt.com/saaspocalypse-ia-disruption-saas-2026/",
       "title": "SaaSpocalypse : L'IA va-t-elle disrupter le SaaS en 2026 ?",
       "date_used": "2026-03-04T07:39:00.429696"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/lg-mise-sur-nvidia-pour-son-premier-robot-humanoide-et-ses-futures-usines-ia-499910.htm#xtor=RSS-1",
       "title": "LG mise sur Nvidia pour son robot humanoïde",
       "date_used": "2026-08-14T07:41:40.724403"
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+      "title": "Stripe s'apprête à acquérir OpenRouter pour 7 milliards $",
+      "date_used": "2026-08-17T07:07:39.111322"
     }
   ]
 }
