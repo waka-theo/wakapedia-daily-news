@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lemagit.fr/tribune/SaaSpocalypse-le-SaaS-est-il-mort-Bien-sur-que-non",
-      "title": "SaaSpocalypse : le SaaS est-il mort ? Bien sûr que non",
-      "date_used": "2026-03-05T07:43:28.837944"
-    },
-    {
       "url": "https://tribuca.net/comment-revolutionner-le-developpement-logiciel-grace-a-lia/",
       "title": "Comment révolutionner le développement logiciel grâce à l'IA",
       "date_used": "2026-03-06T07:39:25.647271"
@@ -449,6 +444,11 @@
       "url": "https://venturebeat.com/technology/qwen3-8-27b-runs-frontier-class-coding-agents-and-reasoning-locally-no-cloud-api-required",
       "title": "Qwen3.8-27B : agents de codage sans API cloud",
       "date_used": "2026-08-18T06:54:48.940009"
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/",
+      "title": "Cursor lance une plateforme concurrente à GitHub",
+      "date_used": "2026-08-19T06:55:05.153973"
     }
   ]
 }
