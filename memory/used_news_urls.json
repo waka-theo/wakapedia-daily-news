@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://tribuca.net/comment-revolutionner-le-developpement-logiciel-grace-a-lia/",
-      "title": "Comment révolutionner le développement logiciel grâce à l'IA",
-      "date_used": "2026-03-06T07:39:25.647271"
-    },
-    {
       "url": "https://www.europe-infos.fr/business/7634/les-pepites-saas-europeennes-qui-challengent-les-geants-americains-en-2026/",
       "title": "Les pépites SaaS européennes défiant les géants américains",
       "date_used": "2026-03-09T07:50:33.569336"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/",
       "title": "Cursor lance une plateforme concurrente à GitHub",
       "date_used": "2026-08-19T06:55:05.153973"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/openai-vise-une-entree-en-bourse-dici-2027-voire-avant-500252.htm#xtor=RSS-1",
+      "title": "OpenAI vise une entrée en Bourse d’ici 2027, voire avant",
+      "date_used": "2026-08-20T06:56:22.888771"
     }
   ]
 }
