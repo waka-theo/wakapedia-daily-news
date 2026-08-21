@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.europe-infos.fr/business/7634/les-pepites-saas-europeennes-qui-challengent-les-geants-americains-en-2026/",
-      "title": "Les pépites SaaS européennes défiant les géants américains",
-      "date_used": "2026-03-09T07:50:33.569336"
-    },
-    {
       "url": "https://www.usine-digitale.fr/logiciels-applications/saas/les-entreprises-de-saas-mises-en-danger-par-lia-pas-selon-le-patron-de-salesforce-qui-saffiche-serein-et-mise-sur-une-productivite-renforcee-grace-aux-agents.QJOUSBVHI5GRVJZCRWRGGE45LY.html",
       "title": "Salesforce rassure sur l'impact de l'IA sur le SaaS",
       "date_used": "2026-03-10T07:42:28.452075"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/openai-vise-une-entree-en-bourse-dici-2027-voire-avant-500252.htm#xtor=RSS-1",
       "title": "OpenAI vise une entrée en Bourse d’ici 2027, voire avant",
       "date_used": "2026-08-20T06:56:22.888771"
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
+      "title": "Micro1 atteint un chiffre d'affaires de 500M$ grâce à l'IA",
+      "date_used": "2026-08-21T06:57:35.663166"
     }
   ]
 }
