@@ -322,6 +322,12 @@
       "full": "Le 20 août 2026, le premier télégramme commercial a été envoyé autour du monde. Cet événement a marqué une étape importante dans l'histoire des communications, démontrant la capacité des nouvelles technologies à relier des continents et à faciliter les échanges d'informations à une échelle mondiale.",
       "category": "records",
       "date_used": "2026-08-25T06:59:12.263333"
+    },
+    {
+      "summary": "birth of Linux",
+      "full": "Le 25 août 1991, Linus Torvalds a annoncé la première version du noyau Linux sur un groupe de discussion en ligne. Cet événement a marqué le début d'un projet qui allait devenir l'un des systèmes d'exploitation les plus populaires et influents au monde, utilisé dans tout, des serveurs aux smartphones.",
+      "category": "origins",
+      "date_used": "2026-08-26T06:59:47.010266"
     }
   ]
 }
