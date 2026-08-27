@@ -1,16 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lemondeinformatique.fr/saas-software-as-a-service-65.html",
-      "title": "Microsoft lance une licence M365 avec IA intégrée",
-      "date_used": "2026-03-13T07:46:58.522658"
-    },
-    {
-      "url": "https://astucesdespro.com/aios-claude-code-automatisation-saas-2026/",
-      "title": "AIOS 2026 : Automatisation de 70% des SaaS",
-      "date_used": "2026-03-16T08:08:33.471012"
-    },
-    {
       "url": "https://www.lexpress.fr/economie/high-tech/ia-le-secteur-du-logiciel-nest-pas-en-crise-il-etait-en-bulle-H2U2NGBQ5JEODB5KXZZE7KQDF4/",
       "title": "L'IA ne détruit pas le secteur logiciel, mais le transforme",
       "date_used": "2026-03-17T07:54:29.752863"
@@ -449,6 +439,16 @@
       "url": "https://techcrunch.com/2026/08/25/indias-ringg-gets-backing-from-peak-xv-as-it-pushes-voice-ai-past-the-phone-call/",
       "title": "Ringg reçoit un soutien majeur pour l'IA vocale",
       "date_used": "2026-08-26T06:59:26.097714"
+    },
+    {
+      "url": "https://www.infoq.com/news/2026/08/google-database-operation-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "title": "Google Cloud lance des agents IA pour la gestion des bases de données",
+      "date_used": "2026-08-27T17:33:25.062037"
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/27/googles-ai-mode-can-now-track-flight-prices-help-book-hotels-and-more/",
+      "title": "Google’s AI Mode suit les prix des vols et aide à réserver",
+      "date_used": "2026-08-27T17:33:25.070633"
     }
   ]
 }
