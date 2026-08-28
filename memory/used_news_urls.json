@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lexpress.fr/economie/high-tech/ia-le-secteur-du-logiciel-nest-pas-en-crise-il-etait-en-bulle-H2U2NGBQ5JEODB5KXZZE7KQDF4/",
-      "title": "L'IA ne détruit pas le secteur logiciel, mais le transforme",
-      "date_used": "2026-03-17T07:54:29.752863"
-    },
-    {
       "url": "https://www.cegelem.fr/actualites/annee-2026/lessor-de-lia-relance-le-debat-sur-lavenir-du-modele-saas/",
       "title": "L'essor de l'IA relance le débat sur l'avenir du modèle SaaS",
       "date_used": "2026-03-18T07:54:13.612755"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/08/27/googles-ai-mode-can-now-track-flight-prices-help-book-hotels-and-more/",
       "title": "Google’s AI Mode suit les prix des vols et aide à réserver",
       "date_used": "2026-08-27T17:33:25.070633"
+    },
+    {
+      "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
+      "title": "Les entreprises d'IA à poids ouvert, cibles d'acquisition",
+      "date_used": "2026-08-28T18:30:15.679367"
     }
   ]
 }
