@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.cegelem.fr/actualites/annee-2026/lessor-de-lia-relance-le-debat-sur-lavenir-du-modele-saas/",
-      "title": "L'essor de l'IA relance le débat sur l'avenir du modèle SaaS",
-      "date_used": "2026-03-18T07:54:13.612755"
-    },
-    {
       "url": "https://www.maya-technologies.com/agents-ia-en-2026-la-nouvelle-generation-dautomatisation-portee-par-les-llm-les-plus-puissants/",
       "title": "Agents IA en 2026 : la nouvelle génération d'automatisation portée par les LLM",
       "date_used": "2026-03-18T07:54:13.619066"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
       "title": "Les entreprises d'IA à poids ouvert, cibles d'acquisition",
       "date_used": "2026-08-28T18:30:15.679367"
+    },
+    {
+      "url": "https://zdnet.fr/actualites/cisco-dote-ses-90-000-employes-dun-agent-ia-personnel-500865.htm#xtor=RSS-1",
+      "title": "Cisco dote ses 90 000 employés d’un agent IA personnel",
+      "date_used": "2026-08-31T13:23:50.921812"
     }
   ]
 }
