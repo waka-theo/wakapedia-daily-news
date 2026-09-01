@@ -55,11 +55,7 @@ jobs:
           fi
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-      - name: Install dependencies
-        run: |
-          uv pip install --system crewai[litellm,tools]==1.7.2 anthropic>=0.40.0 requests>=2.31.0
-
-      - name: Install project
+      - name: Install project and dependencies
         run: |
           uv pip install --system -e .
 
