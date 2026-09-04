@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.solutions-numeriques.com/saaspocalypse-lia-bouscule-le-modele-saas/",
-      "title": "SaaSpocalypse : l'IA bouscule le modèle SaaS",
-      "date_used": "2026-03-24T07:54:17.549294"
-    },
-    {
       "url": "https://siliconcarne.substack.com/p/fin-du-saas-ou-simple-panique-du",
       "title": "Fin du SaaS… ou simple panique du marché ?",
       "date_used": "2026-03-25T07:53:46.939391"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/claude-vise-par-une-vague-de-vols-de-session-avec-un-risque-pour-les-donnees-dentreprise-501087.htm#xtor=RSS-1",
       "title": "Claude visé par une vague de vols de session",
       "date_used": "2026-09-03T11:02:08.838509"
+    },
+    {
+      "url": "https://zdnet.fr/actualites/weathernext-3-google-devoile-son-modele-meteo-ia-le-plus-precis-a-ce-jour-502748.htm#xtor=RSS-1",
+      "title": "WeatherNext 3 : Google dévoile son modèle météo IA le plus précis",
+      "date_used": "2026-09-04T11:03:01.261221"
     }
   ]
 }
