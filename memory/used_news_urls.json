@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://siliconcarne.substack.com/p/fin-du-saas-ou-simple-panique-du",
-      "title": "Fin du SaaS… ou simple panique du marché ?",
-      "date_used": "2026-03-25T07:53:46.939391"
-    },
-    {
       "url": "https://www.lesechos.fr/idees-debats/cercle/a-lere-de-lia-agentique-le-saas-se-reinvente-2222249",
       "title": "À l'ère de l'IA agentique, le SaaS se réinvente",
       "date_used": "2026-03-26T08:02:20.060554"
@@ -449,6 +444,11 @@
       "url": "https://zdnet.fr/actualites/weathernext-3-google-devoile-son-modele-meteo-ia-le-plus-precis-a-ce-jour-502748.htm#xtor=RSS-1",
       "title": "WeatherNext 3 : Google dévoile son modèle météo IA le plus précis",
       "date_used": "2026-09-04T11:03:01.261221"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-nvidia-va-acquerir-hugging-face-pour-12-93-md$-100770.html",
+      "title": "Nvidia va acquérir Hugging Face pour 12,93 Md$",
+      "date_used": "2026-09-07T12:13:04.911240"
     }
   ]
 }
