@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lesechos.fr/idees-debats/cercle/a-lere-de-lia-agentique-le-saas-se-reinvente-2222249",
-      "title": "À l'ère de l'IA agentique, le SaaS se réinvente",
-      "date_used": "2026-03-26T08:02:20.060554"
-    },
-    {
       "url": "https://www.lefigaro.fr/secteur/high-tech/c-est-le-moment-de-sortir-le-code-rouge-sous-la-pression-de-l-ia-les-editeurs-de-logiciels-en-pleine-crise-existentielle-20260225",
       "title": "Les éditeurs de logiciels face à la pression de l'IA",
       "date_used": "2026-03-27T08:00:20.650129"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-nvidia-va-acquerir-hugging-face-pour-12-93-md$-100770.html",
       "title": "Nvidia va acquérir Hugging Face pour 12,93 Md$",
       "date_used": "2026-09-07T12:13:04.911240"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/lanssi-prend-les-pleins-pouvoirs-pour-stopper-lhemorragie-cyber-de-letat-503007.htm#xtor=RSS-1",
+      "title": "L'ANSSI prend les pleins pouvoirs pour stopper l'hémorragie cyber de l'État",
+      "date_used": "2026-09-08T11:02:44.751561"
     }
   ]
 }
