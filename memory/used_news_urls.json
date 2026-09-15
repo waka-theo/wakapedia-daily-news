@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.bfmtv.com/archives/tech/cybersecurite/2026/04/",
-      "title": "Actualité \"Cybersécurité\" en Avril 2026 - Tech: les archives - BFM",
-      "date_used": "2026-04-06T07:56:08.809735"
-    },
-    {
       "url": "https://www.frandroid.com/actualites",
       "title": "Actualités Tech : Toutes les news du 8 avril 2026 - Frandroid",
       "date_used": "2026-04-08T07:46:56.097136"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-deepseek-devoile-son-modele-v41-flash-100778.html",
       "title": "DeepSeek dévoile son modèle V4.1-Flash",
       "date_used": "2026-09-14T12:28:48.120259"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-google-va-construire-trois-data-centers-en-finlande-100783.html",
+      "title": "Google va construire trois data centers en Finlande",
+      "date_used": "2026-09-15T11:32:32.123478"
     }
   ]
 }
