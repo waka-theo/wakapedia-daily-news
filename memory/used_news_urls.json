@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.frandroid.com/actualites",
-      "title": "Actualités Tech : Toutes les news du 8 avril 2026 - Frandroid",
-      "date_used": "2026-04-08T07:46:56.097136"
-    },
-    {
       "url": "https://www.latribune.fr/article/tech/33903701075616/souverainete-numerique-bull-passe-a-l-offensive-avec-500-embauches",
       "title": "Bull passe à l'offensive avec 500 embauches",
       "date_used": "2026-04-09T07:49:26.803374"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-google-va-construire-trois-data-centers-en-finlande-100783.html",
       "title": "Google va construire trois data centers en Finlande",
       "date_used": "2026-09-15T11:32:32.123478"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-google-renforce-gemini-avec-deux-modeles-vocaux-100788.html",
+      "title": "Google renforce Gemini avec deux modèles vocaux",
+      "date_used": "2026-09-16T11:18:58.084474"
     }
   ]
 }
