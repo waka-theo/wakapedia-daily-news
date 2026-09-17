@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.latribune.fr/article/tech/33903701075616/souverainete-numerique-bull-passe-a-l-offensive-avec-500-embauches",
-      "title": "Bull passe à l'offensive avec 500 embauches",
-      "date_used": "2026-04-09T07:49:26.803374"
-    },
-    {
       "url": "https://www.lemonde.fr/technologies/",
       "title": "Technologies - Actualités, vidéos et infos en direct - Le Monde",
       "date_used": "2026-04-13T08:07:05.682755"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-google-renforce-gemini-avec-deux-modeles-vocaux-100788.html",
       "title": "Google renforce Gemini avec deux modèles vocaux",
       "date_used": "2026-09-16T11:18:58.084474"
+    },
+    {
+      "url": "https://www.infoq.com/news/2026/09/platform-artificial-intelligence/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "title": "Construire une plateforme de développement interne avec l'IA",
+      "date_used": "2026-09-17T11:27:15.619819"
     }
   ]
 }
