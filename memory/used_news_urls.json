@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lemonde.fr/technologies/",
-      "title": "Technologies - Actualités, vidéos et infos en direct - Le Monde",
-      "date_used": "2026-04-13T08:07:05.682755"
-    },
-    {
       "url": "https://www.zdnet.fr/actualites/pourquoi-letat-lance-une-offensive-inedite-pour-sortir-des-outils-americains-et-reprendre-le-controle-de-ses-donnees-493462.htm",
       "title": "L'État lance une offensive pour l'open source",
       "date_used": "2026-04-13T08:16:09.321628"
@@ -449,6 +444,11 @@
       "url": "https://www.infoq.com/news/2026/09/platform-artificial-intelligence/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
       "title": "Construire une plateforme de développement interne avec l'IA",
       "date_used": "2026-09-17T11:27:15.619819"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/numspot-ajoute-de-lia-souveraine-managee-avec-mistral-ai-503763.htm#xtor=RSS-1",
+      "title": "Numspot ajoute de l’IA souveraine managée avec Mistral AI",
+      "date_used": "2026-09-18T11:00:39.451026"
     }
   ]
 }
