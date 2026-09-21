@@ -424,6 +424,12 @@
       "full": "Le 11 septembre 1985, l'International Cometary Explorer (ICE) est devenu le premier vaisseau spatial à traverser la queue d'une comète, celle de la comète Giacobini-Zinner. Cet événement a marqué une étape importante dans l'étude des comètes et a permis aux scientifiques de recueillir des données précieuses sur ces objets célestes.",
       "category": "records",
       "date_used": "2026-09-18T11:01:04.249579"
+    },
+    {
+      "summary": "first FORTRAN program runs",
+      "full": "Le 20 septembre 1957, le premier programme écrit en FORTRAN (Formula Translation) a été exécuté sur l'IBM 704. Ce langage de programmation a été conçu pour simplifier les calculs scientifiques et techniques, marquant ainsi un tournant dans le développement des langages de programmation modernes. FORTRAN est encore utilisé aujourd'hui dans des domaines tels que la météorologie et l'ingénierie.",
+      "category": "inventions",
+      "date_used": "2026-09-21T12:35:41.483511"
     }
   ]
 }

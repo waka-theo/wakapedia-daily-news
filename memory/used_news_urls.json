@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.zdnet.fr/actualites/pourquoi-letat-lance-une-offensive-inedite-pour-sortir-des-outils-americains-et-reprendre-le-controle-de-ses-donnees-493462.htm",
-      "title": "L'État lance une offensive pour l'open source",
-      "date_used": "2026-04-13T08:16:09.321628"
-    },
-    {
       "url": "https://www.journaldunet.com/cybersecurite/1546745-2026-la-resilience-nouveau-socle-de-la-cybersecurite/",
       "title": "2026 : la résilience, nouveau socle de la cybersécurité",
       "date_used": "2026-04-14T07:58:47.412451"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/numspot-ajoute-de-lia-souveraine-managee-avec-mistral-ai-503763.htm#xtor=RSS-1",
       "title": "Numspot ajoute de l’IA souveraine managée avec Mistral AI",
       "date_used": "2026-09-18T11:00:39.451026"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/une-erreur-danalyse-de-lia-a-failli-declencher-un-affrontement-militaire-entre-les-etats-unis-et-la-chine-503871.htm#xtor=RSS-1",
+      "title": "Une erreur d’analyse de l’IA a failli déclencher un affrontement militaire",
+      "date_used": "2026-09-21T12:35:14.382562"
     }
   ]
 }
