@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.blog-nouvelles-technologies.fr/365161/dji-osmo-pocket-4-lancement-16-avril-2026/",
-      "title": "Osmo Pocket 4 : DJI confirme le lancement pour le 16 avril",
-      "date_used": "2026-04-16T07:59:02.784759"
-    },
-    {
       "url": "https://www.journaldunet.com/developpeur/1548621-developpement-logiciel-l-acceleration-qui-redessine-l-innovation/",
       "title": "Développement logiciel : l'accélération qui redessine l'innovation",
       "date_used": "2026-04-17T08:00:41.042997"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/openai-gagne-du-terrain-avec-gpt-6-astra-anthropic-prepare-sa-riposte-un-nouveau-claude-se-profile-504238.htm#xtor=RSS-1",
       "title": "OpenAI gagne du terrain avec GPT-6 Astra",
       "date_used": "2026-09-22T11:22:34.311644"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/999249/openai-creators-patreon-execs-hire-sam-yam",
+      "title": "OpenAI recrute des cadres clés de Patreon",
+      "date_used": "2026-09-23T11:18:28.968701"
     }
   ]
 }
