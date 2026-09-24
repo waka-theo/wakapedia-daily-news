@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.journaldunet.com/developpeur/1548621-developpement-logiciel-l-acceleration-qui-redessine-l-innovation/",
-      "title": "Développement logiciel : l'accélération qui redessine l'innovation",
-      "date_used": "2026-04-17T08:00:41.042997"
-    },
-    {
       "url": "https://dcod.ch/",
       "title": "Vulnérabilités : les 11 alertes critiques du 20 avril 2026",
       "date_used": "2026-04-20T08:21:59.796653"
@@ -449,6 +444,11 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/999249/openai-creators-patreon-execs-hire-sam-yam",
       "title": "OpenAI recrute des cadres clés de Patreon",
       "date_used": "2026-09-23T11:18:28.968701"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/pres-de-70-des-salaries-utilisent-desormais-regulierement-lia-mais-beaucoup-nont-juste-pas-le-temps-de-sy-former-504415.htm#xtor=RSS-1",
+      "title": "Près de 70 % des salariés utilisent désormais régulièrement l'IA, mais beaucoup n'ont juste pas le temps de s'y former",
+      "date_used": "2026-09-24T11:32:03.699123"
     }
   ]
 }
