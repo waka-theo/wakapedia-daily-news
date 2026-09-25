@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://dcod.ch/",
-      "title": "Vulnérabilités : les 11 alertes critiques du 20 avril 2026",
-      "date_used": "2026-04-20T08:21:59.796653"
-    },
-    {
       "url": "https://cio-mag.com/cybersecurite-2026-le-passage-dun-enjeu-technique-a-un-arbitrage-strategique/",
       "title": "Cybersécurité 2026 : enjeu stratégique majeur",
       "date_used": "2026-04-21T08:04:28.073350"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/pres-de-70-des-salaries-utilisent-desormais-regulierement-lia-mais-beaucoup-nont-juste-pas-le-temps-de-sy-former-504415.htm#xtor=RSS-1",
       "title": "Près de 70 % des salariés utilisent désormais régulièrement l'IA, mais beaucoup n'ont juste pas le temps de s'y former",
       "date_used": "2026-09-24T11:32:03.699123"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-bnp-paribas-signe-un-accord-de-5-ans-avec-google-cloud-100811.html",
+      "title": "BNP Paribas signe un accord de 5 ans avec Google Cloud",
+      "date_used": "2026-09-25T11:38:32.635981"
     }
   ]
 }
