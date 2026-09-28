@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://cio-mag.com/cybersecurite-2026-le-passage-dun-enjeu-technique-a-un-arbitrage-strategique/",
-      "title": "Cybersécurité 2026 : enjeu stratégique majeur",
-      "date_used": "2026-04-21T08:04:28.073350"
-    },
-    {
       "url": "https://africa-news-agency.com/namibie-conference-internationale-sur-la-cybersecurite-du-22-au-24-avril-2026-a-windhoek/",
       "title": "Namibie : Conférence internationale sur la cybersécurité",
       "date_used": "2026-04-22T08:00:50.870289"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-bnp-paribas-signe-un-accord-de-5-ans-avec-google-cloud-100811.html",
       "title": "BNP Paribas signe un accord de 5 ans avec Google Cloud",
       "date_used": "2026-09-25T11:38:32.635981"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/microsoft-transforme-copilot-en-ia-dexecution-des-taches-et-devoile-home-code-et-autopilot-504567.htm#xtor=RSS-1",
+      "title": "Microsoft transforme Copilot en IA d’exécution des tâches",
+      "date_used": "2026-09-28T13:35:16.368413"
     }
   ]
 }
