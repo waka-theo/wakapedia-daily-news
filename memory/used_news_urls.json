@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://africa-news-agency.com/namibie-conference-internationale-sur-la-cybersecurite-du-22-au-24-avril-2026-a-windhoek/",
-      "title": "Namibie : Conférence internationale sur la cybersécurité",
-      "date_used": "2026-04-22T08:00:50.870289"
-    },
-    {
       "url": "https://www.it-connect.fr/google-chrome-cve-2026-2441-la-premiere-faille-zero-day-de-2026-a-ete-patchee/",
       "title": "Google Chrome : la première faille zero-day de 2026 a été patchée",
       "date_used": "2026-04-23T08:06:35.433183"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/microsoft-transforme-copilot-en-ia-dexecution-des-taches-et-devoile-home-code-et-autopilot-504567.htm#xtor=RSS-1",
       "title": "Microsoft transforme Copilot en IA d’exécution des tâches",
       "date_used": "2026-09-28T13:35:16.368413"
+    },
+    {
+      "url": "https://techcrunch.com/2026/09/29/reco-raises-55m-as-ai-agent-security-startups-crowd-the-market/",
+      "title": "Reco lève 55M$ pour sécuriser les agents IA",
+      "date_used": "2026-09-29T12:36:07.374594"
     }
   ]
 }
