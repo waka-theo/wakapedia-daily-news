@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.it-connect.fr/google-chrome-cve-2026-2441-la-premiere-faille-zero-day-de-2026-a-ete-patchee/",
-      "title": "Google Chrome : la première faille zero-day de 2026 a été patchée",
-      "date_used": "2026-04-23T08:06:35.433183"
-    },
-    {
       "url": "https://www.france24.com/fr/%C3%A9co-tech/20260424-l-entreprise-chinoise-deepseek-annonce-un-nouveau-mod%C3%A8le-d-intelligence-artificielle",
       "title": "DeepSeek annonce un nouveau modèle d'intelligence artificielle.",
       "date_used": "2026-04-24T08:15:50.041277"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/09/29/reco-raises-55m-as-ai-agent-security-startups-crowd-the-market/",
       "title": "Reco lève 55M$ pour sécuriser les agents IA",
       "date_used": "2026-09-29T12:36:07.374594"
+    },
+    {
+      "url": "https://zdnet.fr/actualites/ibm-un-ordinateur-quantique-realise-en-19-secondes-un-calcul-qui-prendrait-110-ans-a-un-supercalculateur-504738.htm#xtor=RSS-1",
+      "title": "IBM : un ordinateur quantique réalise un calcul en 19s",
+      "date_used": "2026-09-30T12:21:35.509987"
     }
   ]
 }
