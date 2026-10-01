@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.france24.com/fr/%C3%A9co-tech/20260424-l-entreprise-chinoise-deepseek-annonce-un-nouveau-mod%C3%A8le-d-intelligence-artificielle",
-      "title": "DeepSeek annonce un nouveau modèle d'intelligence artificielle.",
-      "date_used": "2026-04-24T08:15:50.041277"
-    },
-    {
       "url": "https://www.rtl.fr/actu/sciences-tech/cyberattaque-de-l-ants-pres-de-12-millions-d-usagers-pirates-selon-un-communique-du-ministere-de-l-interieur-7900626723",
       "title": "Cyberattaque de l'ANTS : près de 12 millions de comptes piratés",
       "date_used": "2026-04-27T08:38:01.364199"
@@ -449,6 +444,11 @@
       "url": "https://zdnet.fr/actualites/ibm-un-ordinateur-quantique-realise-en-19-secondes-un-calcul-qui-prendrait-110-ans-a-un-supercalculateur-504738.htm#xtor=RSS-1",
       "title": "IBM : un ordinateur quantique réalise un calcul en 19s",
       "date_used": "2026-09-30T12:21:35.509987"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-ia-pres-de-la-moitie-des-entreprises-commencent-a-generer-de-la-valeur-100823.html",
+      "title": "IA : près de la moitié des entreprises commencent à générer de la valeur",
+      "date_used": "2026-10-01T12:56:34.505923"
     }
   ]
 }
