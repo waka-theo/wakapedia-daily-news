@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.rtl.fr/actu/sciences-tech/cyberattaque-de-l-ants-pres-de-12-millions-d-usagers-pirates-selon-un-communique-du-ministere-de-l-interieur-7900626723",
-      "title": "Cyberattaque de l'ANTS : près de 12 millions de comptes piratés",
-      "date_used": "2026-04-27T08:38:01.364199"
-    },
-    {
       "url": "https://www.latribune.fr/article/tech/start-up/2709522391182914/tech-for-future-la-tribune-et-bfm-business-revelent-les-6-start-up-de-lannee-2026",
       "title": "La Tribune et BFM Business révèlent les 6 start-up de l'année 2026",
       "date_used": "2026-04-28T08:35:36.644279"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-ia-pres-de-la-moitie-des-entreprises-commencent-a-generer-de-la-valeur-100823.html",
       "title": "IA : près de la moitié des entreprises commencent à générer de la valeur",
       "date_used": "2026-10-01T12:56:34.505923"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/zd-tech-puces-ia-voici-pourquoi-laccord-secret-entre-sk-hynix-et-intel-change-tout-504831.htm#xtor=RSS-1",
+      "title": "SK Hynix et Intel : un accord qui change tout",
+      "date_used": "2026-10-02T12:19:14.627625"
     }
   ]
 }
