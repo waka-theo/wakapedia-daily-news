@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://bigmedia.bpifrance.fr/nos-dossiers/nouvelles-tendances-technologiques-en-2026-comprendre-anticiper-et-innover",
-      "title": "Nouvelles tendances technologiques en 2026 - Big Media - Bpifrance",
-      "date_used": "2026-04-29T08:29:02.879617"
-    },
-    {
       "url": "https://www.kiteworks.com/fr/gestion-des-risques-lies-a-la-cybersecurite/tendances-cybersecurite-ia-2026-rapport/",
       "title": "Cybersécurité et IA en 2026 : grandes tendances et menaces",
       "date_used": "2026-05-01T08:22:10.763459"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/74-des-pdg-assument-desormais-le-role-de-responsables-de-lia-alors-que-les-depenses-dans-ce-domaine-explosent-505100.htm#xtor=RSS-1",
       "title": "74 % des PDG deviennent responsables de l'IA",
       "date_used": "2026-10-05T14:19:21.549922"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-cohere-lance-north-2-ses-agents-ia-a-l-assaut-des-entreprises-100835.html",
+      "title": "Cohere lance North 2, ses agents IA à l'assaut des entreprises",
+      "date_used": "2026-10-06T13:10:59.556967"
     }
   ]
 }

@@ -478,6 +478,12 @@
       "full": "Le 4 octobre 1957, l'Union soviétique a lancé Spoutnik 1, le premier satellite artificiel de l'histoire, marquant le début de l'ère spatiale. Cet événement a non seulement révolutionné l'exploration spatiale, mais a également intensifié la course à l'espace entre les États-Unis et l'Union soviétique, influençant profondément la technologie et la culture du XXe siècle.",
       "category": "other",
       "date_used": "2026-10-05T14:19:38.694275"
+    },
+    {
+      "summary": "ENIAC retired",
+      "full": "Le 2 octobre 1965, l'ENIAC (Electronic Numerical Integrator and Computer), l'un des premiers ordinateurs électroniques, a été officiellement retiré du service. Construit en 1945, il a été un pionnier dans le domaine de l'informatique, capable de réaliser des calculs complexes à une vitesse sans précédent pour l'époque.",
+      "category": "pioneers",
+      "date_used": "2026-10-06T13:11:37.283864"
     }
   ]
 }
