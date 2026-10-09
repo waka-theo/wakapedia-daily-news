@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.haas-avocats.com/reglementation/actualite-juridique/lactualite-juridique-numerique-de-la-semaine-5-mai-2026/",
-      "title": "L'actualité juridique numérique de la semaine – 5 mai 2026",
-      "date_used": "2026-05-05T08:21:50.549694"
-    },
-    {
       "url": "https://lactualite.com/techno/4-tendances-technos-a-surveiller-en-2026/",
       "title": "4 tendances technos à surveiller en 2026 - L'actualité",
       "date_used": "2026-05-06T08:37:12.720252"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/10/08/vesta-raises-30m-as-lenders-adopt-ai-agents/",
       "title": "Vesta lève 30M$ pour des agents IA dans les prêts",
       "date_used": "2026-10-08T13:14:07.737604"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-detecteur-d-ia-google-ouvre-synthid-detector-au-grand-public-100842.html",
+      "title": "Détecteur d'IA : Google ouvre SynthID Detector au grand public",
+      "date_used": "2026-10-09T13:00:45.405423"
     }
   ]
 }
