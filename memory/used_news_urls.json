@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://lactualite.com/techno/4-tendances-technos-a-surveiller-en-2026/",
-      "title": "4 tendances technos à surveiller en 2026 - L'actualité",
-      "date_used": "2026-05-06T08:37:12.720252"
-    },
-    {
       "url": "https://www.prnewswire.com/news-releases/ces-2026--lavenir-est-la-302657893.html",
       "title": "CES 2026 : L'avenir est là - PR Newswire",
       "date_used": "2026-05-07T08:44:24.859296"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-detecteur-d-ia-google-ouvre-synthid-detector-au-grand-public-100842.html",
       "title": "Détecteur d'IA : Google ouvre SynthID Detector au grand public",
       "date_used": "2026-10-09T13:00:45.405423"
+    },
+    {
+      "url": "https://arstechnica.com/ai/2026/10/inside-amazons-robotic-arms-race-and-what-it-means-for-the-future-of-human-work/",
+      "title": "Amazon et la course aux bras robotiques : quel avenir pour le travail humain ?",
+      "date_used": "2026-10-12T15:06:56.444835"
     }
   ]
 }
