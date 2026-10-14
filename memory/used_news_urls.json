@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lopinion.fr/economie/les-5-innovations-tech-a-suivre-en-2026",
-      "title": "5 innovations technologiques à suivre en 2026",
-      "date_used": "2026-05-08T07:50:54.297345"
-    },
-    {
       "url": "https://www.lemondeinformatique.fr/actualites/toute-l-actualite.html",
       "title": "Nomination de Romain Danielou chez Meritis",
       "date_used": "2026-05-11T09:54:57.660957"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/",
       "title": "Amex met en place un cadre pour sécuriser les achats IA",
       "date_used": "2026-10-13T13:59:47.318366"
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/14/scimplify-raises-25m-to-challenge-chinas-grip-on-critical-materials-with-ai/",
+      "title": "Scimplify lève 25M$ pour défier la Chine avec l'IA",
+      "date_used": "2026-10-14T11:36:43.710878"
     }
   ]
 }
