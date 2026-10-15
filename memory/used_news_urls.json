@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lemondeinformatique.fr/actualites/toute-l-actualite.html",
-      "title": "Nomination de Romain Danielou chez Meritis",
-      "date_used": "2026-05-11T09:54:57.660957"
-    },
-    {
       "url": "https://www.technologyreview.com/2026/01/12/1130697/10-breakthrough-technologies-2026/",
       "title": "10 Breakthrough Technologies 2026 | MIT Technology Review",
       "date_used": "2026-05-12T08:49:55.734632"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/10/14/scimplify-raises-25m-to-challenge-chinas-grip-on-critical-materials-with-ai/",
       "title": "Scimplify lève 25M$ pour défier la Chine avec l'IA",
       "date_used": "2026-10-14T11:36:43.710878"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-nvidia-investit-dans-doctolib-et-trois-entreprises-francaises-de-l-ia-100852.html",
+      "title": "Nvidia investit dans Doctolib et trois entreprises françaises de l'IA",
+      "date_used": "2026-10-15T11:15:16.776793"
     }
   ]
 }
