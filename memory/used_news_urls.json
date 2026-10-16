@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.technologyreview.com/2026/01/12/1130697/10-breakthrough-technologies-2026/",
-      "title": "10 Breakthrough Technologies 2026 | MIT Technology Review",
-      "date_used": "2026-05-12T08:49:55.734632"
-    },
-    {
       "url": "https://www.lesnumeriques.com/societe-numerique/ia-locale-et-ecrans-trifold-2026-l-annee-ou-la-tech-bascule-dans-une-nouvelle-ere-n248748.html",
       "title": "IA locale et écrans Trifold : 2026, l'année où la tech bascule",
       "date_used": "2026-05-13T08:53:39.555185"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-nvidia-investit-dans-doctolib-et-trois-entreprises-francaises-de-l-ia-100852.html",
       "title": "Nvidia investit dans Doctolib et trois entreprises françaises de l'IA",
       "date_used": "2026-10-15T11:15:16.776793"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/nvidia-lance-nemotron-3-5-super-vl-son-modele-ia-ouvert-ultra-rapide-505951.htm#xtor=RSS-1",
+      "title": "Nvidia lance Nemotron 3.5 Super VL, son modèle IA ouvert ultra-rapide",
+      "date_used": "2026-10-16T11:09:45.666136"
     }
   ]
 }
