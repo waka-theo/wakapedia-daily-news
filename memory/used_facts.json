@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "premier bug informatique mite papillon 1947 harvard mark ii grace hopper",
-      "full": "Le premier bug informatique documenté remonte à 1947, lorsque des ingénieurs travaillant sur l'ordinateur Mark II à l'Université Harvard ont découvert une mite coincée dans l'un des composants.",
-      "date_used": "2026-01-20T08:00:00"
-    },
-    {
       "summary": "Easter egg Excel 97 simulateur de vol",
       "full": "Dans Excel 97, les développeurs ont caché un simulateur de vol entièrement fonctionnel. Pour y accéder, il suffisait de suivre une série d'étapes spécifiques dans le logiciel, révélant ainsi un easter egg surprenant au sein d'une application de tableur.",
       "date_used": "2026-01-20T17:05:44.435217"
@@ -508,6 +503,12 @@
       "full": "Le 16 octobre 1882, la Edison Electric Light Company a été fondée par Thomas Edison. Cette entreprise a joué un rôle crucial dans la commercialisation de l'électricité et l'éclairage électrique, marquant le début d'une nouvelle ère dans l'histoire de l'énergie et de la technologie.",
       "category": "inventions",
       "date_used": "2026-10-16T11:10:04.638821"
+    },
+    {
+      "summary": "CDC 1604 Released",
+      "full": "Le CDC 1604, lancé en 1960, est considéré comme le premier ordinateur à utiliser des transistors au lieu de tubes à vide. Il a marqué un tournant dans l'informatique en offrant une meilleure fiabilité et une consommation d'énergie réduite, ouvrant la voie à la prochaine génération d'ordinateurs.",
+      "category": "inventions",
+      "date_used": "2026-10-19T12:50:02.664754"
     }
   ]
 }
