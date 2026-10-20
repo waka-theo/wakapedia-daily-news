@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "Easter egg Excel 97 simulateur de vol",
-      "full": "Dans Excel 97, les développeurs ont caché un simulateur de vol entièrement fonctionnel. Pour y accéder, il suffisait de suivre une série d'étapes spécifiques dans le logiciel, révélant ainsi un easter egg surprenant au sein d'une application de tableur.",
-      "date_used": "2026-01-20T17:05:44.435217"
-    },
-    {
       "summary": "premier easter egg logiciel 1967 PDP-10",
       "full": "Le premier Easter egg connu dans un logiciel a été intégré dans la commande 'make' des ordinateurs PDP-10 entre octobre 1967 et octobre 1968. Ce Easter egg a été conçu par les programmeurs pour prouver que le code avait été volé si quelqu'un tentait de le réemballer comme étant le sien.",
       "date_used": "2026-01-26T07:30:41.884439"
@@ -509,6 +504,12 @@
       "full": "Le CDC 1604, lancé en 1960, est considéré comme le premier ordinateur à utiliser des transistors au lieu de tubes à vide. Il a marqué un tournant dans l'informatique en offrant une meilleure fiabilité et une consommation d'énergie réduite, ouvrant la voie à la prochaine génération d'ordinateurs.",
       "category": "inventions",
       "date_used": "2026-10-19T12:50:02.664754"
+    },
+    {
+      "summary": "VisiCalc released 1979",
+      "full": "VisiCalc, souvent considéré comme le premier tableur électronique, a été officiellement lancé en 1979. Ce logiciel a révolutionné la manière dont les entreprises géraient leurs finances et a ouvert la voie à l'utilisation des ordinateurs personnels dans le monde des affaires.",
+      "category": "inventions",
+      "date_used": "2026-10-20T11:19:48.809624"
     }
   ]
 }

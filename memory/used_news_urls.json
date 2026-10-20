@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.reseller.co.nz/article/4169738/ai-demand-to-drive-surge-in-public-cloud-spend-to-5-6b.html",
-      "title": "AI demand to drive surge in public cloud spend to $5.6B",
-      "date_used": "2026-05-14T08:47:03.799705"
-    },
-    {
       "url": "https://www.futura-sciences.com/tech/actualites/tech-ces-tendances-devraient-faconner-tech-2026-129681/",
       "title": "Ces tendances qui devraient façonner la tech en 2026 - Futura",
       "date_used": "2026-05-15T09:19:25.159764"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-g7-choisit-le-cloud-secnumcloud-de-s3ns-100847.html",
       "title": "G7 choisit le cloud SecNumCloud de S3NS",
       "date_used": "2026-10-19T12:49:46.255424"
+    },
+    {
+      "url": "https://zdnet.fr/actualites/nvidia-sallie-a-lallemagne-pour-batir-la-future-ia-des-usines-506112.htm#xtor=RSS-1",
+      "title": "Nvidia s'allie à l'Allemagne pour bâtir la future IA des usines",
+      "date_used": "2026-10-20T11:19:24.561374"
     }
   ]
 }
