@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "bug Therac-25 radiation overdose",
-      "full": "Le bug Therac-25 est l'un des incidents les plus tragiques de l'histoire de l'informatique. Ce logiciel, utilisé pour administrer des traitements de radiothérapie, a causé des surdoses mortelles de radiation à des patients en raison de défauts de programmation. Entre 1985 et 1987, plusieurs patients ont été gravement blessés, et certains sont décédés à cause de ce bug, soulignant l'importance cruciale de la vérification des logiciels dans des applications médicales.",
-      "date_used": "2026-01-27T07:30:06.790968"
-    },
-    {
       "summary": "premier easter egg Atari 1979 Warren Robinett",
       "full": "Le premier easter egg de l'histoire du jeu vidéo a été créé en 1979 par Warren Robinett, un développeur chez Atari. Ce secret, caché dans le jeu \"Adventure\", permettait aux joueurs de découvrir un message caché qui révélait le nom de l'auteur du jeu, une pratique rare à l'époque.",
       "date_used": "2026-01-28T07:29:33.687563"
@@ -511,6 +506,12 @@
       "full": "Le 20 octobre 1906, Lee De Forest annonce la triode, un dispositif électronique qui a révolutionné les communications. Ce tube à vide permet de contrôler le courant électrique, ouvrant la voie à la radio et à la télévision, et marquant un tournant dans l'histoire de l'électronique.",
       "category": "inventions",
       "date_used": "2026-10-21T11:35:36.574728"
+    },
+    {
+      "summary": "Apple Introduces PowerBook",
+      "full": "Le 21 octobre 1991, Apple a introduit le PowerBook, un ordinateur portable qui a révolutionné le marché des ordinateurs mobiles. Avec son design innovant et son interface utilisateur conviviale, le PowerBook a établi de nouvelles normes pour les ordinateurs portables, influençant le développement futur de cette catégorie de produits.",
+      "category": "inventions",
+      "date_used": "2026-10-22T11:35:31.546131"
     }
   ]
 }
