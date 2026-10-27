@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://infobref.com/dix-technologies-2026/",
-      "title": "Dix technologies de rupture à surveiller en 2026 - InfoBref",
-      "date_used": "2026-05-21T09:56:35.790762"
-    },
-    {
       "url": "https://www.cointribune.com/ethmilan-revient-pour-une-4e-edition-les-21-22-mai-2026-au-musee-des-sciences-et-de-la-technologie/",
       "title": "ETHMilan revient pour une 4e édition les 21–22 mai 2026 au Musée ...",
       "date_used": "2026-05-22T09:41:38.014632"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/blogs/l-esprit-libre/lia-reduit-fortement-le-temps-de-developpement-en-open-source-mais-506417.htm#xtor=RSS-1",
       "title": "L’IA réduit fortement le temps de développement en open source",
       "date_used": "2026-10-26T12:42:43.649366"
+    },
+    {
+      "url": "https://www.infoq.com/news/2026/10/aws-ai-agents-linux-kernel-cves/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "title": "AWS utilise des agents IA pour gérer les CVE du noyau Linux",
+      "date_used": "2026-10-27T11:57:26.573054"
     }
   ]
 }
