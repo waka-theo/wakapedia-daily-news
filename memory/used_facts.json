@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "bug Ariane 5 1996",
-      "full": "Le 4 juin 1996, la fusée Ariane 5 a explosé 37 secondes après son lancement en raison d'un bug dans son logiciel de contrôle. Ce bug était dû à une conversion de données incorrecte entre deux systèmes, entraînant une surcharge de données. Cet incident a coûté environ 500 millions de dollars et a conduit à des révisions majeures des protocoles de test et de validation dans l'industrie spatiale.",
-      "date_used": "2026-01-29T07:41:45.181022"
-    },
-    {
       "summary": "origine du nom Python langage de programmation Monty Python",
       "full": "Le langage de programmation Python a été créé par Guido van Rossum à la fin des années 1980 et a été nommé d'après la série télévisée britannique \"Monty Python's Flying Circus\". Van Rossum voulait un nom qui soit à la fois court, unique et un peu mystérieux, et il était fan de l'humour absurde de cette série.",
       "date_used": "2026-01-30T07:43:18.631681"
@@ -513,6 +508,12 @@
       "full": "Le 25 octobre 2001, Microsoft a lancé Windows XP, un système d'exploitation qui a révolutionné l'informatique personnelle grâce à son interface utilisateur conviviale et à sa stabilité. Windows XP est devenu l'un des systèmes d'exploitation les plus populaires de l'histoire, restant en usage pendant plus d'une décennie après sa sortie.",
       "category": "inventions",
       "date_used": "2026-10-26T12:43:10.063430"
+    },
+    {
+      "summary": "First Major ARPANET Outage",
+      "full": "Le 28 octobre 1977, le premier incident majeur sur ARPANET, le précurseur d'Internet, a eu lieu. Ce dysfonctionnement a été causé par une erreur de configuration qui a temporairement interrompu les communications entre plusieurs nœuds du réseau. Cet événement a mis en lumière la vulnérabilité des réseaux informatiques naissants et a conduit à des améliorations dans la gestion et la sécurité des réseaux.",
+      "category": "bugs",
+      "date_used": "2026-10-28T12:35:08.762269"
     }
   ]
 }

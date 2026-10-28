@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.cointribune.com/ethmilan-revient-pour-une-4e-edition-les-21-22-mai-2026-au-musee-des-sciences-et-de-la-technologie/",
-      "title": "ETHMilan revient pour une 4e édition les 21–22 mai 2026 au Musée ...",
-      "date_used": "2026-05-22T09:41:38.014632"
-    },
-    {
       "url": "https://www.free-work.com/fr/tech-it/blog/actualites-informatiques/quels-sont-les-salons-a-venir",
       "title": "Les événements tech à ne pas manquer en 2026 ! - Free-Work",
       "date_used": "2026-05-25T10:24:00.438332"
@@ -449,6 +444,11 @@
       "url": "https://www.infoq.com/news/2026/10/aws-ai-agents-linux-kernel-cves/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
       "title": "AWS utilise des agents IA pour gérer les CVE du noyau Linux",
       "date_used": "2026-10-27T11:57:26.573054"
+    },
+    {
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas",
+      "title": "Les électeurs du Texas s'opposent aux centres de données",
+      "date_used": "2026-10-28T12:34:46.810917"
     }
   ]
 }
