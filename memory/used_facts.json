@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "origine du nom Python langage de programmation Monty Python",
-      "full": "Le langage de programmation Python a été créé par Guido van Rossum à la fin des années 1980 et a été nommé d'après la série télévisée britannique \"Monty Python's Flying Circus\". Van Rossum voulait un nom qui soit à la fois court, unique et un peu mystérieux, et il était fan de l'humour absurde de cette série.",
-      "date_used": "2026-01-30T07:43:18.631681"
-    },
-    {
       "summary": "premier virus informatique Creeper 1971",
       "full": "Le premier virus informatique, nommé \"Creeper\", a été créé en 1971 par un programmeur nommé Bob Thomas. Ce virus infectait le réseau ARPANET et était conçu pour se propager d'un ordinateur à l'autre, affichant le message : \"Je suis Creeper, attrapez-moi si vous le pouvez !\".",
       "date_used": "2026-02-02T07:53:23.606683"
@@ -514,6 +509,12 @@
       "full": "Le 28 octobre 1977, le premier incident majeur sur ARPANET, le précurseur d'Internet, a eu lieu. Ce dysfonctionnement a été causé par une erreur de configuration qui a temporairement interrompu les communications entre plusieurs nœuds du réseau. Cet événement a mis en lumière la vulnérabilité des réseaux informatiques naissants et a conduit à des améliorations dans la gestion et la sécurité des réseaux.",
       "category": "bugs",
       "date_used": "2026-10-28T12:35:08.762269"
+    },
+    {
+      "summary": "DMCA signed into law",
+      "full": "Le 28 octobre 1998, le Digital Millennium Copyright Act (DMCA) a été signé en loi aux États-Unis. Cette législation a été conçue pour moderniser les lois sur le droit d'auteur afin de mieux s'adapter à l'ère numérique, en protégeant les œuvres en ligne tout en établissant des règles concernant la responsabilité des fournisseurs de services Internet.",
+      "category": "other",
+      "date_used": "2026-10-29T12:45:56.475750"
     }
   ]
 }

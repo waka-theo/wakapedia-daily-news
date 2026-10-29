@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.free-work.com/fr/tech-it/blog/actualites-informatiques/quels-sont-les-salons-a-venir",
-      "title": "Les événements tech à ne pas manquer en 2026 ! - Free-Work",
-      "date_used": "2026-05-25T10:24:00.438332"
-    },
-    {
       "url": "https://devops.com/microsoft-open-sources-rampart-and-clarity-to-bring-agent-safety-into-the-dev-workflow/",
       "title": "Microsoft open-sources RAMPART et Clarity pour la sécurité des IA",
       "date_used": "2026-05-26T10:11:28.158453"
@@ -449,6 +444,11 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas",
       "title": "Les électeurs du Texas s'opposent aux centres de données",
       "date_used": "2026-10-28T12:34:46.810917"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-google-genie-4-un-modele-d-ia-pour-explorer-des-mondes-interactifs-en-temps-reel-100885.html",
+      "title": "Google Genie 4 : un modèle d'IA pour explorer des mondes interactifs en temps réel",
+      "date_used": "2026-10-29T12:45:28.787755"
     }
   ]
 }
