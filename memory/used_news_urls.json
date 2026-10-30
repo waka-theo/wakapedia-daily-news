@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://devops.com/microsoft-open-sources-rampart-and-clarity-to-bring-agent-safety-into-the-dev-workflow/",
-      "title": "Microsoft open-sources RAMPART et Clarity pour la sécurité des IA",
-      "date_used": "2026-05-26T10:11:28.158453"
-    },
-    {
       "url": "https://www.usinenouvelle.com/technos-et-innovations/une-equipe-de-recherche-franco-japonaise-propose-d-utiliser-l-adn-comme-alternative-au-chiffrement-quantique.N1941681",
       "title": "L'ADN comme alternative au chiffrement quantique",
       "date_used": "2026-05-27T10:09:26.433158"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-google-genie-4-un-modele-d-ia-pour-explorer-des-mondes-interactifs-en-temps-reel-100885.html",
       "title": "Google Genie 4 : un modèle d'IA pour explorer des mondes interactifs en temps réel",
       "date_used": "2026-10-29T12:45:28.787755"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/cessez-de-communiquer-vos-mots-de-passe-aux-agents-ia-met-en-garde-une-grande-banque-506906.htm#xtor=RSS-1",
+      "title": "Cessez de communiquer vos mots de passe aux agents IA",
+      "date_used": "2026-10-30T12:36:51.246018"
     }
   ]
 }
