@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "Y2K bug millennium bug",
-      "full": "Le bug de l'an 2000, également connu sous le nom de Y2K, était une préoccupation majeure à l'approche de l'an 2000. Les systèmes informatiques, qui utilisaient souvent un format d'année à deux chiffres, risquaient de mal interpréter la date de transition du 31 décembre 1999 au 1er janvier 2000, ce qui aurait pu entraîner des pannes massives dans divers secteurs. Heureusement, grâce à des efforts de mise à jour et de test, la plupart des problèmes ont été évités.",
-      "date_used": "2026-02-04T07:45:54.814867"
-    },
-    {
       "summary": "bug du missile Patriot erreur 404",
       "full": "En 1991, lors de la guerre du Golfe, le système de missiles Patriot a connu un bug qui a conduit à l'échec d'une interception. Une erreur de calcul du temps a causé un retard dans le système, permettant à un missile Scud irakien de frapper une caserne à Dhahran, en Arabie Saoudite, tuant 28 soldats américains. Cet incident est souvent cité comme un exemple tragique des conséquences d'un bug informatique.",
       "date_used": "2026-02-05T07:51:13.117867"
@@ -516,6 +511,12 @@
       "full": "Le 26 octobre 1861, le Pony Express, un service de messagerie rapide reliant l'Est et l'Ouest des États-Unis, a cessé ses opérations. Ce service, qui utilisait des cavaliers pour transporter le courrier à travers des terrains difficiles, a été remplacé par le télégraphe, qui a permis une communication instantanée. Le Pony Express est devenu une légende du Far West, symbolisant l'esprit d'aventure et la conquête de l'Ouest.",
       "category": "other",
       "date_used": "2026-10-30T12:37:09.170856"
+    },
+    {
+      "summary": "First Transistor Radio 1954",
+      "full": "Le premier radio à transistor a été mis en vente en 1954, marquant une révolution dans le monde de l'électronique. Ce modèle, produit par la société Texas Instruments, a permis de rendre la radio portable et accessible, changeant ainsi la manière dont les gens écoutaient de la musique et des informations.",
+      "category": "inventions",
+      "date_used": "2026-11-02T16:52:34.786466"
     }
   ]
 }

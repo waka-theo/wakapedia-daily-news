@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.usinenouvelle.com/technos-et-innovations/une-equipe-de-recherche-franco-japonaise-propose-d-utiliser-l-adn-comme-alternative-au-chiffrement-quantique.N1941681",
-      "title": "L'ADN comme alternative au chiffrement quantique",
-      "date_used": "2026-05-27T10:09:26.433158"
-    },
-    {
       "url": "https://www.franceinfo.fr/sciences/high-tech/",
       "title": "Des employés de Samsung touchent une prime record liée à l'IA",
       "date_used": "2026-05-28T10:18:20.453893"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/cessez-de-communiquer-vos-mots-de-passe-aux-agents-ia-met-en-garde-une-grande-banque-506906.htm#xtor=RSS-1",
       "title": "Cessez de communiquer vos mots de passe aux agents IA",
       "date_used": "2026-10-30T12:36:51.246018"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior/",
+      "title": "42AI lève 62,5M$ pour prédire le comportement humain",
+      "date_used": "2026-11-02T16:52:06.244255"
     }
   ]
 }
