@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.franceinfo.fr/sciences/high-tech/",
-      "title": "Des employés de Samsung touchent une prime record liée à l'IA",
-      "date_used": "2026-05-28T10:18:20.453893"
-    },
-    {
       "url": "https://www.lemondeinformatique.fr/saas-software-as-a-service-86.html",
       "title": "Wimi obtient le label SecNumCloud pour sa plateforme SaaS",
       "date_used": "2026-05-29T10:08:10.293401"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior/",
       "title": "42AI lève 62,5M$ pour prédire le comportement humain",
       "date_used": "2026-11-02T16:52:06.244255"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/50-agents-ia-ont-tente-de-batir-une-civilisation-florissante-dans-minecraft-et-ca-ne-sest-pas-bien-termine-507183.htm#xtor=RSS-1",
+      "title": "50 agents IA échouent à bâtir une civilisation dans Minecraft",
+      "date_used": "2026-11-03T14:52:55.251263"
     }
   ]
 }
