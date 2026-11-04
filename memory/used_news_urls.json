@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lemondeinformatique.fr/saas-software-as-a-service-86.html",
-      "title": "Wimi obtient le label SecNumCloud pour sa plateforme SaaS",
-      "date_used": "2026-05-29T10:08:10.293401"
-    },
-    {
       "url": "https://www.globalsecuritymag.fr/infosecurity-europe-revient-du-2-au-4-juin-2026-les-strategies-europeennes-de.html",
       "title": "Infosecurity Europe revient du 2 au 4 juin 2026",
       "date_used": "2026-06-01T11:49:58.893262"
@@ -449,6 +444,11 @@
       "url": "https://www.zdnet.fr/actualites/50-agents-ia-ont-tente-de-batir-une-civilisation-florissante-dans-minecraft-et-ca-ne-sest-pas-bien-termine-507183.htm#xtor=RSS-1",
       "title": "50 agents IA échouent à bâtir une civilisation dans Minecraft",
       "date_used": "2026-11-03T14:52:55.251263"
+    },
+    {
+      "url": "https://www.infoq.com/news/2026/11/inkitt-one-shot-pr-creator-agent/",
+      "title": "Inkitt lance un créateur de PR avec orchestration d'agents",
+      "date_used": "2026-11-04T15:10:57.081988"
     }
   ]
 }
