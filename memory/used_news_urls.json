@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.globalsecuritymag.fr/infosecurity-europe-revient-du-2-au-4-juin-2026-les-strategies-europeennes-de.html",
-      "title": "Infosecurity Europe revient du 2 au 4 juin 2026",
-      "date_used": "2026-06-01T11:49:58.893262"
-    },
-    {
       "url": "https://www.techniques-ingenieur.fr/actualite/",
       "title": "La cryptographie post-quantique se prépare à contrer les attaques...",
       "date_used": "2026-06-02T10:49:02.667302"
@@ -449,6 +444,11 @@
       "url": "https://www.infoq.com/news/2026/11/inkitt-one-shot-pr-creator-agent/",
       "title": "Inkitt lance un créateur de PR avec orchestration d'agents",
       "date_used": "2026-11-04T15:10:57.081988"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/actualites/lire-amd-pourrait-depasser-intel-pour-la-premiere-fois-avec-17-milliards-de-dollars-de-revenus-attendus-100916.html",
+      "title": "AMD pourrait dépasser Intel avec 17 milliards de dollars",
+      "date_used": "2026-11-05T15:12:36.340299"
     }
   ]
 }

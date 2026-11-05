@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "accidental inventions in technology",
-      "full": "De nombreuses inventions célèbres dans le domaine de la technologie ont été découvertes par accident. Par exemple, le Wi-Fi a été développé à partir d'une technologie de radar qui a été initialement conçue pour détecter des objets. De même, le Post-it a été créé lorsqu'un scientifique a tenté de développer un adhésif super fort, mais a plutôt obtenu un adhésif qui ne collait pas très bien. Ces coïncidences ont conduit à des innovations qui ont profondément influencé notre vie quotidienne.",
-      "date_used": "2026-02-12T07:54:19.951133"
-    },
-    {
       "summary": "Bluetooth origin Viking king",
       "full": "Le nom 'Bluetooth' provient d'un roi viking du 10ème siècle, Harald Bluetooth, qui a unifié le Danemark et la Norvège. Ce nom a été choisi pour symboliser l'unification des technologies sans fil, tout comme le roi avait unifié son royaume.",
       "date_used": "2026-02-16T07:56:19.718583"
@@ -519,6 +514,12 @@
       "full": "Le 2 novembre 2000, la première équipe de cosmonautes a été envoyée à bord de la Station spatiale internationale (ISS). Cette mission a marqué le début d'une présence humaine continue dans l'espace, avec des équipes de scientifiques et d'ingénieurs travaillant sur divers projets de recherche et de développement. L'ISS est devenue un symbole de coopération internationale dans le domaine de l'exploration spatiale.",
       "category": "pioneers",
       "date_used": "2026-11-04T15:11:25.920568"
+    },
+    {
+      "summary": "First computer predicts presidential election",
+      "full": "En 1952, un ordinateur a été utilisé pour prédire le résultat de l'élection présidentielle américaine. Ce fut la première fois qu'une machine était utilisée pour analyser des données électorales et faire des prévisions, marquant un tournant dans l'utilisation de la technologie dans le processus électoral. Cette innovation a ouvert la voie à l'utilisation des ordinateurs dans les analyses politiques et les sondages d'opinion.",
+      "category": "pioneers",
+      "date_used": "2026-11-05T15:13:08.249676"
     }
   ]
 }
