@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.techniques-ingenieur.fr/actualite/",
-      "title": "La cryptographie post-quantique se prépare à contrer les attaques...",
-      "date_used": "2026-06-02T10:49:02.667302"
-    },
-    {
       "url": "https://www.france-epargne.fr/news/souverainete-numerique-bruxelles-devoile-un-plan-pour-reduire-la-dependance-technologique-de-leurope",
       "title": "Souveraineté numérique : le plan de Bruxelles dévoilé",
       "date_used": "2026-06-03T11:16:15.236107"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/actualites/lire-amd-pourrait-depasser-intel-pour-la-premiere-fois-avec-17-milliards-de-dollars-de-revenus-attendus-100916.html",
       "title": "AMD pourrait dépasser Intel avec 17 milliards de dollars",
       "date_used": "2026-11-05T15:12:36.340299"
+    },
+    {
+      "url": "https://arstechnica.com/tech-policy/2026/11/nvidia-ceo-jensen-huang-summoned-by-congress-over-chinese-espionage-concerns/",
+      "title": "Le PDG de Nvidia convoqué par le Congrès sur l'espionnage",
+      "date_used": "2026-11-06T14:49:33.150080"
     }
   ]
 }
