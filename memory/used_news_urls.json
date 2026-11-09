@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.france-epargne.fr/news/souverainete-numerique-bruxelles-devoile-un-plan-pour-reduire-la-dependance-technologique-de-leurope",
-      "title": "Souveraineté numérique : le plan de Bruxelles dévoilé",
-      "date_used": "2026-06-03T11:16:15.236107"
-    },
-    {
       "url": "https://fr.euronews.com/video/2026/06/04/lue-lance-une-offensive-technologique-pour-reduire-sa-dependance-aux-etats-unis-et-a-la-ch",
       "title": "UE : offensive technologique pour réduire la dépendance",
       "date_used": "2026-06-04T10:07:34.411243"
@@ -449,6 +444,11 @@
       "url": "https://arstechnica.com/tech-policy/2026/11/nvidia-ceo-jensen-huang-summoned-by-congress-over-chinese-espionage-concerns/",
       "title": "Le PDG de Nvidia convoqué par le Congrès sur l'espionnage",
       "date_used": "2026-11-06T14:49:33.150080"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/applications-developpement/airbnb-accelere-sa-croissance-et-renforce-ses-inve",
+      "title": "Airbnb renforce ses investissements dans l’IA",
+      "date_used": "2026-11-09T17:13:22.473638"
     }
   ]
 }

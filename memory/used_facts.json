@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "Bluetooth origin Viking king",
-      "full": "Le nom 'Bluetooth' provient d'un roi viking du 10ème siècle, Harald Bluetooth, qui a unifié le Danemark et la Norvège. Ce nom a été choisi pour symboliser l'unification des technologies sans fil, tout comme le roi avait unifié son royaume.",
-      "date_used": "2026-02-16T07:56:19.718583"
-    },
-    {
       "summary": "inventions created simultaneously",
       "full": "Dans l'histoire de la technologie, il existe de nombreux exemples d'inventions qui ont été créées simultanément par différents inventeurs. Par exemple, le téléphone a été breveté par Alexander Graham Bell en 1876, mais un autre inventeur, Elisha Gray, a déposé un brevet pour un appareil similaire le même jour. De même, le calculateur électronique a été développé indépendamment par plusieurs inventeurs dans les années 1940, chacun apportant sa propre contribution à cette technologie révolutionnaire.",
       "date_used": "2026-02-23T07:56:31.582196"
@@ -520,6 +515,12 @@
       "full": "En 1952, un ordinateur a été utilisé pour prédire le résultat de l'élection présidentielle américaine. Ce fut la première fois qu'une machine était utilisée pour analyser des données électorales et faire des prévisions, marquant un tournant dans l'utilisation de la technologie dans le processus électoral. Cette innovation a ouvert la voie à l'utilisation des ordinateurs dans les analyses politiques et les sondages d'opinion.",
       "category": "pioneers",
       "date_used": "2026-11-05T15:13:08.249676"
+    },
+    {
+      "summary": "Firefox Rises Out of the Ashes",
+      "full": "Le 9 novembre 2025, Mozilla a annoncé un renouveau de son navigateur Firefox, qui avait perdu des parts de marché face à des concurrents comme Chrome et Edge. Cette renaissance a été marquée par de nouvelles fonctionnalités axées sur la confidentialité et la performance, redonnant ainsi un coup de fouet à la popularité de Firefox.",
+      "category": "inventions",
+      "date_used": "2026-11-09T17:13:53.314346"
     }
   ]
 }
