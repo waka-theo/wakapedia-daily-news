@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://fr.euronews.com/video/2026/06/04/lue-lance-une-offensive-technologique-pour-reduire-sa-dependance-aux-etats-unis-et-a-la-ch",
-      "title": "UE : offensive technologique pour réduire la dépendance",
-      "date_used": "2026-06-04T10:07:34.411243"
-    },
-    {
       "url": "https://www.squairlaw.com/fr/blog/cybersecurite-ia-sous-traitants-les-actualites-data-de-juin-2026-",
       "title": "Cybersécurité, IA, sous-traitants : les actualités Data de juin 2026",
       "date_used": "2026-06-05T10:04:28.335888"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/applications-developpement/airbnb-accelere-sa-croissance-et-renforce-ses-inve",
       "title": "Airbnb renforce ses investissements dans l’IA",
       "date_used": "2026-11-09T17:13:22.473638"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/",
+      "title": "Adobe intègre davantage d'IA dans ses produits",
+      "date_used": "2026-11-10T15:26:54.745277"
     }
   ]
 }

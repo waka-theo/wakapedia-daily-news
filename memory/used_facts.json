@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "inventions created simultaneously",
-      "full": "Dans l'histoire de la technologie, il existe de nombreux exemples d'inventions qui ont été créées simultanément par différents inventeurs. Par exemple, le téléphone a été breveté par Alexander Graham Bell en 1876, mais un autre inventeur, Elisha Gray, a déposé un brevet pour un appareil similaire le même jour. De même, le calculateur électronique a été développé indépendamment par plusieurs inventeurs dans les années 1940, chacun apportant sa propre contribution à cette technologie révolutionnaire.",
-      "date_used": "2026-02-23T07:56:31.582196"
-    },
-    {
       "summary": "Mariner 1 spacecraft bug 1962",
       "full": "En 1962, la sonde spatiale Mariner 1 a été perdue à cause d'une erreur de programmation. Un simple symbole manquant dans le code a conduit à une déviation de la trajectoire, rendant la mission impossible. Cet incident a coûté environ 80 millions de dollars et a mis en lumière l'importance cruciale de la vérification des logiciels dans les missions spatiales.",
       "date_used": "2026-02-24T07:52:03.946911"
@@ -521,6 +516,12 @@
       "full": "Le 9 novembre 2025, Mozilla a annoncé un renouveau de son navigateur Firefox, qui avait perdu des parts de marché face à des concurrents comme Chrome et Edge. Cette renaissance a été marquée par de nouvelles fonctionnalités axées sur la confidentialité et la performance, redonnant ainsi un coup de fouet à la popularité de Firefox.",
       "category": "inventions",
       "date_used": "2026-11-09T17:13:53.314346"
+    },
+    {
+      "summary": "IBM Signs A Deal With The Devil",
+      "full": "En 1980, IBM a signé un contrat avec Microsoft pour développer le système d'exploitation de ses premiers PC. Ce partenariat a été surnommé par certains comme un \"accord avec le diable\", car il a permis à Microsoft de devenir un acteur majeur dans l'industrie du logiciel, transformant ainsi le paysage technologique pour les décennies à venir.",
+      "category": "pioneers",
+      "date_used": "2026-11-10T15:27:17.499366"
     }
   ]
 }
