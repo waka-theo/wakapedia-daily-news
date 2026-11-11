@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.squairlaw.com/fr/blog/cybersecurite-ia-sous-traitants-les-actualites-data-de-juin-2026-",
-      "title": "Cybersécurité, IA, sous-traitants : les actualités Data de juin 2026",
-      "date_used": "2026-06-05T10:04:28.335888"
-    },
-    {
       "url": "https://www.clubic.com/actualites-informatique/",
       "title": "Actualités High-Tech : dernières innovations et tendances",
       "date_used": "2026-06-08T11:11:02.311899"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/",
       "title": "Adobe intègre davantage d'IA dans ses produits",
       "date_used": "2026-11-10T15:26:54.745277"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/",
+      "title": "Plurai améliore les agents IA avec des techniques de voitures autonomes",
+      "date_used": "2026-11-11T14:56:59.055008"
     }
   ]
 }
