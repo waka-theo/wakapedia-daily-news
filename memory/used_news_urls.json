@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.clubic.com/actualites-informatique/",
-      "title": "Actualités High-Tech : dernières innovations et tendances",
-      "date_used": "2026-06-08T11:11:02.311899"
-    },
-    {
       "url": "https://www.techniques-ingenieur.fr/actualite/articles/ces-2026-quand-linnovation-se-passe-dintelligence-artificielle-ou-presque-154889/",
       "title": "CES 2026 : quand l'innovation se passe d'intelligence artificielle (ou presque)",
       "date_used": "2026-06-09T09:57:54.392888"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/",
       "title": "Plurai améliore les agents IA avec des techniques de voitures autonomes",
       "date_used": "2026-11-11T14:56:59.055008"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/",
+      "title": "Norwest investit 4 milliards $ dans l'IA",
+      "date_used": "2026-11-12T15:48:50.585686"
     }
   ]
 }
