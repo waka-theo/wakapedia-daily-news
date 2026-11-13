@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.techniques-ingenieur.fr/actualite/articles/ces-2026-quand-linnovation-se-passe-dintelligence-artificielle-ou-presque-154889/",
-      "title": "CES 2026 : quand l'innovation se passe d'intelligence artificielle (ou presque)",
-      "date_used": "2026-06-09T09:57:54.392888"
-    },
-    {
       "url": "https://www.youtube.com/watch?v=Qgz9TS6gMYE",
       "title": "L'info du jour | 10 juin 2026 - Matin - YouTube",
       "date_used": "2026-06-10T10:15:37.931500"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/",
       "title": "Norwest investit 4 milliards $ dans l'IA",
       "date_used": "2026-11-12T15:48:50.585686"
+    },
+    {
+      "url": "https://www.infoq.com/news/2026/11/google-ambient-agent-prod/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "title": "Google open source un agent pour diagnostiquer les IA",
+      "date_used": "2026-11-13T15:09:39.605919"
     }
   ]
 }
