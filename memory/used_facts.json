@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "Java programming language name origin Oak tree",
-      "full": "Le langage de programmation Java a été initialement nommé Oak, d'après un chêne qui se trouvait devant le bureau de son créateur, James Gosling. Ce nom a ensuite été changé en Java, inspiré par le café Java, pour refléter une nouvelle identité.",
-      "date_used": "2026-03-06T07:40:04.499563"
-    },
-    {
       "summary": "Nokia origins paper products company",
       "full": "Nokia, aujourd'hui célèbre pour ses téléphones, a été fondée en 1865 en tant qu'entreprise de produits en papier. Au fil des ans, elle a diversifié ses activités, notamment dans la fabrication de bottes en caoutchouc, avant de se tourner vers les technologies de communication.",
       "date_used": "2026-03-10T07:42:57.526845"
@@ -523,6 +518,12 @@
       "full": "En 1989, Tim Berners-Lee a proposé le concept du World Wide Web, une idée révolutionnaire qui a permis de relier des documents à travers Internet en utilisant des hyperliens. Ce projet a été le point de départ de l'Internet tel que nous le connaissons aujourd'hui, transformant la manière dont l'information est partagée et accessible dans le monde entier.",
       "category": "origins",
       "date_used": "2026-11-12T15:49:18.812889"
+    },
+    {
+      "summary": "Mariner 9 orbits Mars",
+      "full": "Le 14 novembre 1971, Mariner 9 est devenu le premier vaisseau spatial à orbiter autour d'une autre planète, Mars. Cette mission a permis de cartographier la surface martienne et de découvrir des caractéristiques géologiques majeures, changeant notre compréhension de la planète rouge.",
+      "category": "other",
+      "date_used": "2026-11-16T16:48:39.425723"
     }
   ]
 }

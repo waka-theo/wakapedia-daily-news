@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.youtube.com/watch?v=Qgz9TS6gMYE",
-      "title": "L'info du jour | 10 juin 2026 - Matin - YouTube",
-      "date_used": "2026-06-10T10:15:37.931500"
-    },
-    {
       "url": "https://www.futura-sciences.com/tech/actualites/technologie-vivatech-2026-coeur-innovation-transformation-numerique-confiance-tech-134474/",
       "title": "VivaTech 2026 : au cœur de l'innovation numérique",
       "date_used": "2026-06-12T10:25:04.919456"
@@ -449,6 +444,11 @@
       "url": "https://www.infoq.com/news/2026/11/google-ambient-agent-prod/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
       "title": "Google open source un agent pour diagnostiquer les IA",
       "date_used": "2026-11-13T15:09:39.605919"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+      "title": "Les États-Unis renforcent les contrôles d'exportation des puces IA",
+      "date_used": "2026-11-16T16:48:10.858683"
     }
   ]
 }
