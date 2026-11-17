@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.futura-sciences.com/tech/actualites/technologie-vivatech-2026-coeur-innovation-transformation-numerique-confiance-tech-134474/",
-      "title": "VivaTech 2026 : au cœur de l'innovation numérique",
-      "date_used": "2026-06-12T10:25:04.919456"
-    },
-    {
       "url": "https://www.prnewswire.com/news-releases/ai-to-reshape-the-global-technology-landscape-in-2026-says-trendforce-302626789.html",
       "title": "L'IA redéfinira le paysage technologique mondial en 2026",
       "date_used": "2026-06-15T12:33:22.681835"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
       "title": "Les États-Unis renforcent les contrôles d'exportation des puces IA",
       "date_used": "2026-11-16T16:48:10.858683"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/17/voyage-labs-raises-12-million-for-a-specialized-ai-travel-assistant/",
+      "title": "Voyage Labs lève 12 millions $ pour un assistant de voyage IA",
+      "date_used": "2026-11-17T16:44:22.240577"
     }
   ]
 }
