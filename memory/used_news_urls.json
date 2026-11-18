@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.prnewswire.com/news-releases/ai-to-reshape-the-global-technology-landscape-in-2026-says-trendforce-302626789.html",
-      "title": "L'IA redéfinira le paysage technologique mondial en 2026",
-      "date_used": "2026-06-15T12:33:22.681835"
-    },
-    {
       "url": "https://www.lemondeinformatique.fr/open-source-et-logiciels-libres-69.html",
       "title": "La Cnaf contribue au projet open source Catala de l'Inria.",
       "date_used": "2026-06-16T11:26:07.161782"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/11/17/voyage-labs-raises-12-million-for-a-specialized-ai-travel-assistant/",
       "title": "Voyage Labs lève 12 millions $ pour un assistant de voyage IA",
       "date_used": "2026-11-17T16:44:22.240577"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/donnees-ia/ia-en-entreprise-databricks-revele-l-essor-des-mod",
+      "title": "IA en entreprise : Databricks révèle l’essor des modèles ouverts",
+      "date_used": "2026-11-18T16:14:26.262850"
     }
   ]
 }
