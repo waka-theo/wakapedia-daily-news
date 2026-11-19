@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "famous bugs and glitches in history",
-      "full": "Au cours de l'histoire de l'informatique, plusieurs bugs célèbres ont eu des conséquences notables. Par exemple, le bug de l'ordinateur de la mission Mariner 1 en 1962 a conduit à l'échec de la mission spatiale, coûtant environ 18 millions de dollars. Ce bug était dû à une simple erreur de codage, illustrant à quel point des détails apparemment mineurs peuvent avoir des répercussions majeures.",
-      "date_used": "2026-03-11T07:45:20.747013"
-    },
-    {
       "summary": "first digital camera size toaster 1975",
       "full": "La première caméra numérique, inventée par l'ingénieur de Kodak Steve Sasson en 1975, avait la taille d'un grille-pain. Cet appareil révolutionnaire a marqué le début d'une nouvelle ère dans la photographie, bien avant que les caméras numériques ne deviennent compactes et portables.",
       "date_used": "2026-03-12T07:48:36.688938"
@@ -525,6 +520,12 @@
       "full": "Le tube à vide, inventé en 1904 par John Ambrose Fleming, a été une avancée majeure dans le domaine de l'électronique. Ce dispositif a permis de contrôler le flux d'électricité dans les circuits, ouvrant la voie à des innovations telles que la radio, la télévision et les premiers ordinateurs. Son invention a marqué le début de l'ère de l'électronique moderne.",
       "category": "inventions",
       "date_used": "2026-11-17T16:44:46.240010"
+    },
+    {
+      "summary": "dawn of the microprocessor",
+      "full": "Le 15 novembre 1971, Intel a lancé le premier microprocesseur commercial, le 4004. Ce microprocesseur a marqué le début d'une nouvelle ère dans l'informatique, permettant la miniaturisation des composants et ouvrant la voie à des ordinateurs personnels plus accessibles. Son invention a radicalement transformé le paysage technologique, rendant possible le développement de dispositifs électroniques variés allant des calculatrices aux ordinateurs modernes.",
+      "category": "inventions",
+      "date_used": "2026-11-19T16:23:16.348262"
     }
   ]
 }

@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lemondeinformatique.fr/open-source-et-logiciels-libres-69.html",
-      "title": "La Cnaf contribue au projet open source Catala de l'Inria.",
-      "date_used": "2026-06-16T11:26:07.161782"
-    },
-    {
       "url": "https://www.zdnet.fr/",
       "title": "ZDNET - Actualité, business et technologies pour les professionne ...",
       "date_used": "2026-06-17T11:10:08.329832"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/donnees-ia/ia-en-entreprise-databricks-revele-l-essor-des-mod",
       "title": "IA en entreprise : Databricks révèle l’essor des modèles ouverts",
       "date_used": "2026-11-18T16:14:26.262850"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
+      "title": "Anthropic s'engage à un développement responsable de l'IA",
+      "date_used": "2026-11-19T16:22:51.364877"
     }
   ]
 }
