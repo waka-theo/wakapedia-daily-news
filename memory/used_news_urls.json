@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.zdnet.fr/",
-      "title": "ZDNET - Actualité, business et technologies pour les professionne ...",
-      "date_used": "2026-06-17T11:10:08.329832"
-    },
-    {
       "url": "https://www.infoq.com/news/2026/07/meta-react-compiler-rust/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
       "title": "Meta porte son compilateur React vers Rust",
       "date_used": "2026-07-23T08:40:44.382763"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
       "title": "Anthropic s'engage à un développement responsable de l'IA",
       "date_used": "2026-11-19T16:22:51.364877"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/donnees-ia/ia-au-travail-l-usage-fait-l-adhesion-pas-la-confiance",
+      "title": "IA au travail : l’usage fait l’adhésion, pas la confiance",
+      "date_used": "2026-11-20T15:56:46.008045"
     }
   ]
 }
