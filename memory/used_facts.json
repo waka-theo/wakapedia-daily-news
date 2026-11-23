@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "world's largest solar farm record",
-      "full": "Le record du plus grand parc solaire au monde est détenu par le parc solaire de Bhadla en Inde, qui s'étend sur plus de 14 000 acres et a une capacité de production de 2 245 MW. Inauguré en 2018, ce parc illustre l'énorme potentiel de l'énergie solaire et son rôle croissant dans la transition énergétique mondiale.",
-      "date_used": "2026-03-16T08:09:37.670601"
-    },
-    {
       "summary": "first smartphone IBM Simon 1994",
       "full": "En 1994, IBM a lancé le Simon Personal Communicator, considéré comme le premier smartphone au monde. Il était équipé d'un écran tactile, pouvait envoyer des e-mails et contenait des applications comme un calendrier et un carnet d'adresses, préfigurant ainsi les smartphones modernes.",
       "date_used": "2026-03-19T07:48:47.341533"
@@ -527,6 +522,12 @@
       "full": "En 1994, Intel a connu un bug majeur avec son processeur Pentium, qui a conduit à des erreurs de calcul. Ce problème a été si sérieux qu'Intel a dû rappeler des millions de processeurs et a perdu des milliards de dollars en raison de la perte de confiance des consommateurs. Cet incident est devenu un exemple emblématique des risques associés à la conception de matériel informatique.",
       "category": "bugs",
       "date_used": "2026-11-20T15:57:08.543547"
+    },
+    {
+      "summary": "telephones get a push",
+      "full": "Le 18 novembre 1985, la technologie des téléphones à cadran rotatif a été remplacée par des téléphones à touches, marquant un tournant dans la manière dont les utilisateurs interagissaient avec leurs appareils de communication. Cette innovation a facilité la composition des numéros et a ouvert la voie à des fonctionnalités plus avancées dans les téléphones modernes.",
+      "category": "inventions",
+      "date_used": "2026-11-23T19:01:32.789684"
     }
   ]
 }
