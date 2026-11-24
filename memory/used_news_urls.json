@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.zdnet.fr/actualites/ia-amd-lance-helios-et-convainc-openai-anthropic-et-meta-498965.htm#xtor=RSS-1",
-      "title": "IA : AMD lance Helios et convainc OpenAI, Anthropic et Meta",
-      "date_used": "2026-07-24T08:36:14.983410"
-    },
-    {
       "url": "https://www.lemondeinformatique.fr/actualites/lire-oracle-signe-un-contrat-logiciel-de-7-md$-avec-le-pentagon-100717.html",
       "title": "Oracle signe un contrat logiciel de 7 Md$ avec le Pentagon",
       "date_used": "2026-07-27T10:04:08.320032"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
       "title": "Amazon acquiert Decart pour 7,5 milliards $",
       "date_used": "2026-11-23T19:01:04.121897"
+    },
+    {
+      "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/",
+      "title": "Meta intègre son assistant IA dans Instagram DMs",
+      "date_used": "2026-11-24T18:41:19.515781"
     }
   ]
 }

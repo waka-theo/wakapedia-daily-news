@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "first smartphone IBM Simon 1994",
-      "full": "En 1994, IBM a lancé le Simon Personal Communicator, considéré comme le premier smartphone au monde. Il était équipé d'un écran tactile, pouvait envoyer des e-mails et contenait des applications comme un calendrier et un carnet d'adresses, préfigurant ainsi les smartphones modernes.",
-      "date_used": "2026-03-19T07:48:47.341533"
-    },
-    {
       "summary": "Soviet gas pipeline bug 1982",
       "full": "En 1982, un bug logiciel a provoqué l'explosion d'un gazoduc soviétique. Ce bug, causé par une modification non autorisée du code, a entraîné une surpression dans le système, provoquant une énorme explosion qui a été décrite comme l'un des pires accidents industriels de l'histoire.",
       "date_used": "2026-03-26T08:03:08.991921"
@@ -528,6 +523,12 @@
       "full": "Le 18 novembre 1985, la technologie des téléphones à cadran rotatif a été remplacée par des téléphones à touches, marquant un tournant dans la manière dont les utilisateurs interagissaient avec leurs appareils de communication. Cette innovation a facilité la composition des numéros et a ouvert la voie à des fonctionnalités plus avancées dans les téléphones modernes.",
       "category": "inventions",
       "date_used": "2026-11-23T19:01:32.789684"
+    },
+    {
+      "summary": "AOL buys Netscape",
+      "full": "Le 24 novembre 1998, AOL a acquis Netscape Communications Corporation pour 4,2 milliards de dollars. Cette acquisition a marqué un tournant dans l'histoire d'Internet, car Netscape était alors le principal navigateur web et a joué un rôle crucial dans la popularisation du web auprès du grand public. L'accord a également permis à AOL de renforcer sa position sur le marché des services en ligne.",
+      "category": "inventions",
+      "date_used": "2026-11-24T18:41:43.443210"
     }
   ]
 }
