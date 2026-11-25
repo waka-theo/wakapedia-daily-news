@@ -1,11 +1,6 @@
 {
   "facts": [
     {
-      "summary": "Soviet gas pipeline bug 1982",
-      "full": "En 1982, un bug logiciel a provoqué l'explosion d'un gazoduc soviétique. Ce bug, causé par une modification non autorisée du code, a entraîné une surpression dans le système, provoquant une énorme explosion qui a été décrite comme l'un des pires accidents industriels de l'histoire.",
-      "date_used": "2026-03-26T08:03:08.991921"
-    },
-    {
       "summary": "Knight Capital Group trading glitch 2012",
       "full": "En 2012, une erreur de logiciel chez Knight Capital Group a causé une perte de 440 millions de dollars en seulement 45 minutes. Un technicien avait oublié de copier le nouveau code sur un serveur, ce qui a entraîné une série de transactions erronées. Cette situation a presque conduit la société à la faillite, soulignant l'impact dévastateur que peut avoir un bug dans le secteur financier.",
       "date_used": "2026-04-03T07:21:27.135906"
@@ -529,6 +524,12 @@
       "full": "Le 24 novembre 1998, AOL a acquis Netscape Communications Corporation pour 4,2 milliards de dollars. Cette acquisition a marqué un tournant dans l'histoire d'Internet, car Netscape était alors le principal navigateur web et a joué un rôle crucial dans la popularisation du web auprès du grand public. L'accord a également permis à AOL de renforcer sa position sur le marché des services en ligne.",
       "category": "inventions",
       "date_used": "2026-11-24T18:41:43.443210"
+    },
+    {
+      "summary": "Amazon ignites the Kindle",
+      "full": "Le 19 novembre 2007, Amazon a lancé le Kindle, un lecteur de livres électroniques qui a révolutionné la manière dont les gens lisent et achètent des livres. Avec son écran à encre électronique et sa capacité à stocker des milliers de livres, le Kindle a ouvert la voie à l'essor des livres numériques et a transformé l'industrie de l'édition.",
+      "category": "inventions",
+      "date_used": "2026-11-25T17:50:59.679950"
     }
   ]
 }

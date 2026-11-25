@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.lemondeinformatique.fr/actualites/lire-oracle-signe-un-contrat-logiciel-de-7-md$-avec-le-pentagon-100717.html",
-      "title": "Oracle signe un contrat logiciel de 7 Md$ avec le Pentagon",
-      "date_used": "2026-07-27T10:04:08.320032"
-    },
-    {
       "url": "https://www.zdnet.fr/actualites/data-centers-ia-nvidia-envisage-un-soutien-financier-record-de-250-milliards-de-dollars-a-openai-499043.htm#xtor=RSS-1",
       "title": "Nvidia prévoit un soutien de 250 milliards $ à OpenAI",
       "date_used": "2026-07-28T08:46:10.457683"
@@ -449,6 +444,11 @@
       "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/",
       "title": "Meta intègre son assistant IA dans Instagram DMs",
       "date_used": "2026-11-24T18:41:19.515781"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/cybersecurite-conformite/black-friday-les-cybermenaces-dopees-a-l-ia-mettent-les-distributeurs-sous-pression",
+      "title": "Black Friday : cybermenaces dopées à l'IA sous pression",
+      "date_used": "2026-11-25T17:50:33.265101"
     }
   ]
 }
