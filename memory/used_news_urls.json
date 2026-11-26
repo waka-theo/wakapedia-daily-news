@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://www.zdnet.fr/actualites/data-centers-ia-nvidia-envisage-un-soutien-financier-record-de-250-milliards-de-dollars-a-openai-499043.htm#xtor=RSS-1",
-      "title": "Nvidia prévoit un soutien de 250 milliards $ à OpenAI",
-      "date_used": "2026-07-28T08:46:10.457683"
-    },
-    {
       "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/",
       "title": "Cyera acquiert Oasis Security pour 1 milliard $",
       "date_used": "2026-07-29T08:50:58.533778"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/cybersecurite-conformite/black-friday-les-cybermenaces-dopees-a-l-ia-mettent-les-distributeurs-sous-pression",
       "title": "Black Friday : cybermenaces dopées à l'IA sous pression",
       "date_used": "2026-11-25T17:50:33.265101"
+    },
+    {
+      "url": "https://www.lemondeinformatique.fr/infrastructure-cloud/le-groupement-mousquetaires-choisi-anthropic-pour-deployer-l-ia-dans-500-points-de-vente",
+      "title": "Le groupement Mousquetaires déploie l'IA avec Anthropic",
+      "date_used": "2026-11-26T17:33:58.766704"
     }
   ]
 }
