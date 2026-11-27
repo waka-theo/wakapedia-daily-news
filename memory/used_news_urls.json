@@ -1,11 +1,6 @@
 {
   "urls": [
     {
-      "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/",
-      "title": "Cyera acquiert Oasis Security pour 1 milliard $",
-      "date_used": "2026-07-29T08:50:58.533778"
-    },
-    {
       "url": "https://www.zdnet.fr/actualites/zd-tech-la-menace-invisible-des-agents-ia-en-entreprise-et-90-des-organisations-sont-concernees-498192.htm#xtor=RSS-1",
       "title": "La menace invisible des agents IA en entreprise",
       "date_used": "2026-07-30T08:40:18.068509"
@@ -449,6 +444,11 @@
       "url": "https://www.lemondeinformatique.fr/infrastructure-cloud/le-groupement-mousquetaires-choisi-anthropic-pour-deployer-l-ia-dans-500-points-de-vente",
       "title": "Le groupement Mousquetaires déploie l'IA avec Anthropic",
       "date_used": "2026-11-26T17:33:58.766704"
+    },
+    {
+      "url": "https://www.infoq.com/news/2026/11/uber-agent-spend-steady/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "title": "Meta rend l'approbation automatique des revues de code plus courante",
+      "date_used": "2026-11-27T17:16:38.519279"
     }
   ]
 }
